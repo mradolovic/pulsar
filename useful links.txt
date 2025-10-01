@@ -12,3 +12,15 @@ https://vhfdesign.com/lnas/lna-eme-sav541-for-73cm-and-70cm-bands.html
 
 https://hackaday.com/2018/07/17/the-biggest-corner-antenna-weve-ever-seen/
 
+https://github.com/ccera-astro/pulsar_filterbank
+
+https://github.com/gio54321/pulsar-distro-guide
+
+https://www.changpuak.ch/electronics/interdigital_bandpass_filter_designer.php
+
+https://zaras.si/dnevnik/
+
+https://lea.hamradio.si/~s53mv/
+
+https://www.reddit.com/r/rfelectronics/comments/1n5rb60/what_kind_of_filter_for_400ish_mhz/
+
