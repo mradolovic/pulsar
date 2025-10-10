@@ -1,2 +1,9 @@
+
+#ignore this excel file
 20250927 Radna akcija Sep25.xlsx
+
+#ignore .bin - measurement files
 *.bin
+
+#ignore antenna cst simulation files
+/Simulacija_Darin_CST
