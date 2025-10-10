@@ -6,4 +6,4 @@
 *.bin
 
 #ignore antenna cst simulation files
-/Simulacija_Darin_CST
+Antennas/Simulacija_Darin_CST
