@@ -24,3 +24,14 @@ https://lea.hamradio.si/~s53mv/
 
 https://www.reddit.com/r/rfelectronics/comments/1n5rb60/what_kind_of_filter_for_400ish_mhz/
 
+https://www.k5so.com/documents--and-downloads/document-download-page.html
+
+https://github.com/nanograv/pulsar_timing_school
+
+https://sigpyproc3.readthedocs.io/en/latest/
+
+https://ozgrav.github.io/2023-09-25_NWU_Pulsar_Timing_Workshop/
+
+https://github.com/theXYZT/pulsarbat
+
+https://github.com/SoftwareForScience/pulsar-python?tab=readme-ov-file
