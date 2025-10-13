@@ -35,3 +35,8 @@ https://ozgrav.github.io/2023-09-25_NWU_Pulsar_Timing_Workshop/
 https://github.com/theXYZT/pulsarbat
 
 https://github.com/SoftwareForScience/pulsar-python?tab=readme-ov-file
+
+https://alex88ridolfi.altervista.org/pagine/pulsar_software_conversion_table.html
+
+https://eff100mwiki.mpifr-bonn.mpg.de/doku.php?id=information_for_astronomers:rx_list
+
