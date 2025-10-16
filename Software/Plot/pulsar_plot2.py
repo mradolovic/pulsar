@@ -9,7 +9,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Define file path
-file_path = "output_rapulsar2_avg2_test1.txt"
+file_path = "output_rapulsar2_avg2_test2.txt"
 
 # split_file_path = file_path.split('_')
 #
@@ -39,16 +39,17 @@ with open(file_path, "r") as file:
 average = np.average(col2)
 col2 = col2 - average
 
+
 plt.figure()
-#plt.plot(col1, col2)
-plt.plot(col1, col2, linestyle = '', marker='.', color='blue',label='Power')
-plt.legend(loc='best')
+plt.plot(col1, col2)
+#plt.plot(col1, col2, linestyle = '', marker='.', color='blue',label='Power')
+#plt.legend(loc='best')
 plt.xlabel("Bin number [/]")
 plt.ylabel("Power [a.u.]")
 #plt.title(f"Power vs. Bin number\n{observation_date} - {observation_number}")
 plt.tight_layout()
 #plt.savefig(f"pulsar_plot_{observation_date}_{observation_number}.png")
-plt.savefig("test_0302_20251013_0012h.png")
+plt.savefig("test_0302_20251016_0118h.png")
 #plt.show()
 
 
