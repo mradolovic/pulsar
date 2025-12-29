@@ -1,0 +1,29 @@
+CAM-Ausgabe für aktuelles Projekt NoiseSource_2xGALI-19-7805_2XPATTY.T3001
+Ausgabe am 28. Jun 2024, 16:18h
+Aktuelles Projekt erzeugt mit TARGET 20.7.0.42 professional
+Ausgabe erzeugt mit TARGET 3001! V20.7.0.42
+Aktuelles Projekt von TARGET NC-Edition: Kommerzielle Nutzung ist strafbar!
+LIEFERANSCHRIFT:
+  
+  
+  
+  D- 
+  Tel: 
+  FAX: 
+  eMail: frank@phys.ethz.ch
+Größe der Platine: 59 mm x 34 mm
+
+Folgend die Beschreibung der erzeugten Dateien:
+
+NoiseSource_2xGALI-19-7805_2XPATTY.GTL = 16 = Kupfer oben L1   ( *.GTL )
+NoiseSource_2xGALI-19-7805_2XPATTY.GBL = 2 = Kupfer unten L2   ( *.GBL )
+NoiseSource_2xGALI-19-7805_2XPATTY.TOL = Bohrerliste
+NoiseSource_2xGALI-19-7805_2XPATTY.XLN = Durchkontaktierte Bohrungen
+NoiseSource_2xGALI-19-7805_2XPATTY.GKO = 23 = Platinen-Umriss   ( *.GKO )
+NoiseSource_2xGALI-19-7805_2XPATTY.GTS = 18 = Lötstoppmaske oben   ( *.GTS )
+NoiseSource_2xGALI-19-7805_2XPATTY.GBS = 4 = Lötstoppmaske unten   ( *.GBS )
+NoiseSource_2xGALI-19-7805_2XPATTY.GTO = 21 = Bestückungsdruck oben   ( *.GTO )
+NoiseSource_2xGALI-19-7805_2XPATTY.GTP = 19 = Lötpaste oben   ( *.GTP )
+NoiseSource_2xGALI-19-7805_2XPATTY.APR = TARGET 3001! Blendenliste
+NoiseSource_2xGALI-19-7805_2XPATTY.Whl = Eagle kompatible Blendenliste
+

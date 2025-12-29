@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html class="gl-system ui-neutral with-top-bar with-header " lang="en" style="--broadcast-message-height: 0px;"><head prefix="og: http://ogp.me/ns#">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<title>Michal Rybka / LNA QPL9547 v1.0 · GitLab</title>
+<script nonce="">
+//<![CDATA[
+window.gon={};gon.api_version="v4";gon.default_avatar_url="https://git.ok1kvk.cz/assets/no_avatar-849f9c04a3a0d0cea2424ae97b27447dc64a7dbfae83c036c45b403392f0e8ba.png";gon.max_file_size=50;gon.asset_host=null;gon.webpack_public_path="/assets/webpack/";gon.relative_url_root="";gon.user_color_mode="gl-system";gon.user_color_scheme="white";gon.markdown_surround_selection=null;gon.markdown_automatic_lists=null;gon.markdown_maintain_indentation=null;gon.math_rendering_limits_enabled=true;gon.allow_immediate_namespaces_deletion=true;gon.recaptcha_api_server_url="https://www.recaptcha.net/recaptcha/api.js";gon.recaptcha_sitekey="6LcLFQ0UAAAAAMyOFWGo012jdKr_gCUZwgc8yD_4";gon.gitlab_url="https://git.ok1kvk.cz";gon.promo_url="https://about.gitlab.com";gon.forum_url="https://forum.gitlab.com";gon.docs_url="https://docs.gitlab.com";gon.revision="2e5ae10576d";gon.feature_category="groups_and_projects";gon.gitlab_logo="/assets/gitlab_logo-2957169c8ef64c58616a1ac3f4fc626e8a35ce4eb3ed31bb0d873712f2a041a0.png";gon.secure=true;gon.sprite_icons="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg";gon.sprite_file_icons="/assets/file_icons/file_icons-88a95467170997d6a4052c781684c8250847147987090747773c1ee27c513c5f.svg";gon.illustrations_path="/images/illustrations.svg";gon.emoji_sprites_css_path="/assets/emoji_sprites-bd26211944b9d072037ec97cb138f1a52cd03ef185cd38b8d1fcc963245199a1.css";gon.emoji_backend_version=4;gon.gridstack_css_path="/assets/lazy_bundles/gridstack-f42069e5c7b1542688660592b48f2cbd86e26b77030efd195d124dbd8fe64434.css";gon.test_env=false;gon.disable_animations=false;gon.suggested_label_colors={"#cc338b":"Magenta-pink","#dc143c":"Crimson","#c21e56":"Rose red","#cd5b45":"Dark coral","#ed9121":"Carrot orange","#eee600":"Titanium yellow","#009966":"Green-cyan","#8fbc8f":"Dark sea green","#6699cc":"Blue-gray","#e6e6fa":"Lavender","#9400d3":"Dark violet","#330066":"Deep violet","#36454f":"Charcoal grey","#808080":"Gray"};gon.first_day_of_week=1;gon.time_display_relative=true;gon.time_display_format=0;gon.ee=false;gon.jh=false;gon.dot_com=false;gon.uf_error_prefix="UF";gon.pat_prefix="";gon.keyboard_shortcuts_enabled=true;gon.diagramsnet_url="https://embed.diagrams.net";gon.features={"uiForOrganizations":false,"organizationSwitching":false,"findAndReplace":false,"removeMonitorMetrics":true,"workItemViewForIssues":true,"newProjectCreationForm":false,"workItemsClientSideBoards":false,"glqlWorkItems":false,"glqlAggregation":false,"glqlTypescript":false,"whatsNewFeaturedCarousel":true,"paneledView":false,"imageLightboxes":false,"archiveGroup":false,"projectStudioEnabled":false,"duoSideRail":false,"inlineBlame":false,"issueEmailParticipants":true,"editBranchRules":true,"pageSpecificStyles":false,"directoryCodeDropdownUpdates":true,"repositoryFileTreeBrowser":false,"workItems":true,"workItemsBeta":false,"workItemsAlpha":false};
+//]]>
+</script>
+
+<script nonce="">
+//<![CDATA[
+const root = document.documentElement;
+if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  root.classList.add('gl-dark');
+}
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+  if (e.matches) {
+    root.classList.add('gl-dark');
+  } else {
+    root.classList.remove('gl-dark');
+  }
+});
+
+//]]>
+</script>
+<script nonce="">
+//<![CDATA[
+var gl = window.gl || {};
+gl.startup_calls = {"/RybkaLabs/LNA-QPL9547-v1.0/-/refs/master/logs_tree/?format=json\u0026offset=0\u0026ref_type=HEADS":{},"/RybkaLabs/LNA-QPL9547-v1.0/-/blob/master/README.md?format=json\u0026viewer=rich":{}};
+gl.startup_graphql_calls = null;
+
+if (gl.startup_calls && window.fetch) {
+  Object.keys(gl.startup_calls).forEach(apiCall => {
+   gl.startup_calls[apiCall] = {
+      fetchCall: fetch(apiCall, {
+        // Emulate XHR for Rails AJAX request checks
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        // fetch won’t send cookies in older browsers, unless you set the credentials init option.
+        // We set to `same-origin` which is default value in modern browsers.
+        // See https://github.com/whatwg/fetch/pull/585 for more information.
+        credentials: 'same-origin'
+      })
+    };
+  });
+}
+if (gl.startup_graphql_calls && window.fetch) {
+  const headers = {"X-CSRF-Token":"KgEw4kcsNnYE7XdIdE95PgDtNzc0iipWhbvlkzT_nP1hST74MbgWrtpi0uiPAYARk2kcQJ4m5r2BqvnYXiOiPg","x-gitlab-feature-category":"groups_and_projects"};
+  const url = `https://git.ok1kvk.cz/api/graphql`
+
+  const opts = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...headers,
+    }
+  };
+
+  gl.startup_graphql_calls = gl.startup_graphql_calls.map(call => ({
+    ...call,
+    fetchCall: fetch(url, {
+      ...opts,
+      credentials: 'same-origin',
+      body: JSON.stringify(call)
+    })
+  }))
+}
+
+
+//]]>
+</script>
+
+
+
+<meta content="light dark" name="color-scheme">
+<link rel="stylesheet" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/application-8a9f6b466d0b36fa2755d3040da2a3fae715d40a0a0f10b5.css" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/application_dark-8030447b34f738da83c7d723089105262c01eb13b5b.css" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/project-84c702fec0d46898f3752e2d11cffd1198f91161651f5a64ba96.css"><link rel="stylesheet" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/tree-c8b2da86bd9f1872e6c1dc4ce2c95ee33b47a7181079717517d2a6c.css"><link rel="stylesheet" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commit_description-9e7efe20f0cef17d0606edabfad0418e9eb224aae.css"><link rel="stylesheet" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/projects-6c68dbce82c8ad08ca756be341b31c8cb69af645ef5c77d4f87.css"><link rel="stylesheet" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/work_items-9c736722b9bb76f2c57757ed1bae3a5e79456e78cba897d30.css"><link rel="stylesheet" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/notes_shared-57a4db43ec755df32d86f7c5cdd49148a3b4135f33e08d3.css">
+<link rel="stylesheet" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/application_utilities-e3b0c44298fc1c149afbf4c8996fb92427ae41.css" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/application_utilities_dark-e3b0c44298fc1c149afbf4c8996fb9242.css" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/tailwind-a9fde9b8ef840a75f25766bd8ab8b53262d10d4a4925fa5da38.css">
+
+
+<link rel="stylesheet" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/fonts-deb7ad1d55ca77c0172d8538d53442af63604ff490c74acc2859db.css">
+<link rel="stylesheet" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/white-be4fdae1a25a255ed59f155dc9b7449697d7552a98dd3965643301.css" media="(prefers-color-scheme: light)">
+<link rel="stylesheet" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/dark-77ed54f14352adb6ae26be56730f321e0273576f8be6e1f73d1d2ac.css" media="(prefers-color-scheme: dark)">
+
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/runtime.dd3eff8e.bundle.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/main.53c277e9.chunk.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/tracker.4ac2efa2.chunk.js" defer="defer" nonce=""></script>
+<script nonce="">
+//<![CDATA[
+window.snowplowOptions = {"namespace":"gl","hostname":"git.ok1kvk.cz:443","postPath":"/-/collect_events","forceSecureTracker":true,"appId":"gitlab_sm"}
+
+gl = window.gl || {};
+gl.snowplowStandardContext = {"schema":"iglu:com.gitlab/gitlab_standard/jsonschema/1-1-7","data":{"environment":"self-managed","source":"gitlab-rails","correlation_id":"01K8ZZVRP9JZ1J3JRHG4KNTJA8","plan":"free","extra":{},"user_id":null,"global_user_id":null,"user_type":null,"is_gitlab_team_member":null,"namespace_id":20,"ultimate_parent_namespace_id":20,"project_id":369,"feature_enabled_by_namespace_ids":null,"realm":"self-managed","instance_id":"e8dc4959-507a-4824-8f8e-95a59d927d63","unique_instance_id":"f118263a-4146-5bff-a1d0-fc209b350ae2","host_name":"git.ok1kvk.cz","instance_version":"18.5.1","context_generated_at":"2025-11-01T16:16:34.872+01:00"}}
+gl.snowplowPseudonymizedPageUrl = "https://git.ok1kvk.cz/namespace20/project369";
+gl.maskedDefaultReferrerUrl = "https://git.ok1kvk.cz/";
+gl.ga4MeasurementId = 'G-ENFH3X7M5Y';
+gl.duoEvents = [];
+gl.onlySendDuoEvents = false;
+
+
+//]]>
+</script>
+<link rel="preload" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/application_utilities-e3b0c44298fc1c149afbf4c8996fb92427ae41.css" as="style" type="text/css" nonce="">
+<link rel="preload" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/application-8a9f6b466d0b36fa2755d3040da2a3fae715d40a0a0f10b5.css" as="style" type="text/css" nonce="">
+<link rel="preload" href="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/white-be4fdae1a25a255ed59f155dc9b7449697d7552a98dd3965643301.css" as="style" type="text/css" nonce="">
+
+
+
+
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commons-pages.groups.new-pages.import.gitlab_projects.new-pag.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commons-pages.search.show-super_sidebar.c76916f4.chunk.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/super_sidebar.40335732.chunk.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commons-pages.projects-pages.projects.activity-pages.projects.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commons-pages.groups.packages-pages.groups.registry.repositor.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commons-pages.projects.blob.show-pages.projects.branches.new-.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commons-pages.import.bitbucket_server.new-pages.import.gitea..js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/dbe6a049.8c51c52f.chunk.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commons-pages.projects.blob.show-pages.projects.show-page_002.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commons-pages.projects.blob.show-pages.projects.show-pages.pr.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commons-pages.projects.blob.edit-pages.projects.blob.new-page.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commons-pages.projects.blob.show-pages.projects.commits.show-.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commons-pages.projects.blob.show-pages.projects.show-page_004.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commons-pages.projects.blame.show-pages.projects.blob.show-pa.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commons-pages.projects.blob.show-pages.projects.show-page_003.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commons-pages.groups.show-pages.projects.home_panel-pages.pro.js" defer="defer" nonce=""></script>
+<script src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/pages.projects.show.b38440f2.chunk.js" defer="defer" nonce=""></script>
+
+<meta content="object" property="og:type">
+<meta content="GitLab" property="og:site_name">
+<meta content="Michal Rybka / LNA QPL9547 v1.0 · GitLab" property="og:title">
+<meta content="Low Noise Amplifier with QPL9547 with ultra low noise LDO to 5V DC supply." property="og:description">
+<meta content="https://git.ok1kvk.cz/uploads/-/system/project/avatar/369/qlp9547.png" property="og:image">
+<meta content="64" property="og:image:width">
+<meta content="64" property="og:image:height">
+<meta content="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0" property="og:url">
+<meta content="summary" property="twitter:card">
+<meta content="Michal Rybka / LNA QPL9547 v1.0 · GitLab" property="twitter:title">
+<meta content="Low Noise Amplifier with QPL9547 with ultra low noise LDO to 5V DC supply." property="twitter:description">
+<meta content="https://git.ok1kvk.cz/uploads/-/system/project/avatar/369/qlp9547.png" property="twitter:image">
+
+<meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="ovQyW8J5l2ZTG1NKBSubYBLnc5ICGKBxPanJ1by2vwHpvDxBtO23vo2U9ur-ZWJPgWNY5ai0bJo5uNWe1mqBwg">
+<meta name="csp-nonce" content="23nvVO7iZU9aYxtbKIxrGg==">
+<meta name="action-cable-url" content="/-/cable">
+<link href="https://git.ok1kvk.cz/-/manifest.json" rel="manifest">
+<link rel="icon" type="image/png" href="https://git.ok1kvk.cz/uploads/-/system/appearance/favicon/1/1k-orange.png" id="favicon" data-original-href="/uploads/-/system/appearance/favicon/1/1k-orange.png">
+<link rel="apple-touch-icon" type="image/x-icon" href="https://git.ok1kvk.cz/assets/apple-touch-icon-b049d4bc0dd9626f31db825d61880737befc7835982586d015bded10b4435460.png">
+<link href="https://git.ok1kvk.cz/search/opensearch.xml" rel="search" title="Search GitLab" type="application/opensearchdescription+xml">
+<link rel="alternate" type="application/atom+xml" title="LNA QPL9547 v1.0 activity" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0.atom">
+
+
+
+
+<meta content="Low Noise Amplifier with QPL9547 with ultra low noise LDO to 5V DC supply." name="description">
+<meta content="#ececef" name="theme-color">
+<style>
+svg[data-v-59c5d430] {
+  pointer-events: none;
+
+  position: fixed;
+  right: 0;
+}
+svg polygon[data-v-59c5d430],
+svg rect[data-v-59c5d430] {
+  pointer-events: auto;
+}
+</style><script charset="utf-8" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/a9b73706.55363e65.chunk.js"></script><script charset="utf-8" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/vendors-global_search_modal.18f15ee6.chunk.js"></script><script charset="utf-8" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/global_search_modal.5725375d.chunk.js"></script><script charset="utf-8" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/shortcutsBundle.43fe7854.chunk.js"></script><style>
+/*
+ * We need to override margins on popover body elements to ensure
+ * that `gl-gap-3` works without any added spacing
+ */
+.gl-popover .popover-body .board-card-info {
+  margin-right: 0;
+}
+
+/*
+ * Adds spacing between calender icon and text
+ */
+.gl-popover .popover-body .board-card-info time {
+  margin-left: 0.25rem;
+}
+</style><script charset="utf-8" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/hello.df204cbc.chunk.js"></script><style>
+.blame-commit-wrapper[data-v-dbcc3526]::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: var(--blame-indicator-top);
+  height: var(--blame-indicator-height);
+  width: 3px;
+  background-color: var(--blame-indicator-color);
+  pointer-events: none;
+}
+</style><style>
+/* This is to override a margin caused by bootstrap */
+.non-gfm-markdown-block[data-v-6f91a3a4] {
+[data-v-6f91a3a4] p:last-of-type {
+    margin-bottom: 0;
+}
+  /* All code blocks here should break to avoid overflow issues in consumer components */
+[data-v-6f91a3a4] code {
+    word-break: break-all;
+}
+[data-v-6f91a3a4] pre {
+    white-space: pre-wrap;
+}
+}
+</style><style>
+/* Temporary override until we have
+   * widths available in GlDisclosureDropdown
+   * https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/issues/2439
+   */
+.code-dropdown .gl-new-dropdown-panel {
+  width: 100%;
+  max-width: 348px;
+}
+</style><style>
+.file-tree-browser-toggle-wrapper[data-v-522a1b04] {
+  display: contents; /* Removes wrapper from layout flow */
+}
+.file-browser-toggle-tooltip .tooltip-inner[data-v-522a1b04] {
+  max-width: 210px;
+}
+</style><style>
+/* Temporary override until we have
+   * widths available in GlDisclosureDropdown
+   * https://gitlab.com/gitlab-org/gitlab-services/design.gitlab.com/-/issues/2439
+   */
+.code-dropdown .gl-new-dropdown-panel {
+  width: 100%;
+  max-width: 348px;
+}
+</style><script charset="utf-8" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/ac450171.0ff3d3ec.chunk.js"></script><script charset="utf-8" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/vendors-treeList.53117c11.chunk.js"></script><script charset="utf-8" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/17193943.3d5c0e15.chunk.js"></script><script charset="utf-8" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/commons-pages.projects.blob.show-pages.projects.tree.show-tre.js"></script><script charset="utf-8" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/treeList.36014a7d.chunk.js"></script><script charset="utf-8" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/initInviteMembersTrigger.56255e34.chunk.js"></script><style>
+.fake-input[data-v-26a01bbc] {
+  position: absolute;
+  top: 14px;
+  left: 39px;
+}
+</style><style>
+.input-box-wrapper[data-v-b2da88b0] {
+  position: relative;
+}
+.fake-input-wrapper[data-v-b2da88b0] {
+  position: absolute;
+}
+</style><style>
+.file-row {
+  display: flex;
+  align-items: center;
+  height: var(--file-row-height, 32px);
+  padding: 4px 8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  border-radius: 3px;
+  text-align: left;
+  cursor: pointer;
+  color: unset;
+}
+.file-row-name-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  overflow: visible;
+}
+.file-row-name {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  max-width: inherit;
+  line-height: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-left: calc(var(--level) * var(--file-row-level-padding, 16px));
+}
+</style><style>
+.file-browser-filter-tooltip .tooltip-inner {
+  max-width: 210px;
+}
+</style></head>
+
+<body class="tab-width-8 gl-browser-firefox gl-platform-windows body-fixed-scrollbar page-initialised" data-namespace-id="20" data-page="projects:show" data-page-type-id="LNA-QPL9547-v1.0" data-project="LNA-QPL9547-v1.0" data-project-full-path="RybkaLabs/LNA-QPL9547-v1.0" data-project-id="369" data-project-studio-available="false" data-project-studio-enabled="false">
+<div id="js-tooltips-container"></div>
+
+<script nonce="">
+//<![CDATA[
+gl = window.gl || {};
+gl.client = {"isFirefox":true,"isWindows":true};
+
+
+//]]>
+</script>
+
+
+<header class="header-logged-out" data-testid="navbar">
+<a class="gl-sr-only gl-accessibility" href="#content-body">Skip to content</a>
+<div class="container-fluid">
+<nav aria-label="Explore GitLab" class="header-logged-out-nav gl-flex gl-gap-3 gl-justify-between">
+<div class="gl-flex gl-items-center gl-gap-1">
+<span class="gl-sr-only">GitLab</span>
+<a title="Homepage" id="logo" class="header-logged-out-logo has-tooltip" aria-label="Homepage" data-track-label="main_navigation" data-track-action="click_gitlab_logo_link" data-track-property="navigation_top" href="https://git.ok1kvk.cz/"><img class="brand-header-logo js-lazy-loaded" alt="" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/1k-orange.png" loading="lazy" data-testid="js-lazy-loaded-content">
+</a></div>
+<ul class="gl-list-none gl-p-0 gl-m-0 gl-flex gl-gap-3 gl-items-center gl-grow">
+<li class="header-logged-out-nav-item">
+<a class="" href="https://git.ok1kvk.cz/explore">Explore</a>
+</li>
+</ul>
+<ul class="gl-list-none gl-p-0 gl-m-0 gl-flex gl-gap-3 gl-items-center gl-justify-end">
+<li class="header-logged-out-nav-item">
+<a href="https://git.ok1kvk.cz/users/sign_in?redirect_to_referer=yes">Sign in</a>
+</li>
+<li class="header-logged-out-nav-item">
+<a class="gl-button btn btn-md btn-confirm !gl-inline-flex" href="https://git.ok1kvk.cz/users/sign_up"><span class="gl-button-text">
+Register
+
+</span>
+
+</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<div class="layout-page page-with-super-sidebar">
+<div class="super-sidebar-wrapper"><div class="super-sidebar-overlay"></div> <!----> <nav id="super-sidebar" aria-labelledby="super-sidebar-heading" data-testid="super-sidebar" class="super-sidebar super-sidebar-animatable"><h2 id="super-sidebar-heading" class="gl-sr-only">
+      Primary navigation
+    </h2> <div class="user-bar gl-flex gl-gap-1 gl-p-3"><div class="gl-flex gl-items-center gl-gap-1"><!----> <button aria-controls="super-sidebar" aria-expanded="true" aria-label="Primary navigation sidebar" type="button" class="btn gl-button btn-default btn-md btn-default-tertiary btn-icon js-super-sidebar-toggle-collapse" data-testid="super-sidebar-collapse-button"><!----> <svg data-testid="sidebar-icon" role="img" aria-hidden="true" class="gl-button-icon gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#sidebar"></use></svg>  <!----></button> <!----> <!----> <!----></div> <!----> <button id="super-sidebar-search" data-testid="super-sidebar-search-button" type="button" class="user-bar-button !gl-rounded-lg !gl-px-3 !gl-py-1 btn gl-button btn-default btn-md btn-block"><!----> <!---->  <span class="gl-button-text gl-flex gl-w-full !gl-py-3"><svg data-testid="search-icon" role="img" aria-hidden="true" class="gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#search"></use></svg> <span class="gl-grow gl-text-left">Search or go to…</span> <svg data-testid="quick-actions-icon" role="img" aria-hidden="true" class="gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#quick-actions"></use></svg> <!----></span></button> <!----> <!----> <hr aria-hidden="true" class="-gl-mb-2 gl-mt-2"></div> <div class="contextual-nav gl-flex gl-grow gl-flex-col gl-overflow-hidden"><div id="super-sidebar-context-header" class="super-sidebar-context-header gl-m-0 gl-px-5 gl-py-3 gl-font-bold gl-leading-reset">
+        Project
+      </div> <div class="gl-scroll-scrim gl-overflow-y-auto gl-overflow-x-hidden gl-grow" data-testid="nav-container"><div class="top-scrim-wrapper"><div class="top-scrim"></div></div> <div></div> <div class="gl-relative gl-px-3 gl-py-2"><!----> <!----> <!----> <ul aria-labelledby="super-sidebar-context-header" data-testid="non-static-items-section" class="gl-mb-0 gl-list-none gl-p-0"><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0" aria-current="page" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset super-sidebar-nav-item-current gl-px-2 gl-rounded-base shortcuts-project" data-testid="nav-item-link" aria-label="LNA QPL9547 v1.0" data-track-action="click_menu_item" data-track-label="project_overview" data-track-property="nav_panel_project" data-qa-submenu-item="project-overview"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0 gl-w-6 gl-self-start"><img src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/qlp9547.png" alt="avatar" class="gl-avatar gl-avatar-s24"></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      LNA QPL9547 v1.0
+      <!----></div>  <!----></a> <!----></li><li><button id="menu-section-button-manage" data-testid="menu-section-button" data-qa-section-name="Manage" aria-controls="manage" aria-expanded="false" data-qa-menu-item="Manage" class="super-sidebar-nav-item gl-relative gl-mb-1 gl-flex gl-w-full gl-appearance-none gl-items-center gl-gap-3 gl-rounded-base gl-border-0 gl-bg-transparent gl-p-2 gl-text-left gl-font-semibold !gl-text-default !gl-no-underline focus:gl-focus"><span class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><svg data-testid="users-icon" role="img" aria-hidden="true" class="super-sidebar-nav-item-icon gl-m-auto gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#users"></use></svg></span> <span class="gl-truncate-end menu-section-button-label gl-grow">
+      Manage
+    </span> <span class="gl-mr-2 gl-text-right gl-text-subtle"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="gl-animated-icon gl-animated-icon-off gl-animated-icon-current"><path d="M6.75 4.75L10 8L6.75 11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="gl-animated-chevron-right-down-arrow"></path></svg></span></button> <!----> <div class="gl-m-0 gl-list-none gl-p-0 gl-duration-medium gl-ease-ease collapse" style="display: none;" id="manage" data-testid="menu-section" data-qa-section-name="Manage"><ul aria-label="Manage" class="gl-m-0 gl-list-none gl-p-0"><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/activity" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-project-activity" data-testid="nav-item-link" aria-label="Activity" data-track-action="click_menu_item" data-track-label="activity" data-track-property="nav_panel_project" data-qa-submenu-item="Activity"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Activity
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/project_members" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base" data-testid="nav-item-link" aria-label="Members" data-track-action="click_menu_item" data-track-label="members" data-track-property="nav_panel_project" data-qa-submenu-item="Members"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Members
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/labels" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base" data-testid="nav-item-link" aria-label="Labels" data-track-action="click_menu_item" data-track-label="labels" data-track-property="nav_panel_project" data-qa-submenu-item="Labels"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Labels
+      <!----></div>  <!----></a> <!----></li></ul></div></li><li><button id="menu-section-button-plan" data-testid="menu-section-button" data-qa-section-name="Plan" aria-controls="plan" aria-expanded="false" data-qa-menu-item="Plan" class="super-sidebar-nav-item gl-relative gl-mb-1 gl-flex gl-w-full gl-appearance-none gl-items-center gl-gap-3 gl-rounded-base gl-border-0 gl-bg-transparent gl-p-2 gl-text-left gl-font-semibold !gl-text-default !gl-no-underline focus:gl-focus"><span class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><svg data-testid="planning-icon" role="img" aria-hidden="true" class="super-sidebar-nav-item-icon gl-m-auto gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#planning"></use></svg></span> <span class="gl-truncate-end menu-section-button-label gl-grow">
+      Plan
+    </span> <span class="gl-mr-2 gl-text-right gl-text-subtle"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="gl-animated-icon gl-animated-icon-off gl-animated-icon-current"><path d="M6.75 4.75L10 8L6.75 11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="gl-animated-chevron-right-down-arrow"></path></svg></span></button> <!----> <div class="gl-m-0 gl-list-none gl-p-0 gl-duration-medium gl-ease-ease collapse" style="display: none;" id="plan" data-testid="menu-section" data-qa-section-name="Plan"><ul aria-label="Plan" class="gl-m-0 gl-list-none gl-p-0"><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/issues" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-issues has-sub-items" data-testid="nav-item-link" aria-label="Issues" data-track-action="click_menu_item" data-track-label="project_issue_list" data-track-property="nav_panel_project" data-qa-submenu-item="Issues"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Issues
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/boards" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-issue-boards" data-testid="nav-item-link" aria-label="Issue boards" data-track-action="click_menu_item" data-track-label="boards" data-track-property="nav_panel_project" data-qa-submenu-item="Issue boards"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Issue boards
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/milestones" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base" data-testid="nav-item-link" aria-label="Milestones" data-track-action="click_menu_item" data-track-label="milestones" data-track-property="nav_panel_project" data-qa-submenu-item="Milestones"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Milestones
+      <!----></div>  <!----></a> <!----></li></ul></div></li><li><button id="menu-section-button-code" data-testid="menu-section-button" data-qa-section-name="Code" aria-controls="code" aria-expanded="false" data-qa-menu-item="Code" class="super-sidebar-nav-item gl-relative gl-mb-1 gl-flex gl-w-full gl-appearance-none gl-items-center gl-gap-3 gl-rounded-base gl-border-0 gl-bg-transparent gl-p-2 gl-text-left gl-font-semibold !gl-text-default !gl-no-underline focus:gl-focus"><span class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><svg data-testid="code-icon" role="img" aria-hidden="true" class="super-sidebar-nav-item-icon gl-m-auto gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#code"></use></svg></span> <span class="gl-truncate-end menu-section-button-label gl-grow">
+      Code
+    </span> <span class="gl-mr-2 gl-text-right gl-text-subtle"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="gl-animated-icon gl-animated-icon-off gl-animated-icon-current"><path d="M6.75 4.75L10 8L6.75 11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="gl-animated-chevron-right-down-arrow"></path></svg></span></button> <!----> <div class="gl-m-0 gl-list-none gl-p-0 gl-duration-medium gl-ease-ease collapse" style="display: none;" id="code" data-testid="menu-section" data-qa-section-name="Code"><ul aria-label="Code" class="gl-m-0 gl-list-none gl-p-0"><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/merge_requests" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-merge_requests" data-testid="nav-item-link" aria-label="Merge requests" data-track-action="click_menu_item" data-track-label="project_merge_request_list" data-track-property="nav_panel_project" data-qa-submenu-item="Merge requests"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Merge requests
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/tree/master" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-tree" data-testid="nav-item-link" aria-label="Repository" data-track-action="click_menu_item" data-track-label="files" data-track-property="nav_panel_project" data-qa-submenu-item="Repository"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Repository
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/branches" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base" data-testid="nav-item-link" aria-label="Branches" data-track-action="click_menu_item" data-track-label="branches" data-track-property="nav_panel_project" data-qa-submenu-item="Branches"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Branches
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/commits/master?ref_type=heads" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-commits" data-testid="nav-item-link" aria-label="Commits" data-track-action="click_menu_item" data-track-label="commits" data-track-property="nav_panel_project" data-qa-submenu-item="Commits"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Commits
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/tags" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base" data-testid="nav-item-link" aria-label="Tags" data-track-action="click_menu_item" data-track-label="tags" data-track-property="nav_panel_project" data-qa-submenu-item="Tags"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Tags
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/network/master?ref_type=heads" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-network" data-testid="nav-item-link" aria-label="Repository graph" data-track-action="click_menu_item" data-track-label="graphs" data-track-property="nav_panel_project" data-qa-submenu-item="Repository graph"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Repository graph
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/compare?from=master&amp;to=master" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base" data-testid="nav-item-link" aria-label="Compare revisions" data-track-action="click_menu_item" data-track-label="compare" data-track-property="nav_panel_project" data-qa-submenu-item="Compare revisions"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Compare revisions
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/snippets" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-snippets" data-testid="nav-item-link" aria-label="Snippets" data-track-action="click_menu_item" data-track-label="project_snippets" data-track-property="nav_panel_project" data-qa-submenu-item="Snippets"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Snippets
+      <!----></div>  <!----></a> <!----></li></ul></div></li><li><button id="menu-section-button-build" data-testid="menu-section-button" data-qa-section-name="Build" aria-controls="build" aria-expanded="false" data-qa-menu-item="Build" class="super-sidebar-nav-item gl-relative gl-mb-1 gl-flex gl-w-full gl-appearance-none gl-items-center gl-gap-3 gl-rounded-base gl-border-0 gl-bg-transparent gl-p-2 gl-text-left gl-font-semibold !gl-text-default !gl-no-underline focus:gl-focus"><span class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><svg data-testid="rocket-icon" role="img" aria-hidden="true" class="super-sidebar-nav-item-icon gl-m-auto gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#rocket"></use></svg></span> <span class="gl-truncate-end menu-section-button-label gl-grow">
+      Build
+    </span> <span class="gl-mr-2 gl-text-right gl-text-subtle"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="gl-animated-icon gl-animated-icon-off gl-animated-icon-current"><path d="M6.75 4.75L10 8L6.75 11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="gl-animated-chevron-right-down-arrow"></path></svg></span></button> <!----> <div class="gl-m-0 gl-list-none gl-p-0 gl-duration-medium gl-ease-ease collapse" style="display: none;" id="build" data-testid="menu-section" data-qa-section-name="Build"><ul aria-label="Build" class="gl-m-0 gl-list-none gl-p-0"><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/pipelines" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-pipelines" data-testid="nav-item-link" aria-label="Pipelines" data-track-action="click_menu_item" data-track-label="pipelines" data-track-property="nav_panel_project" data-qa-submenu-item="Pipelines"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Pipelines
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/jobs" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-builds" data-testid="nav-item-link" aria-label="Jobs" data-track-action="click_menu_item" data-track-label="jobs" data-track-property="nav_panel_project" data-qa-submenu-item="Jobs"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Jobs
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/pipeline_schedules" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-builds" data-testid="nav-item-link" aria-label="Pipeline schedules" data-track-action="click_menu_item" data-track-label="pipeline_schedules" data-track-property="nav_panel_project" data-qa-submenu-item="Pipeline schedules"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Pipeline schedules
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/artifacts" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-builds" data-testid="nav-item-link" aria-label="Artifacts" data-track-action="click_menu_item" data-track-label="artifacts" data-track-property="nav_panel_project" data-qa-submenu-item="Artifacts"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Artifacts
+      <!----></div>  <!----></a> <!----></li></ul></div></li><li><button id="menu-section-button-deploy" data-testid="menu-section-button" data-qa-section-name="Deploy" aria-controls="deploy" aria-expanded="false" data-qa-menu-item="Deploy" class="super-sidebar-nav-item gl-relative gl-mb-1 gl-flex gl-w-full gl-appearance-none gl-items-center gl-gap-3 gl-rounded-base gl-border-0 gl-bg-transparent gl-p-2 gl-text-left gl-font-semibold !gl-text-default !gl-no-underline focus:gl-focus"><span class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><svg data-testid="deployments-icon" role="img" aria-hidden="true" class="super-sidebar-nav-item-icon gl-m-auto gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#deployments"></use></svg></span> <span class="gl-truncate-end menu-section-button-label gl-grow">
+      Deploy
+    </span> <span class="gl-mr-2 gl-text-right gl-text-subtle"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="gl-animated-icon gl-animated-icon-off gl-animated-icon-current"><path d="M6.75 4.75L10 8L6.75 11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="gl-animated-chevron-right-down-arrow"></path></svg></span></button> <!----> <div class="gl-m-0 gl-list-none gl-p-0 gl-duration-medium gl-ease-ease collapse" style="display: none;" id="deploy" data-testid="menu-section" data-qa-section-name="Deploy"><ul aria-label="Deploy" class="gl-m-0 gl-list-none gl-p-0"><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/releases" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-deployments-releases" data-testid="nav-item-link" aria-label="Releases" data-track-action="click_menu_item" data-track-label="releases" data-track-property="nav_panel_project" data-qa-submenu-item="Releases"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Releases
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/packages" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-container-registry" data-testid="nav-item-link" aria-label="Package registry" data-track-action="click_menu_item" data-track-label="packages_registry" data-track-property="nav_panel_project" data-qa-submenu-item="Package registry"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Package registry
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/container_registry" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base" data-testid="nav-item-link" aria-label="Container registry" data-track-action="click_menu_item" data-track-label="container_registry" data-track-property="nav_panel_project" data-qa-submenu-item="Container registry"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Container registry
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/ml/models" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base" data-testid="nav-item-link" aria-label="Model registry" data-track-action="click_menu_item" data-track-label="model_registry" data-track-property="nav_panel_project" data-qa-submenu-item="Model registry"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Model registry
+      <!----></div>  <!----></a> <!----></li></ul></div></li><li><button id="menu-section-button-operate" data-testid="menu-section-button" data-qa-section-name="Operate" aria-controls="operate" aria-expanded="false" data-qa-menu-item="Operate" class="super-sidebar-nav-item gl-relative gl-mb-1 gl-flex gl-w-full gl-appearance-none gl-items-center gl-gap-3 gl-rounded-base gl-border-0 gl-bg-transparent gl-p-2 gl-text-left gl-font-semibold !gl-text-default !gl-no-underline focus:gl-focus"><span class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><svg data-testid="cloud-pod-icon" role="img" aria-hidden="true" class="super-sidebar-nav-item-icon gl-m-auto gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#cloud-pod"></use></svg></span> <span class="gl-truncate-end menu-section-button-label gl-grow">
+      Operate
+    </span> <span class="gl-mr-2 gl-text-right gl-text-subtle"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="gl-animated-icon gl-animated-icon-off gl-animated-icon-current"><path d="M6.75 4.75L10 8L6.75 11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="gl-animated-chevron-right-down-arrow"></path></svg></span></button> <!----> <div class="gl-m-0 gl-list-none gl-p-0 gl-duration-medium gl-ease-ease collapse" style="display: none;" id="operate" data-testid="menu-section" data-qa-section-name="Operate"><ul aria-label="Operate" class="gl-m-0 gl-list-none gl-p-0"><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/environments" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-environments" data-testid="nav-item-link" aria-label="Environments" data-track-action="click_menu_item" data-track-label="environments" data-track-property="nav_panel_project" data-qa-submenu-item="Environments"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Environments
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/terraform_module_registry" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base" data-testid="nav-item-link" aria-label="Terraform modules" data-track-action="click_menu_item" data-track-label="infrastructure_registry" data-track-property="nav_panel_project" data-qa-submenu-item="Terraform modules"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Terraform modules
+      <!----></div>  <!----></a> <!----></li></ul></div></li><li><button id="menu-section-button-monitor" data-testid="menu-section-button" data-qa-section-name="Monitor" aria-controls="monitor" aria-expanded="false" data-qa-menu-item="Monitor" class="super-sidebar-nav-item gl-relative gl-mb-1 gl-flex gl-w-full gl-appearance-none gl-items-center gl-gap-3 gl-rounded-base gl-border-0 gl-bg-transparent gl-p-2 gl-text-left gl-font-semibold !gl-text-default !gl-no-underline focus:gl-focus"><span class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><svg data-testid="monitor-icon" role="img" aria-hidden="true" class="super-sidebar-nav-item-icon gl-m-auto gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#monitor"></use></svg></span> <span class="gl-truncate-end menu-section-button-label gl-grow">
+      Monitor
+    </span> <span class="gl-mr-2 gl-text-right gl-text-subtle"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="gl-animated-icon gl-animated-icon-off gl-animated-icon-current"><path d="M6.75 4.75L10 8L6.75 11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="gl-animated-chevron-right-down-arrow"></path></svg></span></button> <!----> <div class="gl-m-0 gl-list-none gl-p-0 gl-duration-medium gl-ease-ease collapse" style="display: none;" id="monitor" data-testid="menu-section" data-qa-section-name="Monitor"><ul aria-label="Monitor" class="gl-m-0 gl-list-none gl-p-0"><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/incidents" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base" data-testid="nav-item-link" aria-label="Incidents" data-track-action="click_menu_item" data-track-label="incidents" data-track-property="nav_panel_project" data-qa-submenu-item="Incidents"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Incidents
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/issues/service_desk" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base" data-testid="nav-item-link" aria-label="Service Desk" data-track-action="click_menu_item" data-track-label="service_desk" data-track-property="nav_panel_project" data-qa-submenu-item="Service Desk"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Service Desk
+      <!----></div>  <!----></a> <!----></li></ul></div></li><li><button id="menu-section-button-analyze" data-testid="menu-section-button" data-qa-section-name="Analyze" aria-controls="analyze" aria-expanded="false" data-qa-menu-item="Analyze" class="super-sidebar-nav-item gl-relative gl-mb-1 gl-flex gl-w-full gl-appearance-none gl-items-center gl-gap-3 gl-rounded-base gl-border-0 gl-bg-transparent gl-p-2 gl-text-left gl-font-semibold !gl-text-default !gl-no-underline focus:gl-focus"><span class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><svg data-testid="chart-icon" role="img" aria-hidden="true" class="super-sidebar-nav-item-icon gl-m-auto gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#chart"></use></svg></span> <span class="gl-truncate-end menu-section-button-label gl-grow">
+      Analyze
+    </span> <span class="gl-mr-2 gl-text-right gl-text-subtle"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="gl-animated-icon gl-animated-icon-off gl-animated-icon-current"><path d="M6.75 4.75L10 8L6.75 11.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="gl-animated-chevron-right-down-arrow"></path></svg></span></button> <!----> <div class="gl-m-0 gl-list-none gl-p-0 gl-duration-medium gl-ease-ease collapse" style="display: none;" id="analyze" data-testid="menu-section" data-qa-section-name="Analyze"><ul aria-label="Analyze" class="gl-m-0 gl-list-none gl-p-0"><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/value_stream_analytics" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-project-cycle-analytics" data-testid="nav-item-link" aria-label="Value stream analytics" data-track-action="click_menu_item" data-track-label="cycle_analytics" data-track-property="nav_panel_project" data-qa-submenu-item="Value stream analytics"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Value stream analytics
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/graphs/master?ref_type=heads" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base" data-testid="nav-item-link" aria-label="Contributor analytics" data-track-action="click_menu_item" data-track-label="contributors" data-track-property="nav_panel_project" data-qa-submenu-item="Contributor analytics"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Contributor analytics
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/pipelines/charts" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base" data-testid="nav-item-link" aria-label="CI/CD analytics" data-track-action="click_menu_item" data-track-label="ci_cd_analytics" data-track-property="nav_panel_project" data-qa-submenu-item="CI/CD analytics"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      CI/CD analytics
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/graphs/master/charts" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base shortcuts-repository-charts" data-testid="nav-item-link" aria-label="Repository analytics" data-track-action="click_menu_item" data-track-label="repository_analytics" data-track-property="nav_panel_project" data-qa-submenu-item="Repository analytics"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Repository analytics
+      <!----></div>  <!----></a> <!----></li><li data-testid="nav-item" class="show-on-focus-or-hover--context hide-on-focus-or-hover--context transition-opacity-on-hover--context gl-relative"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/ml/experiments" class="super-sidebar-nav-item show-on-focus-or-hover--control hide-on-focus-or-hover--control gl-relative gl-mb-1 gl-flex gl-items-center gl-gap-3 gl-py-2 gl-font-semibold gl-text-default !gl-no-underline focus:gl-focus-inset gl-px-2 gl-rounded-base" data-testid="nav-item-link" aria-label="Model experiments" data-track-action="click_menu_item" data-track-label="model_experiments" data-track-property="nav_panel_project" data-qa-submenu-item="Model experiments"><div class="gl-flex gl-h-6 gl-w-6 gl-shrink-0"><!----></div> <div data-testid="nav-item-link-label" class="gl-grow gl-text-default gl-break-anywhere nav-item-link-label">
+      Model experiments
+      <!----></div>  <!----></a> <!----></li></ul></div></li></ul></div> <div id="sidebar-portal-mount"></div> <div></div> <div class="bottom-scrim-wrapper"><div class="bottom-scrim"></div></div></div> <!----> <!----> <div class="gl-p-2"><div class="gl-flex gl-flex-col gl-justify-end"><div class="gl-flex gl-flex-col gl-gap-2 gl-mr-2"><!----> <div class="gl-disclosure-dropdown super-sidebar-help-center-dropdown gl-new-dropdown !gl-block"><div id="dropdown-toggle-btn-4" data-testid="base-dropdown-toggle" class="gl-new-dropdown-custom-toggle"><button data-testid="sidebar-help-button" type="button" class="super-sidebar-help-center-toggle super-sidebar-nav-item gl-w-full !gl-justify-start gl-gap-3 !gl-px-[0.375rem] !gl-py-2 gl-font-semibold btn gl-button btn-default btn-md btn-default-tertiary"><!----> <svg data-testid="question-o-icon" role="img" aria-hidden="true" class="gl-button-icon gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#question-o"></use></svg>  <span class="gl-button-text !gl-text-default">
+        Help
+       <!----></span></button></div> <div class="gl-new-dropdown-container"><div id="base-dropdown-6" data-testid="base-dropdown-menu" class="gl-new-dropdown-panel !gl-w-31"><div class="gl-new-dropdown-arrow"></div> <div class="gl-new-dropdown-inner">  <ul id="disclosure-5" aria-labelledby="dropdown-toggle-btn-4" data-testid="disclosure-content" tabindex="-1" class="gl-new-dropdown-contents"> <!----> <li><!----> <ul class="gl-mb-0 gl-list-none gl-pl-0"><li tabindex="0" data-testid="disclosure-dropdown-item" class="gl-new-dropdown-item"><a href="https://git.ok1kvk.cz/help" tabindex="-1" data-track-property="nav_help_menu" data-track-action="click_link" data-track-label="help" class="gl-new-dropdown-item-content"><span class="gl-new-dropdown-item-text-wrapper">
+          Help
+        </span></a></li><li tabindex="0" data-testid="disclosure-dropdown-item" class="gl-new-dropdown-item"><a href="https://about.gitlab.com/get-help/" tabindex="-1" data-track-property="nav_help_menu" data-track-action="click_link" data-track-label="support" class="gl-new-dropdown-item-content"><span class="gl-new-dropdown-item-text-wrapper">
+          Support
+        </span></a></li><li tabindex="0" data-testid="disclosure-dropdown-item" class="gl-new-dropdown-item"><a href="https://git.ok1kvk.cz/help/docs" tabindex="-1" data-track-property="nav_help_menu" data-track-action="click_link" data-track-label="gitlab_documentation" class="gl-new-dropdown-item-content"><span class="gl-new-dropdown-item-text-wrapper">
+          GitLab documentation
+        </span></a></li><li tabindex="0" data-testid="disclosure-dropdown-item" class="gl-new-dropdown-item"><a href="https://about.gitlab.com/pricing" tabindex="-1" data-track-property="nav_help_menu" data-track-action="click_link" data-track-label="compare_gitlab_plans" class="gl-new-dropdown-item-content"><span class="gl-new-dropdown-item-text-wrapper">
+          Compare GitLab plans
+        </span></a></li><li tabindex="0" data-testid="disclosure-dropdown-item" class="gl-new-dropdown-item"><a href="https://forum.gitlab.com/" tabindex="-1" data-track-property="nav_help_menu" data-track-action="click_link" data-track-label="community_forum" class="gl-new-dropdown-item-content"><span class="gl-new-dropdown-item-text-wrapper">
+          GitLab community forum
+        </span></a></li><li tabindex="0" data-testid="disclosure-dropdown-item" class="gl-new-dropdown-item"><a href="https://contributors.gitlab.com/" tabindex="-1" data-track-property="nav_help_menu" data-track-action="click_link" data-track-label="contribute_to_gitlab" class="gl-new-dropdown-item-content"><span class="gl-new-dropdown-item-text-wrapper">
+          Contribute to GitLab
+        </span></a></li><li tabindex="0" data-testid="disclosure-dropdown-item" class="gl-new-dropdown-item"><a href="https://about.gitlab.com/submit-feedback" tabindex="-1" data-track-property="nav_help_menu" data-track-action="click_link" data-track-label="submit_feedback" class="gl-new-dropdown-item-content"><span class="gl-new-dropdown-item-text-wrapper">
+          Provide feedback
+        </span></a></li></ul></li> <li class="gl-border-t gl-border-t-dropdown-divider gl-pt-2 gl-mt-2"><!----> <ul class="gl-mb-0 gl-list-none gl-pl-0"><li tabindex="0" data-testid="disclosure-dropdown-item" class="gl-new-dropdown-item"><button tabindex="-1" data-track-action="click_button" data-track-label="keyboard_shortcuts_help" data-track-property="nav_help_menu" type="button" class="gl-new-dropdown-item-content js-shortcuts-modal-trigger"><span class="gl-new-dropdown-item-text-wrapper"><span class="-gl-my-1 gl-flex gl-items-center gl-justify-between">
+          Keyboard shortcuts
+          <kbd aria-hidden="true" class="flat">?</kbd></span></span></button></li></ul></li></ul> </div></div></div></div></div> <!----></div></div> <!----></div></nav> <a href="https://git.ok1kvk.cz/explore/snippets" class="gl-hidden dashboard-shortcuts-snippets">
+    Snippets
+  </a><a href="https://git.ok1kvk.cz/explore/groups" class="gl-hidden dashboard-shortcuts-groups">
+    Groups
+  </a><a href="https://git.ok1kvk.cz/explore/projects/starred" class="gl-hidden dashboard-shortcuts-projects">
+    Projects
+  </a> <!----> <!----></div>
+
+
+<div class="content-wrapper">
+<div class="broadcast-wrapper">
+
+
+
+</div>
+<div class="alert-wrapper alert-wrapper-top-space gl-flex gl-flex-col gl-gap-3 container-fluid container-limited">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="top-bar-fixed container-fluid" data-testid="top-bar">
+<div class="top-bar-container gl-flex gl-items-center gl-gap-2">
+<div class="gl-grow gl-basis-0 gl-flex gl-items-center gl-justify-start gl-gap-3">
+<button aria-controls="super-sidebar" aria-expanded="false" aria-label="Primary navigation sidebar" type="button" class="btn gl-button btn-default btn-md btn-default-tertiary btn-icon gl-button btn btn-icon btn-md btn-default btn-default-tertiary js-super-sidebar-toggle-expand super-sidebar-toggle -gl-ml-3"><!----> <svg data-testid="sidebar-icon" role="img" aria-hidden="true" class="gl-button-icon gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#sidebar"></use></svg>  <!----></button>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Michal Rybka","item":"https://git.ok1kvk.cz/RybkaLabs"},{"@type":"ListItem","position":2,"name":"LNA QPL9547 v1.0","item":"https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0"}]}
+
+
+</script>
+<div data-testid="breadcrumb-links" id="js-vue-page-breadcrumbs-wrapper">
+<nav aria-label="Breadcrumb" class="gl-breadcrumbs" style=""><ol class="gl-breadcrumb-list breadcrumb"><!----> <li class="gl-breadcrumb-item gl-breadcrumb-item-sm"><a href="https://git.ok1kvk.cz/RybkaLabs" class=""><!----><span class="gl-align-middle">Michal Rybka</span></a></li><li class="gl-breadcrumb-item gl-breadcrumb-item-sm"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0" aria-current="page" class=""><img src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/qlp9547.png" alt="avatar" class="gl-breadcrumb-avatar-tile gl-border gl-mr-2 !gl-rounded-default gl-avatar gl-avatar-s16" aria-hidden="true" data-testid="avatar"><span class="gl-align-middle">LNA QPL9547 v1.0</span></a></li></ol></nav>
+<div id="js-injected-page-breadcrumbs"></div>
+<div id="js-page-breadcrumbs-extra"></div>
+</div>
+
+
+</div>
+
+</div>
+</div>
+
+<div class="container-fluid container-limited project-highlight-puc">
+<main class="content" id="content-body" itemscope="" itemtype="http://schema.org/SoftwareSourceCode">
+<div id="js-drawer-container"></div>
+<div class="flash-container flash-container-page sticky" data-testid="flash-container">
+<!---->
+</div>
+
+
+
+
+
+
+
+
+
+
+<header class="project-home-panel js-show-on-project-root gl-mt-5">
+<div class="gl-flex gl-justify-between gl-flex-wrap gl-flex-col gl-gap-5 gl-pl-4 @sm/panel:gl-flex-row">
+<div class="home-panel-title-row gl-flex gl-items-center">
+<img srcset="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/qlp9547_003.png 1x, Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/qlp9547_002.png 2x" class="gl-avatar gl-avatar-s48 gl-self-start gl-shrink-0 gl-mr-4 !gl-rounded-base" height="48" width="48" loading="lazy" itemprop="image" alt="LNA QPL9547 v1.0" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/qlp9547_003.png">
+
+<h1 class="home-panel-title gl-heading-1 gl-flex gl-items-center gl-flex-wrap gl-gap-3 gl-break-anywhere gl-mb-0" data-testid="project-name-content" itemprop="name">
+LNA QPL9547 v1.0
+<button class="has-tooltip gl-border-0 gl-bg-transparent gl-p-0 gl-leading-0 gl-text-inherit visibility-icon gl-inline-flex" data-container="body" data-placement="top" title="Public - The project can be accessed without any authentication." type="button" aria-label="Public - The project can be accessed without any authentication."><svg class="s16 gl-fill-icon-subtle" data-testid="earth-icon"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#earth"></use></svg></button>
+
+</h1>
+</div>
+<div class="gl-justify-content-md-end project-repo-buttons gl-flex gl-flex-wrap gl-items-center gl-gap-3"><!----> <!----> <div role="group" class="gl-button-group btn-group"><a href="https://git.ok1kvk.cz/users/sign_in?redirect_to_referer=yes" data-testid="star-button" title="You must sign in to star a project" class="star-btn btn gl-button btn-default btn-md"><!----> <!---->  <span class="gl-button-text"><svg data-testid="star-o-icon" role="img" aria-hidden="true" class="gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#star-o"></use></svg>
+    Star
+   <!----></span></a> <a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/starrers" data-testid="star-count" title="Starrers" class="star-count btn gl-button btn-default btn-md"><!----> <!---->  <span class="gl-button-text">
+    0
+   <!----></span></a></div> <!----> <span itemprop="identifier" data-testid="project-id-content" class="gl-sr-only">
+      Project ID: 369
+    </span> <div class="gl-disclosure-dropdown gl-new-dropdown" data-testid="groups-projects-more-actions-dropdown"><button id="dropdown-toggle-btn-17" data-testid="base-dropdown-toggle" aria-expanded="false" aria-controls="base-dropdown-19" type="button" class="btn gl-button btn-default btn-md btn-default-tertiary gl-new-dropdown-toggle gl-new-dropdown-icon-only btn-icon gl-new-dropdown-toggle-no-caret"><!----> <svg data-testid="ellipsis_v-icon" role="img" aria-hidden="true" class="gl-button-icon gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#ellipsis_v"></use></svg>  <span class="gl-button-text"><span class="gl-new-dropdown-button-text gl-sr-only">
+        More actions
+      </span> <!----> <!----></span></button> <div class="gl-new-dropdown-container"><div id="base-dropdown-19" data-testid="base-dropdown-menu" class="gl-new-dropdown-panel !gl-w-31"><div class="gl-new-dropdown-arrow"></div> <div class="gl-new-dropdown-inner">  <ul id="disclosure-18" aria-labelledby="dropdown-toggle-btn-17" data-testid="disclosure-content" tabindex="-1" class="gl-new-dropdown-contents"><li tabindex="0" data-testid="disclosure-dropdown-item" class="gl-new-dropdown-item" data-clipboard-text="369"><button tabindex="-1" data-testid="copy-project-id" type="button" class="gl-new-dropdown-item-content"><span class="gl-new-dropdown-item-text-wrapper">
+          Copy project ID: 369
+        </span></button></li> <!----> <!----></ul> </div></div></div></div></div>
+</div>
+
+</header>
+
+<div class="project-page-indicator js-show-on-project-root"></div>
+<div class="project-page-layout">
+<div class="project-page-layout-sidebar js-show-on-project-root gl-mt-5 @max-lg/panel:gl-pl-4">
+<aside class="project-page-sidebar" data-testid="project-page-sidebar">
+<div class="project-page-sidebar-block home-panel-home-desc gl-py-4 gl-border-b gl-border-b-subtle !gl-pt-2">
+<h2 class="gl-text-base gl-font-bold gl-leading-reset gl-text-heading gl-m-0 gl-mb-1">Project information</h2>
+<div class="home-panel-description gl-break-words">
+<div class="home-panel-description-markdown read-more-container" data-read-more-height="320" itemprop="description" style="--read-more-height: 320px;">
+<div class="read-more-content">
+<p data-sourcepos="1:1-1:74" dir="auto">Low Noise Amplifier with QPL9547 with ultra low noise LDO to 5V DC supply.</p>
+</div>
+
+</div>
+</div>
+</div>
+<div class="project-page-sidebar-block gl-py-4 gl-border-b gl-border-b-subtle">
+<nav class="project-stats">
+<ul class="nav gl-gap-y-2 gl-gap-x-5">
+<li class="nav-item">
+<a class="nav-link stat-link !gl-px-0 !gl-pb-2" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/commits/master"><svg class="s16 gl-fill-icon-subtle gl-mr-3" data-testid="commit-icon"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#commit"></use></svg><strong class="project-stat-value">23</strong> Commits</a>
+</li>
+<li class="nav-item">
+<a class="nav-link stat-link !gl-px-0 !gl-pb-2" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/branches"><svg class="s16 gl-fill-icon-subtle gl-mr-3" data-testid="branch-icon"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#branch"></use></svg><strong class="project-stat-value">1</strong> Branch</a>
+</li>
+<li class="nav-item">
+<a class="nav-link stat-link !gl-px-0 !gl-pb-2" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/tags"><svg class="s16 gl-fill-icon-subtle gl-mr-3" data-testid="label-icon"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#label"></use></svg><strong class="project-stat-value">0</strong> Tags</a>
+</li>
+</ul>
+
+</nav>
+</div>
+<div class="project-page-sidebar-block gl-py-4 gl-border-b gl-border-b-subtle">
+<div class="project-buttons gl-mb-2 js-show-on-project-root" data-testid="project-buttons">
+<ul class="nav gl-gap-y-2 gl-gap-x-5">
+<li class="nav-item">
+<a class="nav-link stat-link !gl-px-0 !gl-pb-2 btn-default" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/blob/master/README.md"><svg class="s16 gl-fill-icon-subtle gl-mr-3" data-testid="doc-text-icon"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#doc-text"></use></svg>README</a>
+</li>
+</ul>
+
+</div>
+</div>
+
+<div class="project-page-sidebar-block gl-py-4">
+<p class="gl-font-bold gl-text-strong gl-m-0 gl-mb-1">Created on</p>
+<span>March 23, 2021</span>
+</div>
+</aside>
+
+</div>
+<div class="project-page-layout-content">
+<div class="project-show-files">
+<div class="tree-holder gl-clearfix js-per-page gl-mt-5" data-blame-per-page="1000" id="tree-holder">
+<section class="gl-items-center gl-justify-between @sm/panel:gl-flex"><div class="tree-ref-container !gl-mb-3 gl-flex gl-flex-wrap gl-gap-3 @md/panel:!gl-mb-0"><!----> <div class="tree-ref-holder gl-max-w-26"><div class="ref-selector gl-w-full gl-new-dropdown !gl-block" data-testid="ref-dropdown-container"><button id="dropdown-toggle-btn-22" data-testid="base-dropdown-toggle" aria-haspopup="listbox" aria-expanded="false" aria-controls="base-dropdown-23" type="button" class="btn gl-button btn-default btn-md btn-block gl-font-monospace gl-mb-0 gl-new-dropdown-toggle"><!----> <svg data-testid="branch-icon" role="img" aria-hidden="true" class="gl-button-icon gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#branch"></use></svg>  <span class="gl-button-text gl-w-full"><span class="gl-new-dropdown-button-text">
+        master
+      </span> <svg data-testid="chevron-down-icon" role="img" aria-hidden="true" class="gl-button-icon gl-new-dropdown-chevron gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#chevron-down"></use></svg> <!----></span></button> <div class="gl-new-dropdown-container"><div id="base-dropdown-23" data-testid="base-dropdown-menu" class="gl-new-dropdown-panel !gl-w-31"><div class="gl-new-dropdown-arrow"></div> <div class="gl-new-dropdown-inner"><div class="gl-flex gl-min-h-8 gl-items-center !gl-p-4 gl-border-b-1 gl-border-b-solid gl-border-b-dropdown-divider"><div id="listbox-header-24" data-testid="listbox-header-text" class="gl-grow gl-pr-2 gl-text-sm gl-font-bold gl-text-strong">
+        Select Git revision
+      </div> <!----> <!----></div> <div class="gl-border-b-1 gl-border-b-solid gl-border-b-dropdown-divider"><div class="gl-listbox-search"><svg data-testid="search-sm-icon" role="img" aria-hidden="true" class="gl-listbox-search-icon gl-icon s12 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#search-sm"></use></svg> <input type="search" aria-label="Search by Git revision" placeholder="Search by Git revision" id="listbox-search-input-21" data-testid="listbox-search-input" role="combobox" aria-expanded="false" aria-controls="listbox-20" aria-haspopup="listbox" class="gl-listbox-search-input"> <!----></div> <!----></div> <div id="listbox-20" aria-labelledby="listbox-search-input-21" role="listbox" tabindex="0" class="gl-new-dropdown-contents gl-new-dropdown-contents-with-scrim-overlay gl-new-dropdown-contents"><div aria-hidden="true" data-testid="top-scrim" class="top-scrim-wrapper"><div class="top-scrim top-scrim-dark"></div></div> <div aria-hidden="true"></div> <ul role="group" aria-labelledby="gl-listbox-group-41" class="gl-mb-0 gl-pl-0"><li id="gl-listbox-group-41" role="presentation" class="gl-pb-2 gl-pl-4 gl-pt-3 gl-text-sm gl-font-bold gl-text-strong"><div class="gl-flex gl-items-center gl-justify-between gl-pb-1"><div>
+          Selected
+          <!----></div> <div title="Copy selected ref" data-testid="clipboard" data-clipboard-text="master" class="gl-mr-3 gl-cursor-pointer"><svg data-testid="copy-to-clipboard-icon" role="img" aria-hidden="true" class="gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#copy-to-clipboard"></use></svg></div></div></li>  <li role="option" tabindex="-1" aria-selected="true" class="gl-new-dropdown-item" id="listbox-item-40" data-testid="listbox-item-refs/heads/master"><span class="gl-new-dropdown-item-content"><svg data-testid="dropdown-item-checkbox" role="img" aria-hidden="true" class="gl-icon s16 gl-fill-current gl-new-dropdown-item-check-icon gl-mt-3 gl-self-start"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#mobile-issue-close"></use></svg> <span class="gl-new-dropdown-item-text-wrapper">
+      master
+      <span class="gl-badge badge badge-pill badge-info"><!----> <span class="gl-badge-content">default</span></span> <span class="gl-badge badge badge-pill badge-neutral" title="" size="sm"><!----> <span class="gl-badge-content">
+  protected
+</span></span></span></span></li></ul> <!----> <!----> <div aria-hidden="true"></div> <div aria-hidden="true" data-testid="bottom-scrim" class="bottom-scrim-wrapper"><div class="bottom-scrim !gl-rounded-none"></div></div></div> <span aria-live="assertive" data-testid="listbox-number-of-results" class="gl-sr-only">
+        1 result
+      </span> <!---->  </div></div></div></div> <!----></div> <div class="repo-breadcrumb gl-flex gl-w-full gl-justify-between @sm/panel:gl-w-auto js-repo-breadcrumbs"><nav aria-label="Files breadcrumb" class="gl-breadcrumbs breadcrumb-item" style=""><ol data-current-path="" class="gl-breadcrumb-list breadcrumb"><!----> <li class="gl-breadcrumb-item gl-breadcrumb-item-md gl-breadcrumb-only-item"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/tree/master" class=""><!----><span class="gl-align-middle">LNA-QPL9547-v1.0</span></a></li></ol></nav> <!----></div></div> <div class="gl-flex gl-flex-col gl-items-stretch gl-justify-end @sm/panel:gl-flex-row @sm/panel:gl-items-center @sm/panel:gl-gap-5"><!----> <div data-testid="tree-controls-container" class="tree-controls gl-mb-3 gl-flex gl-flex-wrap gl-gap-3 @sm/panel:gl-mb-0"><div class="gl-hidden @sm/panel:gl-block"><!----> <!----> <!----></div> <!----> <button aria-keyshortcuts="t" data-testid="tree-find-file-control" type="button" class="btn gl-button btn-default btn-md gl-w-full @sm/panel:gl-w-auto"><!----> <!---->  <span class="gl-button-text">
+        Find file
+       <!----></span></button> <!----> <div class="project-code-holder gl-w-full @sm/panel:gl-w-auto"><div class="gl-flex gl-justify-end gl-gap-3"><div class="@sm/panel:gl-hidden"><!----> <!----> <!----></div> <div class="gl-disclosure-dropdown code-dropdown gl-ml-auto gl-new-dropdown" data-testid="code-dropdown" project-id="369" project-path="RybkaLabs/LNA-QPL9547-v1.0" git-ref="master"><button id="dropdown-toggle-btn-31" data-testid="base-dropdown-toggle" aria-expanded="false" aria-controls="base-dropdown-33" type="button" class="btn gl-button btn-confirm btn-md gl-new-dropdown-toggle"><!----> <!---->  <span class="gl-button-text"><span class="gl-new-dropdown-button-text">
+        Code
+      </span> <svg data-testid="chevron-down-icon" role="img" aria-hidden="true" class="gl-button-icon gl-new-dropdown-chevron gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#chevron-down"></use></svg> <!----></span></button> <div class="gl-new-dropdown-container"><div id="base-dropdown-33" data-testid="base-dropdown-menu" class="gl-new-dropdown-panel"><div class="gl-new-dropdown-arrow"></div> <div class="gl-new-dropdown-inner">  <ul id="disclosure-32" aria-labelledby="dropdown-toggle-btn-31" data-testid="disclosure-content" tabindex="-1" class="gl-new-dropdown-contents"><li><!----> <ul class="gl-mb-0 gl-list-none gl-pl-0"><li tabindex="0" data-testid="disclosure-dropdown-item" class="gl-new-dropdown-item"><div role="group" class="form-group gl-form-group gl-mb-3 gl-px-3 gl-text-left" id="__BVID__281"><label for="copy-ssh-url-input" class="!gl-block !gl-text-sm !gl-pt-2 col-form-label" id="__BVID__281__BV_label_">
+      Clone with SSH
+      <!----> <!----></label><div><div role="group" class="input-group"><!----> <input id="copy-ssh-url-input" name="ssh_project_clone" type="text" readonly="readonly" class="gl-form-input form-control" aria-label="Clone with SSH" data-testid="copy-ssh-url-input" value="git@git.ok1kvk.cz:RybkaLabs/LNA-QPL9547-v1.0.git"> <div class="input-group-append"><button title="Copy URL" aria-label="Copy URL" data-clipboard-text="git@git.ok1kvk.cz:RybkaLabs/LNA-QPL9547-v1.0.git" data-testid="copy-ssh-url-button" type="button" class="gl-inline-flex btn gl-button btn-default btn-md btn-icon"><!----> <svg data-testid="copy-to-clipboard-icon" role="img" aria-hidden="true" class="gl-button-icon gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#copy-to-clipboard"></use></svg>  <!----></button></div></div><!----><!----><!----></div></div></li></ul></li> <li class="gl-border-t gl-border-t-dropdown-divider gl-pt-2 gl-mt-2"><!----> <ul class="gl-mb-0 gl-list-none gl-pl-0"><li tabindex="0" data-testid="disclosure-dropdown-item" class="gl-new-dropdown-item"><div role="group" class="form-group gl-form-group gl-mb-3 gl-px-3 gl-text-left" id="__BVID__291"><label for="copy-http-url-input" class="!gl-block !gl-text-sm !gl-pt-2 col-form-label" id="__BVID__291__BV_label_">
+      Clone with HTTPS
+      <!----> <!----></label><div><div role="group" class="input-group"><!----> <input id="copy-http-url-input" name="http_project_clone" type="text" readonly="readonly" class="gl-form-input form-control" aria-label="Clone with HTTPS" data-testid="copy-http-url-input" value="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0.git"> <div class="input-group-append"><button title="Copy URL" aria-label="Copy URL" data-clipboard-text="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0.git" data-testid="copy-http-url-button" type="button" class="gl-inline-flex btn gl-button btn-default btn-md btn-icon"><!----> <svg data-testid="copy-to-clipboard-icon" role="img" aria-hidden="true" class="gl-button-icon gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#copy-to-clipboard"></use></svg>  <!----></button></div></div><!----><!----><!----></div></div></li></ul></li> <!----> <li class="gl-border-t gl-border-t-dropdown-divider gl-pt-2 gl-mt-2"><div id="gl-disclosure-dropdown-group-36" class="gl-py-2 gl-pl-4 gl-text-sm gl-font-bold gl-text-strong">Open with</div> <ul aria-labelledby="gl-disclosure-dropdown-group-36" class="gl-mb-0 gl-list-none gl-pl-0"> <li tabindex="0" data-testid="disclosure-dropdown-item" class="gl-mb-3 gl-flex gl-w-full gl-items-center gl-justify-between gl-px-4 gl-py-2 gl-new-dropdown-item" label="Open with"><span class="gl-min-w-0">Visual Studio Code</span> <div role="group" class="gl-button-group btn-group"><a target="_blank" href="vscode://vscode.git/clone?url=git%40git.ok1kvk.cz%3ARybkaLabs%2FLNA-QPL9547-v1.0.git" class="btn gl-button btn-default btn-sm"><!----> <!---->  <span class="gl-button-text">
+      SSH
+     <!----></span></a><a target="_blank" href="vscode://vscode.git/clone?url=https%3A%2F%2Fgit.ok1kvk.cz%2FRybkaLabs%2FLNA-QPL9547-v1.0.git" class="btn gl-button btn-default btn-sm"><!----> <!---->  <span class="gl-button-text">
+      HTTPS
+     <!----></span></a></div></li><li tabindex="0" data-testid="disclosure-dropdown-item" class="gl-mb-3 gl-flex gl-w-full gl-items-center gl-justify-between gl-px-4 gl-py-2 gl-new-dropdown-item" label="Open with"><span class="gl-min-w-0">IntelliJ IDEA</span> <div role="group" class="gl-button-group btn-group"><a target="_blank" href="jetbrains://idea/checkout/git?idea.required.plugins.id=Git4Idea&amp;checkout.repo=git%40git.ok1kvk.cz%3ARybkaLabs%2FLNA-QPL9547-v1.0.git" class="btn gl-button btn-default btn-sm"><!----> <!---->  <span class="gl-button-text">
+      SSH
+     <!----></span></a><a target="_blank" href="jetbrains://idea/checkout/git?idea.required.plugins.id=Git4Idea&amp;checkout.repo=https%3A%2F%2Fgit.ok1kvk.cz%2FRybkaLabs%2FLNA-QPL9547-v1.0.git" class="btn gl-button btn-default btn-sm"><!----> <!---->  <span class="gl-button-text">
+      HTTPS
+     <!----></span></a></div></li></ul></li> <li class="gl-border-t gl-border-t-dropdown-divider gl-pt-2 gl-mt-2"><div id="gl-disclosure-dropdown-group-37" class="gl-py-2 gl-pl-4 gl-text-sm gl-font-bold gl-text-strong">Download source code</div> <ul aria-labelledby="gl-disclosure-dropdown-group-37" class="gl-mb-0 gl-list-none gl-pl-0"> <li tabindex="0" data-testid="disclosure-dropdown-item" class="gl-px-3 gl-py-2 gl-new-dropdown-item"><div role="group" class="gl-w-full gl-button-group btn-group"><a rel="nofollow" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/archive/master/LNA-QPL9547-v1.0-master.zip?ref_type=heads" download="" class="btn gl-button btn-default btn-md"><!----> <!---->  <span class="gl-button-text">
+      zip
+     <!----></span></a><a rel="nofollow" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/archive/master/LNA-QPL9547-v1.0-master.tar.gz?ref_type=heads" download="" class="btn gl-button btn-default btn-md"><!----> <!---->  <span class="gl-button-text">
+      tar.gz
+     <!----></span></a><a rel="nofollow" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/archive/master/LNA-QPL9547-v1.0-master.tar.bz2?ref_type=heads" download="" class="btn gl-button btn-default btn-md"><!----> <!---->  <span class="gl-button-text">
+      tar.bz2
+     <!----></span></a><a rel="nofollow" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/archive/master/LNA-QPL9547-v1.0-master.tar?ref_type=heads" download="" class="btn gl-button btn-default btn-md"><!----> <!---->  <span class="gl-button-text">
+      tar
+     <!----></span></a></div></li></ul></li> <!----> </ul> </div></div></div></div> <div class="gl-disclosure-dropdown gl-new-dropdown" data-testid="repository-overflow-menu"><button id="dropdown-toggle-btn-28" data-testid="base-dropdown-toggle" aria-expanded="false" aria-controls="base-dropdown-30" type="button" class="btn gl-button btn-default btn-md btn-default-tertiary gl-new-dropdown-toggle gl-new-dropdown-icon-only btn-icon gl-new-dropdown-toggle-no-caret"><!----> <svg data-testid="ellipsis_v-icon" role="img" aria-hidden="true" class="gl-button-icon gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#ellipsis_v"></use></svg>  <span class="gl-button-text"><span class="gl-new-dropdown-button-text gl-sr-only">
+        Actions
+      </span> <!----> <!----></span></button> <div class="gl-new-dropdown-container"><div id="base-dropdown-30" data-testid="base-dropdown-menu" class="gl-new-dropdown-panel !gl-w-31"><div class="gl-new-dropdown-arrow"></div> <div class="gl-new-dropdown-inner">  <div id="disclosure-29" aria-labelledby="dropdown-toggle-btn-28" data-testid="disclosure-content" tabindex="-1" class="gl-new-dropdown-contents"><li tabindex="0" data-testid="permalink" class="gl-new-dropdown-item" aria-keyshortcuts="y" data-clipboard-text="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/tree/11f6eae98b664073353762069ff4459fa7f22e56/" data-clipboard-handle-tooltip="false"><button tabindex="-1" type="button" class="gl-new-dropdown-item-content"><span class="gl-new-dropdown-item-text-wrapper"><span class="gl-flex gl-items-center gl-justify-between"><span>Copy permalink</span> <kbd class="flat">y</kbd></span></span></button></li> <!----></div> </div></div></div></div></div></div></div> <!----></div></section>
+<div class="info-well project-last-commit gl-mt-5">
+<div><div class="well-segment commit gl-flex gl-w-full !gl-px-5 !gl-py-4 gl-hidden @sm/panel:gl-flex"><a href="https://git.ok1kvk.cz/RybkaLabs" data-username="" class="gl-avatar-link user-avatar-link js-user-link gl-my-2 gl-mr-3 gl-link gl-link-meta"><span class=""><img src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/avatar.png" alt="Michal Rybka's avatar" class="gl-bg-cover gl-avatar gl-avatar-circle gl-avatar-s32" data-src="/uploads/-/system/user/avatar/12/avatar.png?width=64" data-testid="user-avatar-image"><!----></span> <!----> </a> <div class="commit-detail flex-list gl-flex gl-min-w-0 gl-grow"><div data-testid="commit-content" class="commit-content gl-inline-flex gl-w-full gl-flex-wrap gl-items-baseline"><div class="gl-inline-flex gl-basis-full gl-items-center gl-gap-x-3"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/commit/11f6eae98b664073353762069ff4459fa7f22e56" class="commit-row-message item-title gl-line-clamp-1 gl-whitespace-normal !gl-break-all gl-link">Update README.md</a> <!----></div> <div data-testid="committer" class="committer gl-basis-full gl-truncate gl-text-sm"><a href="https://git.ok1kvk.cz/RybkaLabs" class="commit-author-link js-user-link gl-link">
+              Michal Rybka</a> authored <time tabindex="0" title="April 20, 2021 at 6:50:13 PM GMT+2" aria-label="April 20, 2021 at 6:50:13 PM GMT+2" datetime="2021-04-20T16:50:13+00:00" class="">Apr 20, 2021</time></div> <!----></div> <div class="gl-grow"></div> <div class="commit-actions gl-my-2 gl-flex gl-items-start gl-gap-3"><!----> <!----> <div role="group" class="js-commit-sha-group gl-flex gl-items-center gl-button-group btn-group"><span data-testid="last-commit-id-label" class="gl-font-monospace dark:!gl-bg-strong btn gl-button btn-default btn-md btn btn-label"><!----> <!---->  <span class="gl-button-text">11f6eae9 <!----></span></span> <button id="clipboard-button-42" title="Copy commit SHA" data-clipboard-text="11f6eae98b664073353762069ff4459fa7f22e56" data-clipboard-handle-tooltip="false" aria-label="Copy commit SHA" aria-live="polite" type="button" class="input-group-text dark:!gl-border-l-section btn gl-button btn-default btn-md btn-default-secondary btn-icon"><!----> <svg data-testid="copy-to-clipboard-icon" role="img" aria-hidden="true" class="gl-button-icon gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#copy-to-clipboard"></use></svg>  <!----></button></div> <a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/commits/master?ref_type=HEADS" data-testid="last-commit-history" class="!gl-ml-0 btn gl-button btn-default btn-md btn-default-secondary"><!----> <!---->  <span class="gl-button-text">
+        History
+       <!----></span></a></div></div> <!----></div> <div class="well-segment !gl-px-4 !gl-py-3 gl-block !gl-border-t-0 @sm/panel:gl-hidden"><div class="gl-flex gl-flex-wrap gl-items-center gl-justify-between"><div class="gl-flex gl-items-center gl-gap-3 gl-text-sm"><a href="https://git.ok1kvk.cz/RybkaLabs" data-username="" class="gl-avatar-link user-avatar-link js-user-link gl-link gl-link-meta"><span class=""><img src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/avatar.png" alt="Michal Rybka's avatar" class="gl-bg-cover gl-avatar gl-avatar-circle gl-avatar-s32" data-src="/uploads/-/system/user/avatar/12/avatar.png?width=64" data-testid="user-avatar-image"><!----></span> <!----> </a> <a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/commit/11f6eae98b664073353762069ff4459fa7f22e56" class="commit-row-message item-title gl-line-clamp-1 gl-whitespace-normal !gl-break-all gl-link"><svg data-testid="commit-icon" role="img" aria-hidden="true" class="gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#commit"></use></svg>
+        11f6eae9
+      </a> <time tabindex="0" title="April 20, 2021 at 6:50:13 PM GMT+2" aria-label="April 20, 2021 at 6:50:13 PM GMT+2" datetime="2021-04-20T16:50:13+00:00" class="gl-text-subtle">Apr 20, 2021</time></div> <div class="gl-flex gl-items-center gl-gap-3"><button title="Toggle commit description" aria-label="Toggle commit description" data-testid="text-expander" type="button" class="text-expander btn gl-button btn-default btn-md btn-icon button-ellipsis-horizontal"><!----> <svg data-testid="ellipsis_h-icon" role="img" aria-hidden="true" class="gl-button-icon gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#ellipsis_h"></use></svg>  <!----></button> <a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/commits/master?ref_type=HEADS" data-testid="collapsible-commit-history" class="btn gl-button btn-default btn-sm"><!----> <!---->  <span class="gl-button-text">
+        History
+       <!----></span></a></div></div> <!----></div></div>
+</div>
+<div><div class="tree-content-holder"><div class="table-holder gl-border gl-rounded-base gl-border-section"><table aria-label="Files, directories, and submodules in the path / for commit reference master" aria-live="polite" data-testid="file-tree-table" class="table tree-table gl-table-fixed"><thead><tr><th id="name" scope="col">Name</th> <th id="last-commit" scope="col" class="gl-hidden @sm/panel:gl-table-cell">
+      Last commit
+    </th> <th id="last-update" scope="col" class="!gl-text-right">
+      Last update
+    </th></tr></thead> <tbody><!----> <tr data-event-tracking="click_file_list_on_repository_page" class="tree-item"><th scope="row" class="tree-item-file-name gl-relative gl-cursor-default gl-font-normal"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/tree/master/HW?ref_type=heads" class="tree-item-link gl-inline-flex gl-min-w-0 gl-max-w-full" title="HW" data-testid="file-name-link"><span class="gl-relative gl-mr-2 gl-text-secondary"><svg data-testid="folder-icon" role="img" aria-hidden="true" class="folder-icon gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#folder"></use></svg></span><span data-testid="truncate-end-container" title="HW" class="gl-truncate-component gl-min-w-0 gl-grow hover:gl-underline"><span class="gl-truncate-end">HW</span></span></a> <!----> <!----> <!----></th> <td class="tree-commit cursor-default gl-hidden @sm/panel:gl-table-cell"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/commit/dc299932517493b36acc60a5da9cb130f89e01e2" title="Correct name
+
+" class="str-truncated-100 tree-commit-link gl-text-subtle gl-link">Correct name</a> <div></div></td> <td class="tree-time-ago cursor-default gl-text-right gl-text-subtle"><div><time tabindex="0" title="March 27, 2021 at 2:03:17 PM GMT+1" aria-label="March 27, 2021 at 2:03:17 PM GMT+1" datetime="2021-03-27T14:03:17.000+01:00" class="">4 years ago</time></div> <!----></td></tr><tr data-event-tracking="click_file_list_on_repository_page" class="tree-item"><th scope="row" class="tree-item-file-name gl-relative gl-cursor-default gl-font-normal"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/tree/master/img?ref_type=heads" class="tree-item-link gl-inline-flex gl-min-w-0 gl-max-w-full" title="img" data-testid="file-name-link"><span class="gl-relative gl-mr-2 gl-text-secondary"><svg data-testid="folder-icon" role="img" aria-hidden="true" class="folder-icon gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#folder"></use></svg></span><span data-testid="truncate-end-container" title="img" class="gl-truncate-component gl-min-w-0 gl-grow hover:gl-underline"><span class="gl-truncate-end">img</span></span></a> <!----> <!----> <!----></th> <td class="tree-commit cursor-default gl-hidden @sm/panel:gl-table-cell"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/commit/f68725882b2f7a818c488d0065bf12b76260219a" title="add input
+
+" class="str-truncated-100 tree-commit-link gl-text-subtle gl-link">add input</a> <div></div></td> <td class="tree-time-ago cursor-default gl-text-right gl-text-subtle"><div><time tabindex="0" title="April 20, 2021 at 6:44:28 PM GMT+2" aria-label="April 20, 2021 at 6:44:28 PM GMT+2" datetime="2021-04-20T18:44:28.000+02:00" class="">4 years ago</time></div> <!----></td></tr><tr data-event-tracking="click_file_list_on_repository_page" class="tree-item"><th scope="row" class="tree-item-file-name gl-relative gl-cursor-default gl-font-normal"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/blob/master/LDO_TPS796x_Datasheet.pdf?ref_type=heads" class="tree-item-link gl-inline-flex gl-min-w-0 gl-max-w-full" title="LDO_TPS796x_Datasheet.pdf" data-testid="file-name-link"><span class="gl-relative gl-mr-2 gl-text-secondary"><svg class="s16 gl-relative file-icon"><use href="/assets/file_icons/file_icons-88a95467170997d6a4052c781684c8250847147987090747773c1ee27c513c5f.svg#pdf"></use></svg></span><span data-testid="truncate-end-container" title="LDO_TPS796x_Datasheet.pdf" class="gl-truncate-component gl-min-w-0 gl-grow hover:gl-underline"><span class="gl-truncate-end">LDO_TPS796x_Datasheet.pdf</span></span></a> <!----> <!----> <!----></th> <td class="tree-commit cursor-default gl-hidden @sm/panel:gl-table-cell"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/commit/68469e8cd5ba5ed745581328d7b4505b059a0c89" title="Change attenuator
+
+" class="str-truncated-100 tree-commit-link gl-text-subtle gl-link">Change attenuator</a> <div></div></td> <td class="tree-time-ago cursor-default gl-text-right gl-text-subtle"><div><time tabindex="0" title="March 25, 2021 at 10:43:51 AM GMT+1" aria-label="March 25, 2021 at 10:43:51 AM GMT+1" datetime="2021-03-25T10:43:51.000+01:00" class="">4 years ago</time></div> <!----></td></tr><tr data-event-tracking="click_file_list_on_repository_page" class="tree-item"><th scope="row" class="tree-item-file-name gl-relative gl-cursor-default gl-font-normal"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/blob/master/QPL9547_Datasheet.pdf?ref_type=heads" class="tree-item-link gl-inline-flex gl-min-w-0 gl-max-w-full" title="QPL9547_Datasheet.pdf" data-testid="file-name-link"><span class="gl-relative gl-mr-2 gl-text-secondary"><svg class="s16 gl-relative file-icon"><use href="/assets/file_icons/file_icons-88a95467170997d6a4052c781684c8250847147987090747773c1ee27c513c5f.svg#pdf"></use></svg></span><span data-testid="truncate-end-container" title="QPL9547_Datasheet.pdf" class="gl-truncate-component gl-min-w-0 gl-grow hover:gl-underline"><span class="gl-truncate-end">QPL9547_Datasheet.pdf</span></span></a> <!----> <!----> <!----></th> <td class="tree-commit cursor-default gl-hidden @sm/panel:gl-table-cell"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/commit/8382e1a86fcc12439b54d9b31d544aa1fb0dbb73" title="+ datasheet PDF
+
+" class="str-truncated-100 tree-commit-link gl-text-subtle gl-link">+ datasheet PDF</a> <div></div></td> <td class="tree-time-ago cursor-default gl-text-right gl-text-subtle"><div><time tabindex="0" title="March 24, 2021 at 1:52:50 AM GMT+1" aria-label="March 24, 2021 at 1:52:50 AM GMT+1" datetime="2021-03-24T01:52:50.000+01:00" class="">4 years ago</time></div> <!----></td></tr><tr data-event-tracking="click_file_list_on_repository_page" class="tree-item"><th scope="row" class="tree-item-file-name gl-relative gl-cursor-default gl-font-normal"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/blob/master/README.md?ref_type=heads" class="tree-item-link gl-inline-flex gl-min-w-0 gl-max-w-full" title="README.md" data-testid="file-name-link"><span class="gl-relative gl-mr-2 gl-text-secondary"><svg class="s16 gl-relative file-icon"><use href="/assets/file_icons/file_icons-88a95467170997d6a4052c781684c8250847147987090747773c1ee27c513c5f.svg#markdown"></use></svg></span><span data-testid="truncate-end-container" title="README.md" class="gl-truncate-component gl-min-w-0 gl-grow hover:gl-underline"><span class="gl-truncate-end">README.md</span></span></a> <!----> <!----> <!----></th> <td class="tree-commit cursor-default gl-hidden @sm/panel:gl-table-cell"><a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/commit/11f6eae98b664073353762069ff4459fa7f22e56" title="Update README.md" class="str-truncated-100 tree-commit-link gl-text-subtle gl-link">Update README.md</a> <div></div></td> <td class="tree-time-ago cursor-default gl-text-right gl-text-subtle"><div><time tabindex="0" title="April 20, 2021 at 6:50:13 PM GMT+2" aria-label="April 20, 2021 at 6:50:13 PM GMT+2" datetime="2021-04-20T16:50:13.000+00:00" class="">4 years ago</time></div> <!----></td></tr> <!----> <!----></tbody></table></div></div> <article class="file-holder limited-width-container readme-holder"><div class="js-file-title file-title-flex-parent"><div class="file-header-content"><svg data-testid="doc-text-icon" role="img" aria-hidden="true" class="gl-icon s16 gl-fill-current"><use href="/assets/icons-62cd41f10569bb5050df02409792752f47c042aa91f8d59f11b48b79e724f90d.svg#doc-text"></use></svg> <a href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/blob/master/README.md?ref_type=heads" class="gl-link"><strong>README.md</strong></a></div></div> <div data-testid="blob-viewer-content" itemprop="about" class="blob-viewer"><div><div class="blob-viewer" data-path="README.md" data-rich-type="markup">
+<div class="file-content js-markup-content md">
+<p data-sourcepos="1:1-1:75" dir="auto">EMC shield BOX  <a data-sourcepos="1:17-1:75" href="https://www.tme.eu/cz/details/271.16/stinene-krabicky/teko/" rel="nofollow noreferrer noopener" target="_blank">https://www.tme.eu/cz/details/271.16/stinene-krabicky/teko/</a></p>
+<p data-sourcepos="3:1-3:157" dir="auto">QPL9547 <a data-sourcepos="3:9-3:69" href="https://store.qorvo.com/products/detail/qpl9547-qorvo/675339/" rel="nofollow noreferrer noopener" target="_blank">https://store.qorvo.com/products/detail/qpl9547-qorvo/675339/</a> or <a data-sourcepos="3:74-3:157" href="https://cz.mouser.com/ProductDetail/Qorvo/QPL9547TR7?qs=7MVldsJ5UaxZMCnAEuCHXA%3D%3D" rel="nofollow noreferrer noopener" target="_blank">https://cz.mouser.com/ProductDetail/Qorvo/QPL9547TR7?qs=7MVldsJ5UaxZMCnAEuCHXA%3D%3D</a></p>
+<p data-sourcepos="5:1-5:17" dir="auto">PCB size 52x46 mm</p>
+<h2 data-sourcepos="7:1-7:27" dir="auto">
+<a href="#measurement-tnx-ok1vum" aria-hidden="true" class="anchor" id="user-content-measurement-tnx-ok1vum"></a>Measurement (TNX OK1VUM)</h2>
+<p data-sourcepos="8:1-9:80" dir="auto">144 MHz - Gain 26.21 dB, Noise figure 0.44 dB, P(in) 1dB compression -6 dBm<br data-sourcepos="8:76-8:78">
+432 MHz - Gain 24.60 dB, Noise figure <strong data-sourcepos="9:39-9:49">0.28 dB</strong>, P(in) 1dB compression -4 dBm</p>
+<h2 data-sourcepos="11:1-11:11" dir="auto">
+<a href="#shematic" aria-hidden="true" class="anchor" id="user-content-shematic"></a>Shematic</h2>
+<p data-sourcepos="12:1-12:24" dir="auto"><a class="no-attachment-icon gfm" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/raw/master/HW/SCH.png" rel="noopener noreferrer" target="_blank"><img data-sourcepos="12:1-12:24" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/SCH.png" alt="SCHEMATIC" decoding="async" class="gfm js-lazy-loaded" loading="lazy" data-testid="js-lazy-loaded-content"></a></p>
+<h2 data-sourcepos="14:1-14:15" dir="auto">
+<a href="#pcb-top-side" aria-hidden="true" class="anchor" id="user-content-pcb-top-side"></a>PCB Top Side</h2>
+<p data-sourcepos="15:1-15:22" dir="auto"><a class="no-attachment-icon gfm" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/raw/master/HW/PCB_TOP.png" rel="noopener noreferrer" target="_blank"><img data-sourcepos="15:1-15:22" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/PCB_TOP.png" alt="BOT" decoding="async" class="gfm js-lazy-loaded" loading="lazy" data-testid="js-lazy-loaded-content"></a></p>
+<h2 data-sourcepos="17:1-17:18" dir="auto">
+<a href="#pcb-bottom-side" aria-hidden="true" class="anchor" id="user-content-pcb-bottom-side"></a>PCB Bottom Side</h2>
+<p data-sourcepos="18:1-18:22" dir="auto"><a class="no-attachment-icon gfm" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/raw/master/HW/PCB_BOT.png" rel="noopener noreferrer" target="_blank"><img data-sourcepos="18:1-18:22" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/PCB_BOT.png" alt="TOP" decoding="async" class="gfm js-lazy-loaded" loading="lazy" data-testid="js-lazy-loaded-content"></a></p>
+<h2 data-sourcepos="20:1-20:9" dir="auto">
+<a href="#photos" aria-hidden="true" class="anchor" id="user-content-photos"></a>Photos</h2>
+<p data-sourcepos="21:1-28:19" dir="auto"><a class="no-attachment-icon gfm" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/raw/master/img/001.jpg" rel="noopener noreferrer" target="_blank"><img data-sourcepos="21:1-21:19" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/001.jpg" alt="001" decoding="async" class="gfm js-lazy-loaded" loading="lazy" data-testid="js-lazy-loaded-content"></a>
+<a class="no-attachment-icon gfm" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/raw/master/img/002.jpg" rel="noopener noreferrer" target="_blank"><img data-sourcepos="22:1-22:19" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/002.jpg" alt="002" decoding="async" class="gfm js-lazy-loaded" loading="lazy" data-testid="js-lazy-loaded-content"></a>
+<a class="no-attachment-icon gfm" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/raw/master/img/003.jpg" rel="noopener noreferrer" target="_blank"><img data-sourcepos="23:1-23:19" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/003.jpg" alt="003" decoding="async" class="gfm js-lazy-loaded" loading="lazy" data-testid="js-lazy-loaded-content"></a>
+<a class="no-attachment-icon gfm" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/raw/master/img/004.jpg" rel="noopener noreferrer" target="_blank"><img data-sourcepos="24:1-24:19" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/004.jpg" alt="004" decoding="async" class="gfm js-lazy-loaded" loading="lazy" data-testid="js-lazy-loaded-content"></a>
+<a class="no-attachment-icon gfm" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/raw/master/img/005.jpg" rel="noopener noreferrer" target="_blank"><img data-sourcepos="25:1-25:19" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/005.jpg" alt="005" decoding="async" class="gfm js-lazy-loaded" loading="lazy" data-testid="js-lazy-loaded-content"></a>
+<a class="no-attachment-icon gfm" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/raw/master/img/006.jpg" rel="noopener noreferrer" target="_blank"><img data-sourcepos="26:1-26:19" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/006.jpg" alt="006" decoding="async" class="gfm js-lazy-loaded" loading="lazy" data-testid="js-lazy-loaded-content"></a>
+<a class="no-attachment-icon gfm" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/raw/master/img/007.jpg" rel="noopener noreferrer" target="_blank"><img data-sourcepos="27:1-27:19" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/007.jpg" alt="007" decoding="async" class="gfm js-lazy-loaded" loading="lazy" data-testid="js-lazy-loaded-content"></a>
+<a class="no-attachment-icon gfm" href="https://git.ok1kvk.cz/RybkaLabs/LNA-QPL9547-v1.0/-/blob/master/img/008.jpg" rel="noopener noreferrer" target="_blank"><img data-sourcepos="28:1-28:19" src="Michal%20Rybka%20_%20LNA%20QPL9547%20v1.0%20%C2%B7%20GitLab_files/master.htm" alt="007" decoding="async" class="gfm js-lazy-loaded" loading="lazy" data-testid="js-lazy-loaded-content"></a></p>
+</div>
+
+</div>
+</div></div></article></div>
+
+</div>
+
+</div>
+</div>
+</div>
+
+</main>
+</div>
+
+
+</div>
+</div>
+
+
+<script nonce="">
+//<![CDATA[
+if ('loading' in HTMLImageElement.prototype) {
+  document.querySelectorAll('img.lazy').forEach(img => {
+    img.loading = 'lazy';
+    let imgUrl = img.dataset.src;
+    // Only adding width + height for avatars for now
+    if (imgUrl.indexOf('/avatar/') > -1 && imgUrl.indexOf('?') === -1) {
+      const targetWidth = img.getAttribute('width') || img.width;
+      imgUrl += `?width=${targetWidth}`;
+    }
+    img.src = imgUrl;
+    img.removeAttribute('data-src');
+    img.classList.remove('lazy');
+    img.classList.add('js-lazy-loaded');
+    img.dataset.testid = 'js-lazy-loaded-content';
+  });
+}
+
+//]]>
+</script>
+<script nonce="">
+//<![CDATA[
+gl = window.gl || {};
+gl.experiments = {};
+
+
+//]]>
+</script>
+
+
+
+
+<div></div><div></div></body></html>

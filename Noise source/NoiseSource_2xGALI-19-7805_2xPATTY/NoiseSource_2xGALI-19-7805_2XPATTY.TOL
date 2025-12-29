@@ -1,0 +1,10 @@
+T1 0.300000mm  83x [24.873750 | 7.660375]
+T2 3.200000mm  2x [9.600000 | 18.200000]
+
+; 2 Werkzeuge
+; 85 Bohrungen
+; Duennster Bohrer: 0.300000mm
+
+; Die angegebenen Durchmesser sind Endmaße.
+; Die wirklichen Bohrerdurchmesser müssen erfahrungsgemäß anders gewählt werden!
+

@@ -1,0 +1,102 @@
+/* colour v1.2 for tables
+   03.04.2025
+   Alexander C. Frank,
+   www.changpuak.ch
+*/
+
+.oben
+
+{
+color: #000000 ;
+background: #D8D9D8 ;
+}
+
+.mitte
+
+{
+color: #000000 ;
+background: #F3F3F3 ;
+}
+
+.titel
+
+{
+color: #FFFFFF ;
+background: #9E9E9E ;
+}
+
+.blu
+
+{
+color: #FFFFFF ;
+background: #4F66FB ;
+}
+
+
+
+.royal
+
+{
+background-image: url(https://www.changpuak.ch/aglobe/qs_bg.jpg);
+background-repeat: repeat;
+clear: both;
+-webkit-border-radius: 12px;
+-moz-border-radius: 12px;
+border-radius: 12px;
+}
+
+.grey
+
+{
+background-image: url(https://www.changpuak.ch/aglobe/qt_bg.jpg);
+background-repeat: repeat;
+clear: both;
+-webkit-border-radius: 12px;
+-moz-border-radius: 12px;
+border-radius: 12px;
+}
+
+
+input[readonly], input[readonly="readonly"] 
+
+{
+    background-color: #eee;
+    border: #ddd 1px solid;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;    
+	padding: 2px;
+    text-align: center;
+}
+
+form input[type="text"]
+{
+    border: #ddd 1px solid;
+    /* background-color: #ffffff; */
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;    
+	padding: 2px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+select 
+{
+    border: #dddddd 1px solid;
+    /* background-color: #ffffff; */
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;	padding: 2px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+
+
+
+
+

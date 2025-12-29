@@ -1,0 +1,39 @@
+Interdigital Bandpass Filter, based on work of Jerry Hinshaw,
+Shahrokh Monemzadeh (1985) and Dale Heatherington (1996).
+www.changpuak.ch/electronics/interdigital_bandpass_filter_designer.php
+Javascript Version : 09. Jan 2014
+-------------------------------------------------------------------------
+Design data for a 3 section interdigital bandpass filter.
+Center Frequency : 1090 MHz
+Passband Ripple : 0 dB
+System Impedance : 50 Ohm
+Cutoff Frequency : 1085 MHz and 1095 MHz
+Bandwidth (3dB) : 10 MHz
+Fractional Bandwidth : 9.2 MHz
+Filter Q : 109
+Estimated Qu : 2712.84
+Loss, based on this Qu : 0.698 dB
+Passband Delay : 63.662 ns
+-------------------------------------------------------------------------
+Quarter Wavelength : 68.76 mm or 2.707 inch
+Length interior Element : 61.15 mm or 2.407 inch
+Length of end Element : 61.49 mm or 2.421 inch
+Ground plane space : 30 mm or 1.181 inch
+Rod Diameter : 8 mm or 0.315 inch
+End plate to center of Rod : 15 mm or 0.591 inch
+Tap to shorted End : 2.79 mm or 0.110 inch
+Impedance end Rod : 88.549 Ohm
+Impedance inner Rod : 93.734 Ohm
+Impedance ext. line : 50.000 Ohm
+-------------------------------------------------------------------------
+**** Dimensions, mm (inch) ****
+#    End to Center    Center-Center    G[k]    Q/Coup
+0    0.00 (0.000)
+1    15.00 (0.591)    52.41 (2.063)    1.000    0.707
+2    67.41 (2.654)    52.41 (2.063)    2.000    0.707
+3    119.82 (4.717)    0.00 (0.000)    1.000    1.000
+4    134.82 (5.308)   
+**** Box inside dimensions ****
+Height : 68.76 mm or 2.707 inch
+Length : 134.82 mm or 5.308 inch
+Depth : 30.00 mm or 1.181 inch

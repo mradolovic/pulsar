@@ -1,0 +1,32 @@
+Our new cavity filter seems to work well.
+For those of you who want to build it, below are the dimensions. After failed attempts at trying to solder wires on the end rods, we removed part of the wall so that the sma pins directly goes into the end rods.
+
+Enclosure (internal dimensions):
+Height: 3.00 cm
+Width: 5.80 cm
+Length: 16.42 cm
+
+Resonator Rods:
+Diameter: 3/8 inch
+End resonators (1st and 5th): 4.88 cm long
+Interior resonators (2nd, 3rd, 4th): 4.63 cm long
+
+Resonator Positions (from left inner wall):
+They are symmetrical about the center of the enclosure.
+1.50 cm, 4.71 cm, 8.21 cm, 11.71 cm, 14.92 cm
+
+Tap Point:
+1.22 cm from the adjacent end wall
+
+Tuning screws:
+#10-32. Inserted 0.5 cm at their optimal tuning position.
+Minimum insertion loss requires a smooth surface and good conductors. The skin depth of copper / aluminum at 1.4 GHz is about 2 microns.
+
+
+Hi, how did you couple the SMA central pin to the first/last element? could you provide a closeup photo of this? Thanks! Thinking of designing a similar one for 422 MHz...
+We drilled a hole in the couple rod, and removed some of the outside wall so that the sma center pin directly attaches into the copper rod.
+Couple of mm, I presume?
+Yes, just a couple of mm.
+
+Is that Berilium Copper. Did you machine it round from cube stock?
+Possibly but I'm not sure. Our machinist had 3/8in rods in the machine shop, so I designed the filter in Feko based on that size of resonators.

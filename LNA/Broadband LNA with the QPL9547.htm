@@ -1,0 +1,1269 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+<!-- Meta Data -->
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>Broadband LNA with the QPL9547</title>
+<meta name="author" content="Alexander C. Frank, aka Changpuak">
+<meta name="description" content="Broadband LNA with the QPL9547 from Quorvo. 10 dB @ 6 GHz is not too shabby.">
+<meta name="keywords" content="Broadband,LNA,QPL9547,6 GHz,DIY,pcb,PCB,Low Noise,Amplifier,UHF,">
+<meta name="robots" content="index">
+<meta name="robots" content="follow">
+<meta name="revisit-after" content="10 days">
+<link rel="shortcut icon" href="https://www.changpuak.ch/electronics/favicon.ico">
+<!-- Style -->
+<link href="Broadband%20LNA%20with%20the%20QPL9547_files/easy_style.css" type="text/css" rel="stylesheet">
+<link href="Broadband%20LNA%20with%20the%20QPL9547_files/sidebar.css" type="text/css" rel="stylesheet">
+<link href="Broadband%20LNA%20with%20the%20QPL9547_files/table.css" type="text/css" rel="stylesheet">
+<!-- Javascript -->
+<script type="text/javascript" src="Broadband%20LNA%20with%20the%20QPL9547_files/sidebar.js"></script>
+<!--[if IE]><script language="javascript" type="text/javascript" src="javascript/excanvas.pack.js"></script><![endif]-->
+<script language="javascript" type="text/javascript" src="Broadband%20LNA%20with%20the%20QPL9547_files/jquery.js"></script>
+<script language="javascript" type="text/javascript" src="Broadband%20LNA%20with%20the%20QPL9547_files/jquery.flot.js"></script>
+<!-- facebook -->
+<meta property="fb:admins" content="changpuak">
+<meta property="fb:app_id" content="234314026587324">
+<meta property="og:image" content="https://www.changpuak.ch/images/chang2.jpg">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="www.changpuak.ch">
+
+<meta property="og:url" content="https://www.changpuak.ch/electronics/Broadband_LNA_QPL9547.php">
+<meta property="og:title" content="Broadband LNA with the QPL9547">
+<script type="text/javascript" src="Broadband%20LNA%20with%20the%20QPL9547_files/genericCommentWrapper2.php"></script><script src="Broadband%20LNA%20with%20the%20QPL9547_files/comment-func.php" type="text/javascript"></script><script src="Broadband%20LNA%20with%20the%20QPL9547_files/comment-func_002.php" type="text/javascript"></script></head>
+
+
+<body>
+
+	
+<div id="page_wrapper">
+
+  <div id="page_header">
+    <table border="0">
+    <tbody><tr>
+    <td width="400"><a href="https://www.changpuak.ch/"><img src="Broadband%20LNA%20with%20the%20QPL9547_files/chang.png" alt="ช้างเผือก" border="0" width="160" height="80" style="margin-top:10px;">ช้างเผือก</a></td>
+
+    <td width="330">&nbsp;</td>
+    <td width="453" align="right">
+   		<div style="margin-top:47px;">
+		
+<div style="height:10px;"></div>
+
+<div id="cp-csebox">
+
+<form id="cp-cseform" action="https://www.changpuak.ch/search/cse.php" method="post">
+    <input type="text" id="s" name="q" value="Was guckst du • SEARCH • ค้นหา" onfocus='if (this.value == "Was guckst du • SEARCH • ค้นหา") {this.value = ""}' onblur='if (this.value == "") {this.value = "Was guckst du • SEARCH • ค้นหา";}'>
+    <input type="image" src="Broadband%20LNA%20with%20the%20QPL9547_files/blank.gif" id="sbutton">
+</form>
+
+</div>
+		</div>
+    </td>
+    </tr>
+    </tbody></table>
+  </div>
+  
+  
+  <div id="cssmenu">
+  
+		
+		<ul>
+		<li><a href="https://www.changpuak.ch/index.php"><b> Home </b></a></li>
+		<li><a href="https://www.changpuak.ch/author/index.php"><b> ช้างเผือก </b></a></li>
+		<li class="active"><a href="https://www.changpuak.ch/electronics/index.php"><b> Electronics </b></a></li>
+		<li><a href="https://www.changpuak.ch/bijoux/index.php"><b> Bijoux </b></a></li>
+		<li><a href="https://www.changpuak.ch/GALLERY/index.php"><b> Pictures </b></a></li>
+		<li><a href="https://www.changpuak.ch/Rezepte/index.php"><b> Foodlab </b></a></li>
+		<li><a href="https://www.changpuak.ch/links/index.php"><b> Links </b></a></li>
+		<li><a href="https://www.changpuak.ch/terms/index.php"><b> Terms </b></a></li>
+		<li><a href="https://www.changpuak.ch/contact/index.php"><b> Mail </b></a></li> 
+		<li class="last"><a href="https://www.changpuak.ch/login/index.php"><b> Login </b></a></li> 
+		</ul>
+
+  </div>
+  
+  
+  
+  
+  
+
+  <div style="height:5px;"></div>
+
+
+
+    <div id="content_wrapper">
+
+    <div id="left_side">
+    
+			<div class="headbox">
+			Categories
+			</div>		 	
+			<div class="contentbox">
+				<div id="navigation">
+	
+					<!-- MENUE BEGIN -->
+<ul class="top-level">
+
+<li><a href="#">Hua Hin Weather Station 🌤</a>
+	<ul class="sub-level">
+		<li><a href="#">coming soon ...</a></li>
+	</ul>
+</li>	
+
+<!-- --------------------------------------------------------------------------------------------------------------------------------------- -->
+
+<li><a href="#">Projects (Antiques) 🦖</a>
+	<ul class="sub-level">
+
+	<li><a href="https://www.changpuak.ch/electronics/proj_01.php">Eprom Wave Player</a></li>
+
+	<li><a href="#">Frequency Counters • Accessories</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/CETH-60-Counter.php">CETH-60 Frequency Counter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Mini-VHF-Frequency-Display.php">DIY Mini VHF Frequency Display</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/preamplifier.php">Preamplifier</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/prescaler.php">Prescaler : 1000 / 1.5 GHz</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/prescaler_12GHz.php">Prescaler : 1000 / 12 GHz</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/FA_17GHz_PRESCALER.php">Prescaler : 1000 / 17 GHz</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Arduino-24_GHz_Counter.php">Prescaler : 1000 / 24 GHz Counter (Arduino)</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Rubidium_Standard.php">Efratom LPR101 Rubidium Frequency Standard</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/OCXO.php">10 MHz OCXO</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Arduino-Daramod-Amplifier.php">Daramod - 10 MHz Distribution Amplifier</a></li>
+	</ul>
+	</li>
+
+	<li><a href="https://www.changpuak.ch/electronics/FG2206.php">Function Generator (with XR2206)</a>
+	</li><li><a href="https://www.changpuak.ch/electronics/VHF_Synthesiser_withAD9859.php">VHF Synthesiser with AD9859 :: 'RF-2859'</a></li>
+	<li><a href="https://www.changpuak.ch/electronics/Curve_Tracer.php">Curve Tracer (simple)</a></li>
+	<li><a href="https://www.changpuak.ch/electronics/Curve_Tracer_advanced.php">Curve Tracer (advanced)</a></li>
+	<li><a href="https://www.changpuak.ch/electronics/DCF77.php">DCF-77 Signal Generator (obsolete)</a></li>
+
+	<li><a href="#">RFID</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/RFID-READER-125kHz.php">125 kHz RFID Reader (obsolete)</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Arduino-Project-MrBean.php">125 kHz RFID Reader : CoffeeDuino</a></li>
+		<li><a href="#">13.56 MHz RFID Reader/Writer </a></li>
+	</ul>
+	</li>
+
+	</ul>
+</li>
+
+<li><a href="#">Micro Projects • Tools 🪓</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/LED-DigitalVoltmeterModule.php">Atmega8 LED Panelmeter (U,I,°C,°F)</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/CustomerCounter.php">Corona Customer Counter for a shop/place</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/LCD-Adaptor.php">LCD Adapter • Interface</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/MicrophonePreamplifier.php">Microphone Preamplifier</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/ROTARY-ENCODER.php">ROTARY ENCODER (STEC11B03)</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/SDR.php">SDRSharp and a DVB-T stick : a 20 EUR Spectrum Analyser ?</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/UART-RS232-Adapter.php">UART - RS232 Bridge (ST232CDR)</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/UART-USB-Adapter.php">UART - USB Bridge (MCP2200)</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/UART-XPORT-Adapter.php">UART - ETHERNET Bridge (LANTRONIX XPORT)</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/IR-GhettoBlaster.php">USB - InfraRed Transceiver</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/USB-PLL-Adapter.php">USB - PLL / DDS - Interface</a></li>	 
+
+
+
+	</ul>
+</li>
+
+<li><a href="#">Arduino Projects 🛸</a>
+	<ul class="sub-level">
+		<li><a href="#">Spectrum Analyzer • Measurement Receiver ➜</a>
+			<ul class="sub-level">		
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Project-VISIONARY.php">A DC-199 MHz Spectrum Analyser 'VISIONARY' with Si4432</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Project-SPECTRE.php">A 15-2700 MHz Spectrum Analyser with the RF Explorer 3G+</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-LevelMod.php">Levelmod - A DC to Daylight Microwave Powermeter</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-SmartPowerSensor.php">Micro Smart Power Sensor - with AD8319, TMP101</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Polarmod.php">Polarmod - An I-Q-Processor with the AD9958</a></li>			 
+			<li><a href="https://www.changpuak.ch/electronics/airband_receiver.php">VHF Airband Receiver with Si570 and AD8361</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-WACHARA1.php">Wacharamod - An FM Stereo Receiver with the TEA5767</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Wanmod.php">Wanmod, A Frequency Selective Levelmeter, 29.999 MHz</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">Network Analyzer ➜</a>
+			<ul class="sub-level">		
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-TOBI.php">Shield <i>TOBI</i> : A 60 MHz, 80dB Scalar Network Ananlyzer</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Tobimod.php">Arduino 400 MHz Scalar Network Analyzer 'Tobimod'</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">Frequency Counter • Frequency Standard ➜</a>
+			<ul class="sub-level">		
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Countermod.php">Countermod - 1 GHz Frequency Counter</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Daramod-Receiver.php">Daramod - 10 MHz GPS Receiver with the NEO-7N</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Daramod-Amplifier.php">Daramod - 10 MHz Distribution Amplifier</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-STANDARDMOD.php">Standardmod - A 10.000000 MHz OCXO</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">Low Frequency (AF) Generators ➜</a>
+			<ul class="sub-level">		
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-KILOMOD.php">Kilomod - 15 mHz ... 5 kHz TTL PWM Generator</a></li>
+			<li><a href="#">Mannmod - A PRBS Generator (soon)</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/AD9833-MicroWaveformGenerator.php">Micro USB Waveform Generator - with AD9833</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">High Frequency (RF) Synthesizer ➜</a>
+			<ul class="sub-level">		
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Kumod.php">Kumod - 1 MHz ... 200 MHz Synthesiser with the AD9958</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Si570.php">Micromod - A 220 MHz Synthesizer with the Si570</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/LMK61E2.php">Macromod - A 850 MHz Synthesizer with the LMK61E2</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Ningmod.php">Ningmod - A RF Synthesizer with the AD9953 + co-workers</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Sathanimod.php">Sathanimod - an FM Radiostation with the Si4713</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-SUPERMOD.php">Supermod - A 23.5 - 6000 MHz Synthesizer with the MAX2871</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-CHULA.php">Teramod - A 2 to 15 GHz Synthesizer</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-ULTRAMOD.php">Ultramod - A 9.9 - 3200 MHz Synthesizer with the Si564</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">Power Supplies • Voltage Standards ➜</a>
+			<ul class="sub-level">		
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Samroimod.php">Samroimod - 32 V, 1 A Linear</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Sungmod.php">Sungmod - 270 V, 1 mA Linear</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-SupplyMod.php">Supplymod - 20 V, 2 A Linear</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-SupplyMod-B.php">Supplymod-B. ±10 V, 0.5 A Linear</a></li>
+			<li><a href="#">Supplymod-P. 25 V, 2.5 A SMPS+Linear</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/PowerSupply-Thormod.php">Thormod, a Power Supply for Photodiodes</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">Measurement Devices • U • I • P • R • T ➜</a>
+			<ul class="sub-level">		
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Boots-5009.php">Multimod - Our tribute to the Schuh ASM 5007 Multimeter</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Nuumod.php">Nuumod - A Microvoltmeter with the LTC2400</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-PINGUMOD.php">Pingumod - A Power Monitor with the INA260</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">RF Switches • Attenuators ➜</a>
+			<ul class="sub-level">		
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Attamod.php">Attamod, a 2 GHz 60dB Attenuator with the F1958</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Switchmod-RF.php">Switchmod, A double SPDT RF Switch with the PE4250</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">Component Tester ➜</a>
+			<ul class="sub-level">		
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Diodemod.php">Diodemod : for DC Characterization of Photodiodes</a></li>			
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Ipamod_2022.php">Ipamod 2022 : A high Precision Digital Capacitance Meter</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Tanachaimod.php">Tanachaimod - a Bipolar Transistor Curve Tracer</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">Environmental Test System - Madimod ➜</a>
+			<ul class="sub-level">		
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Madimod-77110-I2C.php">Madimod : Basestation I2C</a></li>
+			<li><a href="#">Madimod : Basestation BNC</a></li>
+			<!-- ---------------------------------------------------- -->
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Madimod-MPL115A2.php">I2C Sensor Barometric Pressure MPL115A2</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Madimod-SCD30.php">I2C Sensor CO2 with the SCD30</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Madimod-DS18B20.php">I2C Sensor Temperature (liquids) DS18B20</a></li>
+			<!-- ---------------------------------------------------- -->
+			<li><a href="#">BNC Sensor Conductivity of Water</a></li>
+			<li><a href="#">BNC Sensor pH Value</a></li>
+			<li><a href="#">BNC Sensor Dissolved Oxygen</a></li>
+			<li><a href="#">BNC Sensor Total Dissolved Solids</a></li>
+			<!-- ---------------------------------------------------- -->
+			<!-- ---------------------------------------------------- -->
+			</ul>
+		</li>	
+		<li><a href="#">P-I-D and other Controllers ➜</a>
+			<ul class="sub-level">		
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Project-Ongmod.php">Ongmod : Temperature Controller </a></li>			
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Rotormod-TX.php">Rotormod (TX) : An Arduino based DiSEqC™ Controller</a></li>			
+			<li><a href="#">Rotormod (RX) : An Arduino based Servo Controller (FeeTech)</a></li>			
+			</ul>
+		</li>	
+
+		<li><a href="#">Other Shields for Arduino ➜</a>
+			<ul class="sub-level">		
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-BHUMI.php">Shield <i>BHUMI</i> : A Voltage Standard, programmeable</a></li>			 
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-CALCDUINO.php">CALC-DUINO, a simple Pocket Calculator Shield (MAX7219)</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-ClockToSchool.php">CLOCK-DUINO, a clock, to be shown to my teachers :-)</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-DCF77.php">DCF-77 Synthesizer. With Arduino. Aka "TimeDuino"</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-LEO.php">Shield <i>LEO</i> : SMS on Power down</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-NRVD.php">Shield <i>NRVD</i> : Dual UHF Power Meter</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-MARCELLA.php">Shield <i>MARCELLA</i> : Control your Laboratory Devices</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-RENE.php">Shield <i>RENÉ</i> : Reference Voltage Source, aka <i>REFDUINO</i></a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-TANACHAI.php">Shield <i>TANACHAI</i> : A Transistor Curve Tracer</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-TOBI.php">Shield <i>TOBI</i> : A 60 MHz, 80dB Scalar Network Ananlyzer</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-LeadAcidBatteryTester.php">Add-on <i>BRUNO</i> : Universal Battery Tester (Charge/Discharge)</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Arduino Final Projects : IPA's ➜</a>
+			<ul class="sub-level">
+				<li><a href="https://www.changpuak.ch/electronics/Arduino-Ipamod_2022.php">Ipamod 2022 : A high Precision Digital Capacitance Meter</a></li>
+				<li><a href="https://www.changpuak.ch/electronics/Arduino-Ipamod_2023.php">Ipamod 2023 : An Emergency 10 MHz Reference Source</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Arduino Knowledgebase ➜</a>
+			<ul class="sub-level">
+				<li><a href="https://www.changpuak.ch/electronics/Arduino-Code-Snippets.php">Arduino Code Snippets</a></li>
+				<li><a href="https://www.changpuak.ch/electronics/I2C_ADDRESSES.php">Overview I<sup>2</sup>C Addresses</a></li>
+			</ul>
+		</li>		
+		<li><a href="https://www.changpuak.ch/electronics/Arduino-Shield-MOD.php">What's All This '...mod' Stuff, Anyhow ?</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Arduino-BOM-mod.php">Additional Components for all '...mod' things</a></li>
+		
+	</ul>
+</li>		
+
+<li><a href="#">Bluepill • Blackpill Projects 🛸</a>
+	<ul class="sub-level">
+		<li><a href="#">- no have yet -</a></li>
+		<li><a href="#">- no have yet -</a></li>
+		<li><a href="#">- no have yet -</a></li>
+	</ul>
+</li>
+
+<li><a href="#">Teensy Projects 🛸</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/ADS-B-Synthesizer.php">ADS-B Signal Generator (Teensy 4.0)</a></li>
+	</ul>
+</li>
+
+<li><a href="#">Raspberry Pi Projects 🛸</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/Raspberry-ADC-DAC.php">An ADC+DAC hat. 2 Channel ±10 V Input and Output</a></li>
+	</ul>
+</li>
+
+<li><a href="#">Python Lab Experiments 🐍</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/PyLab-Basics.php">Basics like e.g. 'Hello Arduino' e.a.</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/PyLab-LongTerm-0301.php">Long Term Datalogging to File (Wanmod)</a></li>
+		<!--li><a href="#">&#8987; Long Term Datalogging to File (Multimod, LM35)</a></li-->
+		<!--li><a href="#">&#8987; Measure Diode Characteristics (Supplymod, Multimod)</a></li-->
+		<!--li><a href="#">&#8987; Testing that Ubertooth Thing from Great Scott Gadgets</a></li-->
+		<li><a href="https://www.changpuak.ch/electronics/PyLab-VCO.php">VCO Testbench (Supplymod, Levelmod, Countermod)</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/PyLab-Amplitude-Response-107.php">Amplitude Response 10.7 MHz Bandpass (Ningmod, Wanmod)</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/PyLab-HF-Band-Spectrum.php">Frequency Spectrum HF-Bands (Wanmod)</a></li>
+		<!--li><a href="#">Talking to a Rohde &amp; Schwarz SMC100A</a></li-->
+		<!--li><a href="#">&#8987; Calibrating a Powersensor (Levelmod, R&amp;S SMC100A)</a></li-->
+		<li><a href="#">EMC Precompliance Testing (conducted, Wanmod)</a>
+		</li><li><a href="#">EMC Precompliance Testing (far field, Wanmod)</a>
+		</li><li><a href="#">EMC Precompliance Testing (near field, R&amp;S FSP)</a>
+		</li><li><a href="#">Diode Characteristics (2 x Rigol DM3058E, Supplymod)</a>
+		</li><li><a href="#">Python 3.x and PicoScope™</a>
+			<ul class="sub-level">
+			<li><a href="#">Gain / Phase - measured with a PicoScope™ 2204A (soon)</a></li>
+			</ul>
+		</li>
+		<li><a href="#">Cookies • Breadcrumbs</a>
+			<ul class="sub-level">
+			<li><a href="https://www.changpuak.ch/electronics/PyLab-Cookie-01-Ningmod-Sweep.php">Frequency Sweep with Ningmod</a></li>
+			<!--li><a href="#">Frequency Sweep with R&amp;S SMC100A</a></li-->
+			</ul>
+		</li>
+	</ul>
+</li>
+
+<li><a href="#">Power Supplies • Calculations</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/proj_06.php">Artificial Ground</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/PowerSupplyCharacterisation.php">Power Supply Characterisation</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Voltage-Controlled-Current-Source-Characterisation.php">Current Source (VCCS) Characterisation</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/power_supply_design.php">Power Supply Designer : Rectification</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/power_supply_design_413.php">Power Supply Designer : Linear Regulator</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/PowerSupplyGallery.php">Power Supply Gallery (Experience Database)</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/PowerSupplyRippleNoise.php">Power Supply Ripple and Noise Measurements</a></li>		
+		<li><a href="https://www.changpuak.ch/electronics/LM317.php">Yet another LM317 Calculator</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/FeedbackCalculator.php">Feedback Voltage Divider Finder (LM2576 e.a.)</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/High_Voltage_Power_Supply_MC34063.php">High Voltage Power Supply (MC34063, step-up)</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/Low_Voltage_Power_Supply_MC34064.php">Low Voltage Power Supply (MC34063, step-down)</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/VB408.php">VB 408 Replacement</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Arduino-Project-LEOMOD.php">Leomod, Power Supply for ±15 V, 1 A</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/Arduino-Powermod.php">Powermod, a Power Supply with the LM317/LM337</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Arduino-Samroimod.php">Samroimod - A 32 V / 1 A Power Supply</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Arduino-Sungmod.php">Sungmod - A 270 V / 1 mA Power Supply</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Arduino-SupplyMod.php">Supplymod - A 20 V / 2 A Power Supply </a></li>
+		<li><a href="https://www.changpuak.ch/electronics/SupplyMod-R.php">Supplymod-R ... like Recycling (with the LT1074)</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/PowerSupply-Thormod.php">Thormod, a Power Supply for Photodiodes</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/PETH-6-7815.php">PETH-6 Power Supply • ± 15 V, 100 mA</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/PETH-6-1074.php">PETH-6 Power Supply • +7.5 V, for Arduino / Genuino</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/proj_03.php">PETH-20 Power Supply • ± 15 V, 600 mA</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/proj_03a.php">PETH-30 Power Supply</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/PETH-40B3.php">PETH-40 B3 Power Supply ±15V, 1200 mA</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/proj_08.php">PETH-40-HAM Power Supply • ± 15 V, 1.5 A</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/proj_04.php">PETH-49 Power Supply • 1 ... 19 V, 2 A</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/PETH-200V.php">PETH-200V - High Voltage Power Supply</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/PETH-581.php">PETH-581 Power Supply • Buck Conv. with Linear Afterburner</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/PETH-1074.php">PETH-1074 Power Supply • Step-Down with an LT1074</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/PETH-8093.php">PETH-8093 Power Supply • Step-Down and linear regulation</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/peth_9910.php">PETH-9910 Power Supply • 8 ... 16 V, 10 A</a></li>
+	</ul>
+</li>
+
+<li><a href="#">Amplifiers • Calculations</a>
+	<ul class="sub-level">
+		<li><a href="#">Audio Amplifier ➜</a>
+			<ul>
+			<li><a href="https://www.changpuak.ch/electronics/Sojamod-Sonar-AF.php">Sojamod-AF, a 20 dB AF Amplifier Class-D</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">Amplifier Calculations • Design ➜</a>
+			<ul>
+			<li><a href="https://www.changpuak.ch/electronics/BJT_Buffer_Amplifier.php">BJT Buffer Amplifier Designer (Collector Feedback Bias)</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/BJT_Buffer_Amplifier_2.php">BJT Buffer Amplifier Designer (Base Bias Network)</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/BJT_Buffer_Amplifier_3.php">BJT Buffer Amplifier Designer (Voltage Feedback Bias)</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/BJT_Buffer_Amplifier_4.php">BJT Buffer Amplifier Designer (Emitter Feedback Bias)</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/mar_era_bias.php">MAR, ERA, GALI Amplifier Bias Calculator</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">Low Noise Amplifier ➜</a>
+			<ul>
+			<li><a href="https://www.changpuak.ch/electronics/Broadband_LNA_QPL9547.php">Broadband LNA with the QPL9547 - 100 MHz ... 6 GHz</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/BGA2817.php">Broadband LNA with the BGA2817 - DC ... 2 GHz, 5 dBm</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">Measurement Amplifier ➜</a>
+			<ul>
+		<li><a href="https://www.changpuak.ch/electronics/Amplifier_UHF2.php">Broadband Measurement Amplifier, +13 dBm, 4 GHz</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Amplifier_LMH6609.php">Measurement Amplifier with the LMH6609 • Vu = 1000, 30 MHz</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Sojamod.php">Sojamod, a 20 dB RF Amplifier up to more than 1.5 GHz</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">Universal Amplifier, using Mini Circuits Components ➜</a>
+			<ul>
+			<li><a href="https://www.changpuak.ch/electronics/Amplifier_BONLab_81.php">Broadband UHF Amplifier "BONLab-81", 10 dB, +19 dBm</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/PHA-202+Amplifier.php">Broadband Power Amplifier, 1 Watt from 2 - 2500 MHz</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">SOT-115 J-9 Power Modules ➜</a>
+			<ul>
+			<li><a href="https://www.changpuak.ch/electronics/Broadband_VHF_Power_Amplifier_with_the_BGD804.php">VHF/UHF Power Amplifier with the BGD 804 - 860 MHz, 24 V</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Broadband_VHF_Power_Amplifier_with_the_BGY588N.php">VHF/UHF Power Amplifier with the BGY 588N - 550 MHz, 24 V</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Broadband_VHF_Power_Amplifier_with_the_QPA3314.php">VHF/UHF Power Amplifier with the QPA 3314 - 1794 MHz, 24 V</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Broadband_VHF_Power_Amplifier_with_the_QPA3316.php">VHF/UHF Power Amplifier with the QPA 3316 - 1794 MHz, 24 V</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Broadband_VHF_Power_Amplifier_with_the_TAT8888.php">VHF/UHF Power Amplifier with the TAT 8888 - 1000 MHz, 24 V</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Broadband_VHF_Power_Amplifier_with_the_RFPD3580.php">VHF/UHF Power Amplifier with the RFPD 3580 - 1218 MHz, 24 V</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">Even Bigger Power Modules ➜</a>
+			<ul>
+			<li><a href="https://www.changpuak.ch/electronics/VHF_Power_Amplifier_M57762.php">VHF Power Amplifier with the M57762 - 1.2 ... 1.35 GHz, 1 W+</a></li>
+			</ul>
+		</li>	
+		<li><a href="#">Shortwave Amplifier ➜</a>
+			<ul>
+			<li><a href="https://www.changpuak.ch/electronics/ShortwaveAmplifier2N2219Ax2.php">Shortwave Amplifier with 2 x 2N2219A - 0.1 ... 50 MHz, 22 dB</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Amplifier_Roi-Et.php">Shortwave Power Amplifier with MRF101 - 0.1 ... 50 MHz, 18 dB</a></li>
+			</ul>
+		</li>	
+	</ul>
+</li>
+
+
+
+<li><a href="#">Opamp Circuits • Knowledge</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/Cascading_OPAMPs.php">Cascading OPAMPs For Increased Bandwidth</a></li>
+		<li><a href="">Cascading OPAMPs For Zero Offset AND High Power</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Cascaded-Opamp-Gain-Bandwidth-Calculator.php">Maximize Bandwidth for cascaded Opamps</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Choosing_OPAMP_01.php">Slew-Rate Considerations</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Choosing_OPAMP_02.php">Maximum Output Voltage vs. Frequency</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Choosing_OPAMP_to_drive_ADC.php">Choosing the right OPAMP to drive an ADC (SAR ADC)</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/BipolarVoltage-to-UnipolarVoltage_ADC_Input.php">Bipolar Voltage to Unipolar Voltage ADC Driver</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/UnipolarVoltageOutputDAC-to-BipolarVoltage.php">Unipolar Voltage to Bipolar Voltage DAC Circuit</a></li>
+		 		 
+		<li><a href="https://www.changpuak.ch/electronics/DifferentialAmplifier.php">Differential Amplifier</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/InvertingAmplifier.php">Inverting Amplifier</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/InvertingComparator.php">Inverting Comparator with Hysteresis • Schmitt-Trigger</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/NonInvertingOpamp.php">Non-Inverting Amplifier</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/NonInvertingComparator.php">Non-Inverting Comparator with Hysteresis • Schmitt-Trigger</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/SummingAmplifier.php">Summing Amplifier</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Remembering_RAP.php">Remembering Robert A. Pease, aka "RAP"</a></li>
+	</ul>
+</li>
+
+<li><a href="#">Antenna Designer 📡</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/Antenna_Selection_Guide.php">Antenna Selection Guide</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Antipodal_Vivaldi_Antenna_Designer.php">Antipodal Vivaldi Antenna Designer</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/bi_quad_antenna_designer.php">Bi-Quad Antenna Designer</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/cantenna.php">Cantenna Calculator</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/DisconeAntennaCalculator.php">Discone Antenna Designer</a></li>
+		<li><a href="#">Dipoles ➜</a>
+		  <ul>
+			<li><a href="https://www.changpuak.ch/electronics/Dipole_folded.php">Dipole Calculator - folded</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Dipole_straight.php">Dipole Calculator - straight</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Butterfly-Antenna-Designer.php">Bowtie • Batwing • Butterfly Dipole Calculator</a></li>
+			<li><a href="#">Diamond Dipole Calculator</a></li>
+			<li><a href="#">Elliptical Dipole Calculator</a></li>
+			<li><a href="#">Fan Dipole Calculator</a></li>
+		  </ul>	
+		</li>			
+		<li><a href="#">Monopoles, Rod Antennas ➜</a>
+		  <ul>
+			<li><a href="https://www.changpuak.ch/electronics/Collinear-Antenna-Array.php">Collinear Antenna Array Calculator</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/J-Pole_Antenna-Designer.php">J-Pole Antenna</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/lambda_4_gp.php">Lambda/4 Groundplane Designer</a></li>
+			<li><a href="#">Short Marconi Antenna Designer</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Sleeve-Antenna.php">Sleeve Antenna Designer</a></li>
+		  </ul>	
+		</li>			
+		<li><a href="https://www.changpuak.ch/electronics/HB9CV.php">HB9CV Antenna Calculator</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/calc_12b.php">Helix Antenna Calculator</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/calc_12a.php">Helix Antenna with Match Calculator</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/lpda.php">Logarithmic Periodic Dipole Antenna Calculator</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Loop-Antenna-Calculator.php">Magnetic Loop Antenna Calculator</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Microstrip_Patch_Antenna_Calculator.php">Microstrip Patch Antenna Calculator</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/PCB-Loop-Antenna-Calculator.php">PCB Loop Antenna Calculator</a></li>
+		<li><a href="#">Wokatenna Design</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/yagi_uda_antenna.php">Yagi Uda Antenna Designer (NBS Tech. Note 688)</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/yagi_uda_antenna_DL6WU.php">Yagi Uda Antenna Designer (Rothammel/DL6WU)</a></li>
+	</ul>
+</li>
+
+<li><a href="#">Filter Designer (Audio, AF)</a>
+		 <ul class="sub-level">
+		     <li><a href="#">Lowpass Filters ➜</a>
+			     <ul class="sub-level">
+		 		<li><a href="https://www.changpuak.ch/electronics/Bessel_Lowpass_active_24dB.php">Bessel Lowpass Filter 24 dB/octave</a></li>
+		 		<li><a href="https://www.changpuak.ch/electronics/Butterworth_Lowpass_active_24dB.php">Butterworth Lowpass Filter 24 dB/octave</a></li>
+		 		<li><a href="https://www.changpuak.ch/electronics/Linkwitz_Lowpass_active_24dB.php">Linkwitz Lowpass Filter 24 dB/octave</a></li>
+		     	<li><a href="https://www.changpuak.ch/electronics/calc_08.php">Sallen-Key Lowpass</a></li>
+				 </ul>
+			 </li>
+
+		     <li><a href="#">Bandpass Filters ➜</a>
+			     <ul class="sub-level">
+		 		<li><a href="https://www.changpuak.ch/electronics/bandpass_filter_designer.php">Bandpass Filter Design Guide</a></li>
+		 		<li><a href="https://www.changpuak.ch/electronics/Bessel_Bandpass_active.php">Bessel Bandpass Filter 4th order</a></li>
+		 		<li><a href="https://www.changpuak.ch/electronics/Butterworth_Bandpass_active.php">Butterworth Bandpass Filter 4th order</a></li>
+		 		<li><a href="https://www.changpuak.ch/electronics/Chebyshev_Bandpass_active.php">Chebyshev Bandpass Filter 4th order</a></li>
+		 		<li><a href="https://www.changpuak.ch/electronics/Deliyannis_Bandpass.php">Deliyannis Band Pass Filter</a></li>
+		 		<li><a href="https://www.changpuak.ch/electronics/Narrow_Bandpass_2.php">Narrow Bandpass Filter</a></li>
+		 		<li><a href="https://www.changpuak.ch/electronics/Sallen_Key_Bandpass_light.php">Sallen-Key Bandpass</a></li>
+		 		<li><a href="https://www.changpuak.ch/electronics/Simple_Bandpass.php">Simple Bandpass Filter</a></li>
+				 </ul>
+			 </li>
+
+		     <li><a href="#">Highpass Filters ➜</a>
+			     <ul class="sub-level">
+		 		<li><a href="https://www.changpuak.ch/electronics/Bessel_Highpass_active_24dB.php">Bessel Highpass Filter 24 dB/octave</a></li>
+		 		<li><a href="https://www.changpuak.ch/electronics/Butterworth_Highpass_active_24dB.php">Butterworth Highpass Filter 24 dB/octave</a></li>
+		 		<li><a href="https://www.changpuak.ch/electronics/Linkwitz_Highpass_active_24dB.php">Linkwitz Highpass Filter 24 dB/octave</a></li>
+		 		<li><a href="https://www.changpuak.ch/electronics/calc_09.php">Sallen-Key Highpass</a></li>
+				 </ul>
+			 </li>
+
+		     <li><a href="#">Band Reject Filters • Notch Filters ➜</a>
+			     <ul class="sub-level">
+			 	<li><a href="https://www.changpuak.ch/electronics/Bainter_Notch_Filter.php">Bainter Notch Filter Calculator</a></li>
+		 		<li><a href="https://www.changpuak.ch/electronics/Notch_Filter.php">Fliege Notch Filter</a></li>
+			 	<li><a href="https://www.changpuak.ch/electronics/Active_Notch_Filter.php">Twin - T - Notch Filter</a></li>
+				 </ul>
+			 </li>
+
+			 </ul></li>
+		 
+
+<li><a href="#">Filter Designer (Radio, RF)</a>
+	<ul class="sub-level">
+	
+	<li><a href="#">Lowpass Filters</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/butterworth_lowpass.php">Butterworth Lowpass Filter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/chebyshev_lowpass.php">Chebyshev Lowpass Filter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Const_k_Lowpass.php">Constant K Lowpass Filter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Stepped_Impedance_Lowpass_Coax.php">Stepped Impedance Coaxial Lowpass Filter Designer</a></li>
+	</ul>
+	</li>
+
+	<li><a href="#">Bandpass Filters</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/butterworth_bandpass.php">Butterworth Bandpass Filter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/ceramic_bandpass_filter.php">Ceramic Bandpass Filters</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/chebyshev_bandpass.php">Chebyshev Bandpass Filter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/combline_bandpass_filter_designer.php">Combline Bandpass Filter Design</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Coaxial_Tank_VHF_Filter_Designer.php">Coaxial Tank V.H.F. (Bandpass) Filter Designer</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Const_k_Bandpass.php">Constant K Bandpass Filter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Direct-Coupled-Resonator-Bandpass.php">Coupled Resonator Bandpass Filter Designer</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Quartz_Crystal_Filter_Designer_0.php">Crystal Filter Design #0 : Buy a lot of crystals :-)</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Quartz_Crystal_Filter_Designer_1.php">Crystal Filter Design #1 : Measure replacement data</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Quartz_Crystal_Filter_Designer_2.php">Crystal Filter Design #2 : Calculate the Ladder Filter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Quartz_Crystal_Filter_Designer_3.php">Crystal Filter Design #3 : Verifying the results</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Helical_Bandpass_Filter_Designer.php">Helical Bandpass Filter Designer</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/interdigital_bandpass_filter_designer.php">Interdigital Bandpass Filter</a></li>
+	</ul>
+	</li>
+
+	<li><a href="#">Highpass Filters</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/butterworth_highpass.php">Butterworth Highpass Filter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/chebyshev_highpass.php">Chebyshev Highpass Filter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Const_k_Highpass.php">Constant K Highpass Filter</a></li>
+	</ul>
+	</li>
+
+	<li><a href="#">Band Reject Filters • Notch Filters</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/butterworth_bandstop.php">Butterworth Bandstop (Notch) Filter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/chebyshev_bandstop.php">Chebyshev Bandstop (Notch) Filter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Coaxial_Stub_Filter_Designer.php">Coaxial Stub Notch Filter Designer</a></li>
+	</ul>
+	</li>
+
+	</ul>
+</li>
+
+
+<li><a href="#">PLL, VCO, DDS, Oscillators</a>
+	<ul class="sub-level">
+		<li><a href="#">ADF 4350 Module</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Reference_100MHz.php">A 100 MHz Reference Frequency Source, locked to 10 MHz</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Reference_100MHz-DIL28.php">A 100 MHz Reference Frequency Add-On, DIL-28 Formfactor</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/VCO-1648.php">A universal VCO Board - MC100EL1648DG and PGA-103+</a></li>	 
+		<li><a href="https://www.changpuak.ch/electronics/XCO-100.php">A universal XCO/PLL Board - NB3N501/502/511</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/InjectionLockOscillatorPLL.php">Injection Lock Oscillator with PLL (and a NB3N502)</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/MEMS_Oscillators.php">MEMS Oscillators - SiT8008/SiT8208/SiT8209</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Mobile-Emitter-V1.php">The Mobile Emitter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/AD9851.php">DDS Synthesizer - with AD9851, ≈70 MHz</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/AD9859-DaughterBoard.php">Low Noise DDS Daughterboard - with AD9859, ≈ 160 MHz</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/RF-PowerTransferStandard.php">RF Reference Source - for Powermeter Calibration</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/4046_VCO_Calculator.php">4046 VCO Calculator</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/MiniSynthesizer.php">Mini Synthesizer with 74HCT9046A</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/pll_loopfilter_calc.php">PLL Loopfilter Designer, 2nd and 3rd order</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/pll_divider_calc.php">PLL Divider Calculator</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/NE555-astable-Single.php">NE 555 Oscillator - Single Frequency</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/NE555-astable-Range.php">NE 555 Oscillator - Frequency Range</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/NE555_Monoflop.php">NE 555 Monoflop</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/RC_HCT_Generator.php">RC HCT Inverter Oscillator</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Wien-Bridge-Oscillator.php">Wien Bridge Oscillator</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/XCO3.php">XCO3 - A low cost Crystal Oscillator Module</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Oscillators.php">Circuit Collection : Oscillators</a></li>
+	</ul>
+</li>
+
+ <li><a href="#">Mixer • Freq. Converters</a>
+	 <ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/Mixer-Measurements.php">How to measure Mixer Characteristics</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Mixer-ADE-XY.php">A Mixer Tinkerboard for those ADE-xxx from MCL</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Mixer-NE612.php">A Mixer Tinkerboard with the venerable NE/SA 612</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/LNC-1.php">Universal Frequency Converter with the Si564</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/I-Q-LO-Generator.php">A broadband Phase-Shifter for IQ Mixing Applications (ECL)</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/I-Q-LO-Generator-V2.php">An RF Phase-Shifter for IQ Mixing Applications (LVC)</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Arduino-Transmod.php">Transmod, shifts 6.8±1 GHz to 1.0±1 GHz.</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/UpConverter_for_SDR_Callisto_ea.php">UpConverter for SDR, Callisto e.a.</a></li>
+	 </ul>
+ </li>
+ 
+<li><a href="#">Noisy Things </a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/Noise.php">Noise • Introduction</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/ENR-Noise-Source-Calibration.php">Calibrate your Noise Source. ENR calculator.</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/calc_01.php">Cascaded Noise Figure Calculations</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/DIY-NoiseSourceBFR92.php">DIY Noise Source with the BFR92</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Noise-Source-with-2xGVA82-15dB.php">DIY Noise Source with 2 x GVA and 2 x PAT - ENR : 12.0 dB</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Noise-Source-with-2xGALI.php">DIY Noise Source with 2 x GVA-81+ - ENR : 21.43 dB @ 1.0 GHz</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Noise-Source-with-3xGALI.php">DIY Noise Source with 3 x GVA-81+ - ENR : 24.44 dB @ 1.0 GHz</a></li>
+		<li><a href="#">DIY Noise Source aka Ghettoblaster 555</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Powerline-Schnuffelstuck.php">EMI Powerline Schnüffelstück</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/How_to_Measure_the_Noise_Floor_of_Your_Spectrum_Analyzer.php">How to Measure the Noise Floor of Your Spectrum Analyzer</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/MagneticFieldProbe.php">Magnetic Field Probe up to 3 GHz</a></li>			
+		<li><a href="https://www.changpuak.ch/electronics/NoiseFigureMeasurement-Gain-Method.php">Noise Figure Measurement using the Gain-Method</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/NoiseFigureMeasurement-Y-Method.php">Noise Figure Measurement using the Y-Method</a></li>
+	</ul>
+</li>	
+
+
+<li><a href="#">Quantumoptics Stuff 3599</a>
+	 <ul class="sub-level">
+
+		<li><a href="#">QO Basics - Photodiode Things ➜</a>
+		 <ul class="sub-level">
+			<li><a href="https://www.changpuak.ch/electronics/Photodiodes_for_Physicists.php">Photodiodes for Physicists</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Photodiodes_for_Technicians.php">Photodiodes for Engineers, Technicians, ...</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Mobile-Emitter-V2.php">Photodiodes Troubleshooting : The Mobile Emitter</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/PhotodiodeOpampAmplifier.php">Photodiode Opamp Amplifier • Transimpedance Amplifier</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/LED-acts-like-Photodiode.php">LED's ... working like Photodiodes</a></li>
+			<li><a href="#">LED powered Photon Amplifier</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Diodemod.php">Diodemod : for DC Characterization of Photodiodes</a></li>
+			<li><a href="#">Photomod : a Gain / Phase Analyzer for Photodiode Amplifiers</a></li>
+		 </ul>
+		</li>
+
+		<li><a href="#">QO Toolbox - Radio Frequency Things ➜</a>
+		 <ul class="sub-level">
+			<li><a href="https://www.changpuak.ch/electronics/Bias-Tee.php">Bias - Tee</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Bias-Tee-Commercial.php">Bias - Tee, Broadband and Commercial</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-CoupledResonator-Bandpass.php">Coupled Resonator L-C Bandpass</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-DC-Block.php">DC-Block</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Diode_Detectors.php">Diode RF Detector</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Equalizer.php">Equalizer • Slope - Compensator</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Logarithmic_Amplifier_AD8307.php">Logarithmic Amplifier with the AD8307</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-Highpass.php">Highpass, 9-pole, L-C</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-Lowpass.php">Lowpass, 9-pole, L-C</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-HF-Filters.php">Lowpass, Highpass using Würth Power Inductors</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/MagneticFieldProbe.php">Magnetic Field Probe up to 3 GHz</a></li>			
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-PrescalerMC12093.php">Prescaler :2 :4 :8 :10 :20 :40 :80 MC12093 MC12095 MC12080</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Prescaler_HMC705LP4E.php">6.5 GHz Prescaler :1 - :17 with the HMC705LP4</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-PowerSplit3+1.php">Resistive Power Split, DC - 3000 MHz, 9.5 dB, 3 Way</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-PowerSplit-SWR-Bridge.php">Wheatstone Bridge Power Split, 1 - 1000 MHz, 6 dB, 2 Way</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-Limiter.php">RF Limiter</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-Switch-JSW2-63DR.php">RF Switch - with the JSW2-63DR</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Arduino-Switchmod-RF.php">RF Switch - with the PE4250</a></li>
+		 </ul>
+		</li>
+
+		<li><a href="#">QO Toolbox - Audio Frequency Things ➜</a>
+		 <ul class="sub-level">
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-PitayaBooster.php">Booster (Amplifier) for Red Pitaya e.a.</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-GroundBreaker.php">Ground-Breaker</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/LISN.php">LISN - Line Impedance Stabilization Network</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-Adder2.php">Quantum Computer Arithmetic Unit : Adder</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-Amplifier.php">Quantum Computer Arithmetic Unit : Amplifier</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-Divider1.php">Quantum Computer Arithmetic Unit : Divider</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-Inverter.php">Quantum Computer Arithmetic Unit : Inverter</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-Multiplexer-2-1.php">Quantum Computer Arithmetic Unit : Multiplexer (Switch) 2:1</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-Multiplier1.php">Quantum Computer Arithmetic Unit : Multiplier</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-Subtractor.php">Quantum Computer Arithmetic Unit : Subtractor</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/RF-T-TransientLimiter.php">Transient Limiter</a></li>
+		 </ul>
+		</li>
+	 </ul>
+</li>
+
+<li><a href="#">Components • Networks 🧲</a>
+	 <ul class="sub-level">
+	 
+	 <li><a href="#">Resistors, NTCs</a>
+			<ul class="sub-level">
+			<li><a href="https://www.changpuak.ch/electronics/resistor_colour_code_4.php">Resistor Colour Code (Decoder:-) :: 4 RINGS</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/resistor_colour_code_5.php">Resistor Colour Code (Decoder:-) :: 5 RINGS</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/resistor_colour_code_6.php">Resistor Colour Code (Decoder:-) :: 6 RINGS</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/NTC-1.php">NTC Fundamentals</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/calc_06.php">Find parallel Resistor combination</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/calc_06_Find_Serial_Resistors.php">Find serial Resistor combination</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/VoltageDivider1.php">Voltage Divider Calculator 1 (Fixed)</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/VoltageDivider2.php">Voltage Divider Calculator 2 (Adjusteable)</a></li>
+			</ul>
+	 </li>
+	 <li><a href="#">Capacitors</a>
+			<ul class="sub-level">
+			<li><a href="https://www.changpuak.ch/electronics/Disc_Air_Capacitor_Calculator.php">Disc Air Capacitor Calculator</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Blindwiderstand.php">Impedance Calculator : XL, XC</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/MKS-MKP.php">Film Capacitors : What's all this MKS stuff anyhow ?</a></li>
+			</ul>
+	 </li>
+	 <li><a href="#">Inductors, Transformers</a>
+			<ul class="sub-level">
+			<li><a href="https://www.changpuak.ch/electronics/90-Degree-Power-Split.php">90 Degree Power Split / Combiner</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/broadband_transformer_matching.php">Broadband Impedance Matching with Transformer</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/amidon_toroid_calculator_2.php">Ferrite Toroidal Coil (Amidon)</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/calc_21.php">Helical Coil Calculator</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Blindwiderstand.php">Impedance Calculator : XL, XC</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/amidon_toroid_calculator.php">Iron Powder Toroidal Coil (Amidon)</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Magic-Tee.php">Magic Tee Power Split / Combiner</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Power_Transformer_Design.php">Power Transformer Design :: EI • M Core</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/calc_22.php">Wire inductance Calculator</a></li>
+			</ul>
+	 </li>
+	 <li><a href="#">Directional Couplers</a>
+			<ul class="sub-level">
+			<li><a href="#">Bi Directional Coupler or Dual Directional Coupler ???</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/DIY-Bi-Directional-Coupler.php">A Bi Directional Coupler, 1 - 800 MHz, 20 dB</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/DIY-DualDirectionalCoupler.php">A Dual Directional Coupler, 5 - 1500 MHz, 10 / 20 dB</a></li>
+		    <li><a href="https://www.changpuak.ch/electronics/DIY-DualDirectionalCoupler-TCD-17-282X+.php">A Dual Directional Coupler, 5 - 2850 MHz, 17 ±1 dB</a></li>
+			<li><a href="#">Understanding Directivity</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/How_to_Measure_Directivity_of_Directional_Couplers.php">How to Measure Directivity of Directional Couplers</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Gain_Phase_Adapter.php">Gain - Phase - Adapter using the AD 8302</a></li>
+			</ul>
+	 </li>	 
+	 <li><a href="#">Microstrip</a>
+			<ul class="sub-level">
+			<li><a href="https://www.changpuak.ch/electronics/Coplanar_Waveguide_Calculator.php">Coplanar Waveguide Impedance Calculator</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Microstrip_Calculator.php">Microstrip Impedance Calculator</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Microstrip_RF_Corner.php">Microstrip 90° Corner Calculator</a></li>
+			</ul>
+	 </li>	 
+	 <li><a href="#">Networks (mostly RF)</a>
+			<ul class="sub-level">
+			<li><a href="https://www.changpuak.ch/electronics/coaxial_power_split.php">Coaxial Power Split</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/calc_16a.php">Diplexer Bandpass</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/Diplexer.php">Diplexer Lowpass</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/LumpedBalunCalculator.php">Lumped Element Balun Calculator</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/calc_18.php">Matching Network</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/AttenuatorCalculator.php">Matched Attenuator Calculator</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/PWM-to-DC-Lowpass-Calculator.php">PWM to DC Lowpass Calculator</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/MinimumLossResistorMatch.php">Resistive Matching Network, the L-Pad</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/resistive_power_split.php">Resistive Equal Power Divider</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/ResistivePowerSignalTap.php">Resistive Unequal Power Divider</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/wilkinson_power_split_2.php">Wilkinson Power Split</a></li>
+			</ul>
+	 </li>
+	 <li><a href="#">SWR • Return Loss Bridges</a>
+			<ul class="sub-level">
+			<li><a href="https://www.changpuak.ch/electronics/SWR_Bridge_Trafo.php">A Return Loss Bridge : 3 * 50Ω, ADTT1-6+</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/SWR_Bridge_Trafo_3G.php">A Return Loss Bridge : 3 * 50Ω, ETC1-1-13TR</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/SWR_Bridge_AD8307.php">A Return Loss Bridge : 3 * 50Ω, AD8307</a></li>
+			<li><a href="#">A Return Loss Bridge : 3 * 50Ω, AD8302</a></li>
+			</ul>
+	 </li>	 
+	 <li><a href="https://www.changpuak.ch/electronics/calc_15.php">Coaxial cable Calculator</a></li>
+	 <li><a href="https://www.changpuak.ch/electronics/calc_20.php">Dielectric Coaxial Resonator</a></li>
+	 <li><a href="https://www.changpuak.ch/electronics/Choosing_the_correct_Fuse.php">Choose the right Fuse (without confuse :-)</a></li>
+	 <li><a href="https://www.changpuak.ch/electronics/calc_23.php">Heatsink Calculator</a></li>
+	 
+	 </ul>
+</li>
+
+<li><a href="#">Conversions 📏</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/MultiCarrierAddUp.php">Adding Up Multiple Carriers</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/calc_15a.php">AWG • Metric Conversion</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/calc_01a.php">Noise Figure • Temp.</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Reflection_Coefficient_Impedance_Converter.php">Reflection Coefficient to Impedance Converter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/VSWR_to_dB.php">VSWR to Return Loss (dB) Converter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/dB_to_VSWR.php">Return Loss (dB) to VSWR Converter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/calc_13_PowerConversion.php">Power Conversion : dBm - volts - watts</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/phase_noise_jitter_conversion.php">Phase Noise to Phase Jitter Converter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/phase_noise_jitter_conversion_reverse.php">Phase Jitter to Phase Noise Converter</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/ppm_to_Hz_converter.php">ppm to Hz Converter</a></li>
+	</ul>
+</li>
+
+<li><a href="#">misc. Calculations 🖩</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/pathloss_rssi.php">Pathloss / RSSI</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Mismatch_Loss_Calculator.php">Missmatch Loss</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/calc_19.php">IP3 / SFDR Calculator</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/IP3_IP2_IP1_Visualiser.php">IP3, IP2, 1dB Comp. SFDR Visualizer</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/SOA-Diagram-Drawer.php">SOA Diagram Drawer (Safe Operating Area Visualiser)</a></li>
+	</ul>
+</li>
+		 		 
+<li><a href="#">Hardware • Software 🖫</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/Tool_SolderTipStand.php">DIY Soldering Tip Stand for SMD Tips</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Software.php">Must-Have favourites (Windows)</a></li>
+
+		<li><a href="#">CodeVisionAVR Tools • Snippets</a>
+		<ul class="sub-level">
+			<li><a href="https://www.changpuak.ch/electronics/Lcd_custom_character_designer.php">LCD Custom Character Code Generator</a></li>
+		</ul>
+		</li>
+	</ul>
+</li>
+
+<li><a href="#">Datasheets • Manuals</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/datasheets.php">Datasheet Collection of our Projects</a></li>
+		<li><a href="#">FLUKE Service Manuals</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/proj_02.php">HP Service Manuals</a></li>
+		<!--li><za href="http://www.rfmicrowave.it/catalogue_file.php&amp;file=catalogo.pdf&amp;action=d&amp;lang=eng&amp;pos=18">Must-Have Catalog</a></li-->
+		<li><a href="https://www.changpuak.ch/electronics/tut_01.php">Papers of Changpuak</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/engineering_formula_collection.php">Engineering Formula Collections / Goodies</a></li>
+	</ul>
+</li>
+
+<li><a href="#">Tutorials • DHE</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/DIY-FrontPanelProduction.php">Make your own frontpanel with Gedakop ®</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/tut_04.php">Klirrfaktor </a></li>
+		<li><a href="https://www.changpuak.ch/electronics/MTBF-1.php">Mean Time To Failure • Reliability Considerations</a></li>
+		
+		<li><a href="#">PLL Seminar</a>
+		<ul class="sub-level">
+			<li><a href="https://www.changpuak.ch/electronics/PLL_Seminar_1.php">PLL Seminar #1 - Theory </a></li>
+			<li><a href="https://www.changpuak.ch/electronics/PLL_Seminar_2.php">PLL Seminar #2 - Loop Filter Calculations</a></li>
+			<li><a href="https://www.changpuak.ch/electronics/PLL_Seminar_3.php">PLL Seminar #3 - Simulations with LTSpice</a></li>
+		</ul>
+		</li>
+		<li><a href="https://www.changpuak.ch/electronics/engineering_formula_collection.php">Engineering Formula Collections / Goodies</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/DHE.php">Dr. Hat Electronics</a></li>
+	</ul>
+</li>
+		 
+<li><a href="#">Troubleshooting • Repair 🔧</a>
+	<ul class="sub-level">
+		<li><a href="https://www.changpuak.ch/electronics/trouble_DS1307.php">A DS1307 (I2C RTC) displays 165.165.XXX</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/trouble_Thorlabs-PDA8GS.php">Autopsy of a Thorlabs PDA8GS</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/trouble_ut803_serial.php">UT803 : Let's get serial</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/Arduino-reads-UT803.php">UT803 : Let's talk to an Arduino/Genuino</a></li>
+		<li><a href="https://www.changpuak.ch/electronics/trouble_with_Foldback.php">Trouble with that Foldback Current limiting</a></li>
+	</ul>
+</li>
+
+
+</ul>
+<!-- MENUE END -->	
+				</div>
+			</div>
+			<div style="height:10px;"></div>
+
+			<!-- ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+			<div class="headbox">
+			Statistics
+			</div>				
+				 	
+	
+			<div class="flagbox">
+			
+				<!-- Counter starts 08.08.2014 -->
+				<a rel="nofollow" href="http://info.flagcounter.com/uXSf" target="_blank">
+				<div style="overflow:hidden;"> 
+				<img src="Broadband%20LNA%20with%20the%20QPL9547_files/a" alt="Flag Counter" style="margin:0px 20px -22px -4px;" r1rfgnhp8=""> 
+				</div>
+				</a>
+				<small>Since 08.08.2014<br><small>Counts only, if "DNT = disabled".</small></small>
+				
+				<hr>
+				
+				Your IP is 89.164.109.21<br><small>89-164-109-21.dsl.iskon.hr</small> 				
+				<br>
+			</div>
+			<div style="height:10px;"></div>
+
+			<!-- ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+			
+						
+			<noscript>
+					<div class="headbox">
+					Warning !
+					</div>		 	
+					<div class="contentbox">
+					The calculations are all done with Javascript. You turned it off, so they do not work.
+					<br>
+					<br>
+					<a href="https://www.changpuak.ch/electronics/javascript.php" style="color:#0000FF; text-decoration: underline;">MORE INFORMATION</a>
+					</div>
+					<div style="height:10px;"></div>
+
+			</noscript>
+			
+			<!-- ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	
+				<div class="headbox">
+			Info
+			</div>		 	
+
+			<div class="contentbox">
+
+			<a href="http://validator.w3.org/check?uri=referer"><img src="Broadband%20LNA%20with%20the%20QPL9547_files/valid-html401.png" alt="Valid HTML 4.01 Transitional" height="31" width="88" border="0" style="margin-right:10px;"></a>
+			<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank"><img src="Broadband%20LNA%20with%20the%20QPL9547_files/by-nc-nd-lek.png" width="92" height="31" alt="Creative Commons Lizenzvertrag" border="0"></a>
+
+			<div style="height:10px;"></div>
+
+
+			<div id="webutation-badge" style="float:left;">
+			<a id="webutation-link" href="https://www.webutation.net/go/review/changpuak.ch"><img src="Broadband%20LNA%20with%20the%20QPL9547_files/changpuak.ch.png"></a>
+			</div>
+			
+							
+			<a href="https://www.changpuak.ch/electronics/rss/electronics.xml"><img src="Broadband%20LNA%20with%20the%20QPL9547_files/rss.gif" width="32" height="32" alt="rss" border="0" style="margin: 5px 0 0 5px;"></a>
+
+
+			</div>
+			
+			<div style="height:10px;"></div>
+			
+			
+			<!-- ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+
+		
+	</div>
+	
+    <div id="right_side">
+        
+		
+		<div class="headbox">
+		เราจะทำแบบวิศวกรผู้ยิ่งใหญ่
+		</div>	
+		<!-- เรา จะ ทำ รอย วิศวกรผู้ยิ่งใหญ่ -->
+	
+		<div class="kingbox">
+			<img src="Broadband%20LNA%20with%20the%20QPL9547_files/king.jpg" width="100%" height="auto" alt="We love the King">
+		</div>
+
+		<div style="height:10px;"></div>
+
+		<!-- ooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+		
+					
+			
+			
+			<div class="headbox">
+			1. November  2025			</div>		 	
+
+			<div class="contentbox" style="min-height:50px;">
+			
+			
+			<script type="text/javascript">
+
+			function GetClock(){
+			d = new Date();
+			nhour  = d.getHours();
+			nmin   = d.getMinutes();
+			nsec   = d.getSeconds();
+			if(nhour <= 9){nhour="0"+nhour}
+			if(nmin <= 9){nmin="0"+nmin}
+			if(nsec <= 9){nsec="0"+nsec}
+			
+			
+			document.getElementById('clockbox').innerHTML=""+nhour+":"+nmin+":"+nsec+"";
+			setTimeout("GetClock()", 1000);
+			}
+			window.onload=GetClock;
+			</script>
+			<div id="clockbox" class="glogg" style="font-size:36px;text-align:center;font-weight:bolder;color: white; text-shadow: black 0.1em 0.1em 0.2em;" title="SWF : shock wave free :-)">16:19:19</div>
+
+			<div style="height:6px;"></div>
+			
+			</div>
+			
+			<div style="height:10px;"></div>
+			
+
+
+		<div class="headbox">YOUR OPINION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://www.changpuak.ch/electronics/99voter-list.php" target="_blank" style="color:#FFF;">•••</a></div><div class="contentbox">average: 5.000,&nbsp;&nbsp;&nbsp;n: 1<br><br><div class="piclek">
+		<img src="Broadband%20LNA%20with%20the%20QPL9547_files/5V.png" alt="Rating" style="display:block;margin-left:auto;margin-right:auto;width:99%;height:119px;"></div><br><form method="POST"><label for="rating">Rate this (0 👎 to 5 👍):</label><br><br><input type="number" id="rating" name="rating" min="0" max="5" required="" style="font-size:18px;margin-right:15px;width:69px;height:36px;border-radius:8px;border:1px solid #000;text-align: center;"><button type="submit" style="font-size:14px;background-color:#424242;color:white;height:36px;border-radius:8px;padding:0 20px 0 20px;border:1px solid #00c;">TRANSMIT</button></form>
+<br>
+<span style="font-size:10px;">When using this form, your ip is stored in order to avoid multiple voting on the same website. That's it.</span></div>
+
+
+		<div style="height:10px;"></div>
+
+    </div>
+
+    <div id="center">
+    
+	    	<div id="path">
+    	
+			<b>
+			Broadband_LNA_QPL9547.php &nbsp;&nbsp;&nbsp;6077 Bytes &nbsp;&nbsp;&nbsp;04-03-2025 19:11:43    	
+			</b>
+			
+    	</div>
+
+
+
+	<!-- ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo -->
+	<hr>
+	<br>
+	<h3>Broadband LNA with the QPL9547</h3>	
+	<hr style="color:#00c;background-color:#00c;height:3px;border:none;"> 
+	<h2>1 MHz - 2 GHz, NF 0.6 dB, Gain 25 dB, 21 dBm (max)</h2>
+	<br>
+	<br>
+	<br>
+	<div class="mainpic">
+	<img src="Broadband%20LNA%20with%20the%20QPL9547_files/QPL9547.jpg" alt="Broadband LNA with the QPL9547" title="Broadband LNA with the QPL9547">
+	</div>
+
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	
+	<h2>Circuit Description</h2>
+	<hr style="color:#00c;background-color:#00c;height:3px;border:none;"> 
+	<br>
+	<br>
+	<div class="just">
+	This is our version of the Low Noise Amplifier from Quorvo. We used FR4 as this is budget-friendlier.
+	The revenge is  lower gain at higher frequencies. If you need the approx. 10 dB Gain @ 6 GHz, you 
+	mayst want to use Rogers™  RO4350B / 0.8 mm as described in UKW berichte 2/2023 (article
+	by Wolfgang Schneider, DJ8ES). As a bias, we used the TCBT-14+ from Mini - Circuits. This is a better
+	choice than any 18 nH / 0603 as it is broadband-isher :-)<br>
+	
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<h2>1 dB Compression Point</h2>
+	<hr style="color:#00c;background-color:#00c;height:3px;border:none;"> 
+	<br>
+	<br>
+	<div class="just">
+	The figure below shows, that 1 dB compression is at an input level of 
+approx. 0 dBm. Data measured at 1 GHz. Supply : 10 V, 70 mA
+	<br>
+	<br>
+	<br>
+	<div class="mainpic">
+	<img src="Broadband%20LNA%20with%20the%20QPL9547_files/1dB-Compression-1GHz.png" alt="Broadband LNA with the QPL9547" title="Broadband LNA with the QPL9547">
+	</div>
+	</div>
+	
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<h2>Frequency Response : S21</h2>
+	<hr style="color:#00c;background-color:#00c;height:3px;border:none;"> 
+	<br>
+	<br>
+	<div class="just">
+	The revenge of using FR4 is clearly seen above 2 GHz. With Rogers™  RO4350B, 19 dB are approachable @ 2GHz.
+	<br>
+	<br>
+	<br>
+	<div class="mainpic">
+	<img src="Broadband%20LNA%20with%20the%20QPL9547_files/S21.png" alt="Broadband LNA with the QPL9547" title="Broadband LNA with the QPL9547">
+	</div>
+	<br>
+	<b>S21 from 500 kHz to 6 GHz</b>
+	</div>
+	
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	
+	<h2>Matching : S11 and S22</h2>
+	<hr style="color:#00c;background-color:#00c;height:3px;border:none;"> 
+	<br>
+	<br>
+	<div class="just">
+	As most LNA's have a poor matching, so does this.
+	The datasheet specifies a typical value of 12.2 dB (S11) and 13.5 dB (S22).
+	<br>
+	<br>
+	<br>
+	<div class="mainpic">
+	<img src="Broadband%20LNA%20with%20the%20QPL9547_files/S11.png" alt="Broadband LNA with the QPL9547" title="Broadband LNA with the QPL9547">
+	</div>
+	<br>
+	<b>S11 is acceptable from 100 MHz to 6 GHz</b><br>
+	<br>
+	<br>
+	<div class="mainpic">
+	<img src="Broadband%20LNA%20with%20the%20QPL9547_files/S22.png" alt="Broadband LNA with the QPL9547" title="Broadband LNA with the QPL9547">
+	</div>
+	<br>
+	<b>S22 is acceptable from 3 MHz to 6 GHz</b>
+	</div>
+	
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<h2>✈&nbsp;Downloads</h2>	
+	<hr style="color:#00c;background-color:#00c;height:3px;border:none;">  
+	<br>
+	<br>
+	<div class="downloads">
+	<!-- DOWNLOADS -->
+	<a href="https://www.changpuak.ch/electronics/Amplifier/QPL9547/QPL9547-1-SCH.pdf"><img src="Broadband%20LNA%20with%20the%20QPL9547_files/schema.png" title="Schematics"></a>
+	<a href="https://www.changpuak.ch/electronics/Amplifier/QPL9547/QPL9547-1.T3001"><img src="Broadband%20LNA%20with%20the%20QPL9547_files/target_160_.png" title="Target 3001 File" alt=""></a>
+	<a href="https://www.changpuak.ch/electronics/Amplifier/QPL9547/QPL9547-1-PCB.pdf"><img src="Broadband%20LNA%20with%20the%20QPL9547_files/JPG.jpg" title="Placement" alt=""></a>
+	<a href="https://www.changpuak.ch/electronics/Amplifier/QPL9547/QPL9547-1.zip"><img src="Broadband%20LNA%20with%20the%20QPL9547_files/gerber.jpg" title="Gerber Files Mainboard" alt=""></a>
+	<!-- DOWNLOADS -->
+	</div>
+	
+	
+			
+		
+	<br>
+	<br>
+	<br>
+	<br>
+	<h2>✈&nbsp;Share your thoughts</h2>
+	<hr style="color:#00c;background-color:#00c;height:3px;border:none;">
+	<br>
+	<div class="just">
+	The webmaster does not read these comments regularely. Urgent questions should be send via email.
+	Ads or links to completely uncorrelated things will be removed.<br>
+	</div>
+
+	<br>
+	<br>
+	
+	<script>
+	var idcomments_acct = 'b853f18c24c40e6ea4ffe84fcc600baa';
+	var idcomments_post_id;
+	var idcomments_post_url;
+	</script>
+	<span id="IDCommentsPostTitle" style="display:none"></span>
+	<div id="idc-container-parent" class=""><div id="idc-container" class="idc"><div id="IDCommentPopup" style="display: none;" class="idc-info"> <div> <div id="IDCommentPopupInner"> <a href="#" class="idc-close"><span>Close</span></a> <h6>Forgot password?</h6> <form> <label for="txtResolveEmail">Please put in your email:</label> <input class="idc-text" id="txtResolveEmail" type="text"> <a href="#" class="idc-btn_s"><span>Send me my password!</span></a> </form> <p class="idc-bottom"><a href="#">Close message</a></p> </div> <div class="idc-bottom"></div> </div> </div><div id="IDCommentsHead" class="idc-head"> <span id="IDCommentsHeadDivider" style="display:none"></span> <div class="idc-right"> <a href="javascript: showLogin();" id="IDCommentsHeadLogin" class="idc-head_tools-login"><span>Login</span><span class="idc-r"></span></a> <div class="idc-share" onmouseover="showFollowThisDiscussion();" onmouseout="hideFollowThisDiscussion();"> <div class="idc-share_inner" id="IDCommentsHeadFollowMenu" onmouseover="showFollowThisDiscussion();" onmouseout="hideFollowThisDiscussion();"> <ul class="idc-share-tabs" onmouseover="showFollowThisDiscussion();" onmouseout="hideFollowThisDiscussion();"> <li id="IDShareMenuPost" class="idc-sel"><a href="javascript: IDShowFollowPost();"><span>This blog post</span></a></li> <li id="IDShareMenuBlog"><a href="javascript: IDShowFollowBlog();"><span>All blog posts</span></a></li> </ul> <div id="divIdcSharePost" onmouseover="showFollowThisDiscussion();" onmouseout="hideFollowThisDiscussion();"> <p>Subscribe to this blog post's comments through...</p> <ul class="idc-share-list"> <li><a href="https://www.netvibes.com/subscribe.php?type=rss&amp;url=https://www.intensedebate.com/postRSS/623218030"><img id="IDCommentsShowNetvibes" width="91" height="17" border="0" alt="Add to netvibes"></a></li> <li><a href="https://add.my.yahoo.com/rss?url=https://www.intensedebate.com/postRSS/623218030"><img id="IDCommentsShowYahoo" border="0" alt="Add to My Yahoo!"></a></li> </ul> <ul class="idc-share-list"> <li><a href="https://fusion.google.com/add?source=atgs&amp;feedurl=https://www.intensedebate.com/postRSS/623218030"><img id="IDCommentsShowGoogle" border="0" alt="Add to Google"></a></li> <li><a href="https://my.msn.com/addtomymsn.armx?id=rss&amp;ut=https://www.intensedebate.com/postRSS/623218030"><img id="IDCommentsShowMsn" border="0" style="width: 92px; height: 17px;" alt="Add to Microsoft Live"></a></li> </ul> <p class="idc-b"><a href="https://www.intensedebate.com/postRSS/623218030"><img id="IDCommentsShowRss" alt="RSS Icon"> RSS Feed</a></p> <div class="idc-subscribe-email"> <p><strong>Subscribe via email</strong></p> <span id="IDCSubscribeSpan0"><input type="text" value="Email Address" id="IDCSubscribeEmail0" class="idc-text" onfocus="this.style.color='#333';this.value='';" onblur="if(this.value==''){this.style.color='#ccc';this.value='Email Address';}"></span> <span id="IDCSubscribeSubmit0"><a class="idc-btn_s" href="javascript:IDCSubscribeByEmail(0);"><span></span><span class="idc-r">Subscribe</span></a> </span> </div> </div> <div id="divIdcShareBlog" style="display:none" onmouseover="showFollowThisDiscussion();" onmouseout="hideFollowThisDiscussion();"> <p>Subscribe to this blog's comments through...</p> <ul class="idc-share-list"> <li><a href="https://www.netvibes.com/subscribe.php?type=rss&amp;url=https://www.intensedebate.com/allBlogCommentsRSS/429222"><img id="IDCommentsShowNetvibes2" width="91" height="17" border="0" alt="Add to netvibes"></a></li> <li><a href="https://add.my.yahoo.com/rss?url=https://www.intensedebate.com/allBlogCommentsRSS/429222"><img border="0" alt="Add to My Yahoo!" id="IDCommentsShowYahoo2"></a></li> </ul> <ul class="idc-share-list"> <li><a href="https://fusion.google.com/add?source=atgs&amp;feedurl=https://www.intensedebate.com/allBlogCommentsRSS/429222"><img id="IDCommentsShowGoogle2" border="0" alt="Add to Google"></a></li> <li><a href="https://my.msn.com/addtomymsn.armx?id=rss&amp;ut=https://www.intensedebate.com/allBlogCommentsRSS/429222"><img border="0" id="IDCommentsShowMsn2" style="width: 92px; height: 17px;" alt="Add to Microsoft Live"></a></li> </ul> <p class="idc-b"><a href="https://www.intensedebate.com/allBlogCommentsRSS/429222"><img alt="RSS Icon" id="IDCommentsShowRss2"> RSS Feed</a></p> <div class="idc-subscribe-email"> <p><strong>Subscribe via email</strong></p> <span id="IDCSubscribeSpan1"><input type="text" value="Email Address" id="IDCSubscribeEmail1" class="idc-text" onfocus="this.style.color='#333';this.value='';" onblur="if(this.value==''){this.style.color='#ccc';this.value='Email Address';}"></span> <span id="IDCSubscribeSubmit1"><a class="idc-btn_s" href="javascript:IDCSubscribeByEmail(1);"><span></span><span class="idc-r">Subscribe</span></a> </span> </div> </div> </div> <a href="https://www.intensedebate.com/postRSS/623218030" class="idc-head_tools-share" title="https://www.intensedebate.com/postRSS/623218030" onmouseover="showFollowThisDiscussion();" onmouseout="hideFollowThisDiscussion();">Follow the discussion</a> </div> </div><h3><span id="idc-commentcount_label">Comments</span></h3><input type="hidden" id="userid" value="0"> <div class="idc-head_action idc-loggingin"> <span><img style="padding-right: 5px" src="Broadband%20LNA%20with%20the%20QPL9547_files/ajax-loader.gif" alt="Loading..."> Logging you in...</span> </div> <div class="idc-head_action idc-login" id="IDLoginPopup"> <form id="IDfrmHeaderLogin" method="post" action="https://www.intensedebate.com/login"> <a href="javascript: hideLoginSignup();" class="idc-close"><span>Close</span></a> <p><strong>Login to IntenseDebate</strong></p> <p>Or <a href="https://www.intensedebate.com/signup" class="snap_noshots" target="_blank">create an account</a></p> <div class="idc-columns"> <div class="idc-divide"> <label for="IDtxtLoginEmail">Username or Email:</label> </div> <div class="idc-divide"> <label for="IDtxtLoginPass">Password:</label> </div> <span class="idc-clear"></span> </div> <div class="idc-divide"> <input id="IDtxtLoginEmail" name="txtLoginEmail" class="idc-text" onfocus="txtOnFocus(this, '');" onblur="txtOnBlur(this, '');" type="text"> </div> <div class="idc-divide"> <input id="IDtxtLoginPass" name="txtLoginPass" class="idc-text idc-password" onfocus="txtOnFocus(this, '');" onblur="txtOnBlur(this, '');" type="password"> <p class="idc-fade"><a href="javascript: showForgotPassword();" class="snap_noshots">Forgot login?</a></p> </div> <div class="idc-head_b"> <div class="idc-tools"> <a class="idc-btn_l-secondary" href="javascript: hideLoginSignup();"><span></span><span class="idc-r">Cancel</span></a> <a href="javascript: logUserIn();" class="idc-btn_l"><span></span><span class="idc-r"><strong>Login</strong></span></a> </div> </div> </form> </div> <div class="idc-head_action idc-wp-login" id="IDWPLoginPopup"> <form id="IDfrmHeaderWPLogin" method="post" action="https://www.intensedebate.com/wp-login.php"> <a href="javascript: hideLoginSignup();" class="idc-close"><span>Close</span></a> <span> <img src="Broadband%20LNA%20with%20the%20QPL9547_files/wordpress-logo.png" style="margin-bottom: -10px;"> <span style="font-size: 25px; padding-left: 5px; font-family: verdana,serif;">WordPress.com</span> </span> <div class="idc-columns" style="padding-top: 20px;"> <div class="idc-divide"> <label for="IDtxtWPLoginEmail">Username or Email:</label> </div> <div class="idc-divide"> <label for="IDtxtWPLoginPass">Password:</label> </div> <span class="idc-clear"></span> </div> <div class="idc-divide"> <input id="IDtxtWPLoginEmail" name="txtLoginEmail" class="idc-text" onfocus="txtOnFocus(this, '');" onblur="txtOnBlur(this, '');" type="text"> </div> <div class="idc-divide"> <input id="IDtxtWPLoginPass" name="txtLoginPass" class="idc-text idc-password" onfocus="txtOnFocus(this, '');" onblur="txtOnBlur(this, '');" type="password"> <p class="idc-fade"><a href="https://wordpress.com/wp-login.php?action=lostpassword" target="_new" class="snap_noshots">Lost your password?</a></p> </div> <div class="idc-head_b"> <div class="idc-tools"> <input type="hidden" name="IDtxtWPIDSiteID" value="429222"> <a class="idc-btn_l-secondary" href="javascript: hideLoginSignup();"><span></span><span class="idc-r">Cancel</span></a> <a href="javascript: IDC.$('IDfrmHeaderWPLogin').submit()" class="idc-btn_l"><span></span><span class="idc-r"><strong>Login</strong></span></a> </div> </div> </form> </div> <div class="idc-head_action idc-user"> <div class="idc-right"> <a class="snap_noshots" href="https://www.intensedebate.com/userDash">Dashboard</a> <span class="idc-divider"><span>|</span></span> <a class="snap_noshots" href="https://www.intensedebate.com/editprofile">Edit profile</a> <span class="idc-divider"><span>|</span></span> <a class="snap_noshots" href="https://www.intensedebate.com/logout?_id_nonce=" id="idc-logout-link">Logout</a> </div> <div> <a id="IDCommentUserBarLink1" href="https://www.intensedebate.com/people/0" class="idc-a snap_noshots"></a> </div> <ul class="idc-user_i"> <li>Logged in as <a id="IDCommentUserBarLink2" class="snap_noshots" href="https://www.intensedebate.com/people/0"></a></li> </ul> <div class="idc-user_admin" id="idc-user_admin" style="display:none;"> <p><a href="javascript:showHideOpts();" id="IDAdminOptsLink" class="idc-collapselink_closed snap_noshots">Admin Options</a></p> <div id="showHideAdminOpts" style="display:none;"> <p> <input type="hidden" id="IDUserAdminVal" value="1"> <span onclick="javascript: changeDisabledLink();"><label for="chkDisableIDC" class="idc-nofloat"><input type="checkbox" id="chkDisableIDC"> Disable comments for this page</label></span> </p><p><a id="adminOptions" class="idc-btn_s snap_noshots"><span></span><span class="idc-r" id="IDCSavedSettings">Save Settings</span></a></p> <p></p> </div> </div> </div><span class="idc-clear"></span><div class="idc-message" id="commentMessage" style="display:none;"></div></div><div id="idc-cover" class="idc-comments">	<div class="idc-message" id="IDCommentsNoCommentsDiv"> There are no comments posted yet. <a href="javascript: document.getElementById('IDCommentNewThreadText').focus()">Be the first one!</a> </div></div>	<div id="IDCommentsNewThreadCover" class="idc-new"> <a name="respond"></a> <h3>Post a new comment</h3> <div class="idc-thread" id="IDCThread"> <div style="width: 100%;" id="IDCommentsNewThread" class="idc-c idc-reply idc-anonymous idc-signup"> <div class="idc-c-h" id="IDCommentsNewThreadHeader" style="display: none;"> <div class="idc-right" id="IDCommentsNewThreadHeaderRight"> <div class="idc-expand"></div> </div> </div> <ul class="idc-c-plugins" id="idc-plugin-buttons-new-thread"></ul> <div class="idc-c-t"> <form id="IDCommentNewThreadForm1"> <div class="idc-c-t-inner"> <textarea class="idc-text_noresize" style="color: rgb(204, 204, 204); width: 672px;" id="IDCommentNewThreadText" onfocus="txtOnFocus(this, 'Enter text right here!');" onblur="txtOnBlur(this, 'Enter text right here!');">Enter text right here!</textarea> <span class="idc-clear"> </span></div> </form> </div> <div class="idc-postnav" id="IDCPostNav"> <p id="IDCNavGuest2" style="display: inline;" class="idc-postnav-label"><span>Comment as a Guest, or login:</span></p> <ul class="idc-postnav-list" id="IDCNavList"> <li class="idc-first"><a href="javascript: showLogin();" class="idc-loginbtn_intensedebate">Login to IntenseDebate</a></li> <li class="idc-first"><a href="javascript: showWPLogin();" class="idc-loginbtn_wordpress">Login to WordPress.com</a></li> </ul> <a href="javascript: IDCNavReply('IDCNavGuest'); showSignupNewThread(); id_fbStopPoll(); id_show_nav();" id="IDCNavGuest" style="display:none;margin:2px 0;line-height:21px;">Go back</a> </div> <div class="idc-c-m idc-signup"> <form id="IDCommentNewThreadForm2"> <div style="width: 100%;"> <div class="idc-columns"> <div class="idc-column" id="IDCColumnNameLabel"> <label for="txtNameNewThread">Name</label> </div> <div class="idc-column" id="IDCColumnEmailLabel"> <label for="txtEmailNewThread">Email</label> </div> <div class="idc-column" id="IDCColumnURLLabel"> <label for="txtURLNewThread">Website (optional)</label> </div> <span class="idc-clear"></span> </div> <div class="idc-column" id="IDCColumnName"> <input type="text" id="txtNameNewThread" class="idc-text" onfocus="txtOnFocus(this, '');" onblur="txtOnBlur(this, '');"> <p class="idc-form-info">Displayed next to your comments.</p> </div> <div class="idc-column" id="IDCColumnEmailReply"> <input type="text" id="txtEmailNewThread" class="idc-text" onfocus="txtOnFocus(this, '');" onblur="txtOnBlur(this, '');"> <p class="idc-form-info">Not displayed publicly.</p> </div> <div class="idc-column" id="IDCColumnURL"> <input type="text" class="idc-text" id="txtURLNewThread" onfocus="txtOnFocus(this, '');" onblur="txtOnBlur(this, '');"> <p class="idc-form-info">If you have a website, link to it here.</p> </div> </div> </form> </div> <p id="IDCommentsNewThreadListItem1" style="display:none;">Posting anonymously.</p> <p id="IDNewThreadTweetThisWrapper" style="display:none"><label for="IDNewThreadTweetThis" class="idc-nofloat"><input type="checkbox" id="IDNewThreadTweetThis"> Tweet this comment</label></p> <div class="idc-c-b"> <div class="idc-right" id="IDNewThreadSubmitLI"> <a class="idc-btn_l" href="javascript: postComment(0);"><span></span><span class="idc-r"><strong>Submit Comment</strong></span></a> </div> <div class="idc-new_subscribe" id="IDSubscribeToThisWrapper"> <!--<input type="checkbox" id="IDSubscribeToThis" class="idc-chk" />--> <label for="IDSubscribeToThis" class="idc-nofloat"> Subscribe to <select id="IDSubscribeToThis" name="IDSubscribeToThis"> <option value="-1" id="IDSubscribeToThis-def" selected="selected">None</option> <option value="1" id="IDSubscribeToThis-replies">Replies</option> <option value="0">All new comments</option> </select> </label> </div> <div class="idc-customtext"> <span id="customText"></span> </div> <span class="idc-clear"></span> </div> </div> </div> </div> <div class="idc-foot"> <p class="idc-id"><span>Comments by </span><a href="https://www.intensedebate.com/" class="idc-idlogo" target="_blank">IntenseDebate</a></p> <span class="idc-clear"></span> </div><div id="divReplyExpandingText" class="idc-measure"></div><div id="divNewPostExpandingText" class="idc-measure"></div><div style="display: none;" class="idc-c idc-reply idc-anonymous idc-signup" id="IDCommentReplyDiv"><p class="idc-header" id="IDCommentReplyName"></p> <ul class="idc-c-plugins" id="idc-plugin-buttons-reply"></ul> <div class="idc-c-t"> <div class="idc-c-t-inner"> <form id="IDCommentReplyForm1"> <textarea id="txtComment" class="idc-text_noresize" onfocus="txtOnFocus(this, 'Enter text right here!');" onblur="txtOnBlur(this, 'Enter text right here!');">Enter text right here!</textarea> </form> <span class="idc-clear"> </span></div> </div> <div class="idc-postnav" id="IDCPostNavReply"> <p id="IDCNavGuestReply2" style="display: inline;" class="idc-postnav-label"><span>Reply as a Guest, or login:</span></p> <ul class="idc-postnav-list" id="IDCNavListReply"> <li class="idc-first"><a href="javascript: showLogin();" class="idc-loginbtn_intensedebate">Login to IntenseDebate</a></li> <li class="idc-first"><a href="javascript: showWPLogin();" class="idc-loginbtn_wordpress">Login to WordPress.com</a></li> </ul> <a href="javascript: IDCNavReply('IDCNavGuestReply'); showSignupReply(); id_fbStopPoll(); id_show_nav();" id="IDCNavGuestReply" style="display:none;margin:2px 0;line-height:21px;">Go back</a> </div> <div class="idc-c-m idc-signup" id="IDCommentReplyOuterDiv"> <form id="IDCommentReplyForm2"> <div style="width: 100%;" id="IDCommentReplyInnerDiv"> <div class="idc-columns"> <div class="idc-column" id="IDCColumnNameReplyLabel"> <label for="txtNameReply">Name</label> </div> <div class="idc-column" id="IDCColumnEmailReplyLabel"> <label for="txtEmailReply">Email</label> </div> <div class="idc-column" id="IDCColumnURLReplyLabel"> <label for="txtURLReply">Website (optional)</label> </div> <span class="idc-clear"></span> </div> <div class="idc-column" id="IDCColumnNameReply"> <input type="text" id="txtNameReply" class="idc-text" onfocus="txtOnFocus(this, '');" onblur="txtOnBlur(this, '');"> <p class="idc-form-info">Displayed next to your comments.</p> </div> <div class="idc-column" id="IDCColumnEmailReply"> <input type="text" id="txtEmailReply" class="idc-text" onfocus="txtOnFocus(this, '');" onblur="txtOnBlur(this, '');"> <p class="idc-form-info">Not displayed publicly.</p> </div> <div class="idc-column" id="IDCColumnURLReply"> <input type="text" class="idc-text" id="txtURLReply" onfocus="txtOnFocus(this, '');" onblur="txtOnBlur(this, '');"> <p class="idc-form-info">If you have a website, link to it here.</p> </div> </div> </form> </div> <p id="IDCommentReplyListItem1" style="display:none;">Posting anonymously.</p> <p id="IDReplyTweetThisWrapper" style="display:none"><label for="IDReplyTweetThis" class="idc-nofloat"><input type="checkbox" id="IDReplyTweetThis"> Tweet this comment</label></p> <div class="idc-c-b"> <div class="idc-right" id="IDReplyDivSubmitLI"> <a href="javascript: hideReply();" class="idc-btn_l-secondary"><span></span><span class="idc-r">Cancel</span></a> <a id="IDReplyDivSubmitLIButton" class="idc-btn_l" href="javascript: postComment(1);"><span></span><span class="idc-r"><strong>Submit Comment</strong></span></a> </div> <div class="idc-new_subscribe" id="IDSubscribeToThisWrapperReply"> <!--<input type="checkbox" id="IDSubscribeToThisReply" class="idc-chk" />--> <label for="IDSubscribeToThisReply" class="idc-nofloat"> Subscribe to <select id="IDSubscribeToThisReply" name="IDSubscribeToThisReply"> <option value="-1" id="IDSubscribeToThisReply-def" selected="selected">None</option> <option value="1" id="IDSubscribeToThisReply-replies">Replies</option> <option value="0">All new comments</option> </select> </label> </div> <span class="idc-clear"></span> </div></div><iframe src="Broadband%20LNA%20with%20the%20QPL9547_files/empty.htm" style="display: none;"></iframe><img src="Broadband%20LNA%20with%20the%20QPL9547_files/remoteCheckin.bmp" style="display: none;"></div><span id="idc-clear"></span></div><script type="text/javascript" src="Broadband%20LNA%20with%20the%20QPL9547_files/623218030"></script><script type="text/javascript" src="Broadband%20LNA%20with%20the%20QPL9547_files/genericCommentWrapperV2.js">
+	</script>
+
+	
+	<div style="text-align:center; color:#000; font-size: 14px; ">
+	Your Browser says that you allow tracking. Mayst we suggest that you check that DNT thing ?	</div>
+	<br>
+		
+		
+
+
+                 
+    </div>
+
+  </div>
+
+	  <div id="boots">
+		
+	
+		
+  	<div style="height:12px; border-top:3px solid #5833DE;">&nbsp;</div>
+    
+    <table width="100%" align="center" border="0" cellpadding="10">
+    
+    <tbody><tr>
+    
+    <td width="120" style="font-size:12px; color:#6f6f6f; text-align: left;">
+    <!-- timestamp -->
+    t<sub>1</sub> = 7051 d 
+    <br><br>
+    <!-- ladezeit boots -->
+	t<sub>2</sub> = 238 ms 
+    </td>
+    
+    <td width="100" style="font-size:12px; color:#6f6f6f; text-align: left;">
+    </td>
+    
+    <td width="840">
+    <p style="text-align:center; color:#afafaf; font-size: 16px;">★&nbsp;★&nbsp;★&nbsp;&nbsp;Copyright © 2006 - 2025 by changpuak.ch&nbsp;&nbsp;★&nbsp;★&nbsp;★</p>
+
+	<p style="color:#6f6f6f; text-align:center; opacity: 0.89;">
+	<!-- http://www.lucazappa.com/brilliantMaker/buttonImage.php -->
+	<a href="https://www.changpuak.ch/index.php">
+		<img src="Broadband%20LNA%20with%20the%20QPL9547_files/first-page.png" width="80" height="15" alt="" style="margin-right:19px;"></a>
+	
+	<img src="Broadband%20LNA%20with%20the%20QPL9547_files/button_php.png" width="80" height="15" alt="" style="margin-right:19px;">
+	
+	<img src="Broadband%20LNA%20with%20the%20QPL9547_files/Od_80x15_grey.png" width="80" height="15" alt="" style="margin-right:19px;" title="All relevant information can be found in the sourcecode !">
+	
+
+	<a href="https://www.changpuak.ch/contact/impressum.php" title="Impressum" target="_blank" rel="nofollow">
+		<img src="Broadband%20LNA%20with%20the%20QPL9547_files/im-pressum.png" alt="Impressum" width="80" height="15" style="margin-right:0px;"></a>
+	</p>
+	    
+    </td>
+    
+    <td width="100" style="font-size:12px; color:#6f6f6f; text-align: center;">&nbsp;</td>
+
+    <td width="120" style="font-size:12px; color:#6f6f6f; text-align: center">
+    <img src="Broadband%20LNA%20with%20the%20QPL9547_files/europrojetion.png" width="101" height="auto" alt="" style="margin-top:11px;">
+    
+    </td>
+    
+    </tr>
+    
+    </tbody></table>
+
+  </div><!-- end of boots -->
+  
+
+
+</div>
+
+
+
+
+<style>@namespace fb "http://www.facebook.com/2008/fbml";#idc-container{margin:1.5em 0;max-width:800px;min-width:180px;float:none;letter-spacing:normal!important;text-align:left;width:auto}#idc-container.idc-inline{clear:both;height:400px;margin:1.2em 0;overflow:auto;overflow-x:hidden;overflow-y:auto;padding:0 8px 0 0}#idc-container .idc-trackbacks,#idc-container .idc-comments,#idc-container .idc-new{margin:0 0 1.5em}#idc-container div *{font-weight:normal;letter-spacing:0!important;margin:0;padding:0;text-indent:0}#idc-container fb\:login-button,#idc-container fb|login-button{color:white;background:#5f78ab url(https://www.intensedebate.com/images/facebook-login.png) no-repeat left -211px;display:block;height:21px}#idc-container fb\:login-button span,#idc-container fb|login-button span{font-weight:bold;font-family:"lucida grande",tahoma,verdana,arial,sans-serif;font-size:11px}#idc-container div span.fb_button_text{font-weight:bold;margin:1px 1px 0 21px;padding:2px 6px 2px 6px}#idc-container div span.fb_button_text span{padding:0}#idc-container div div div{text-transform:none}#idc-container img{border:0;background:0;padding:0}#idc-container span{display:inline}#idc-container span.fb_button_text{display:block}#idc-container strong,#idc-container .idc-c-t b{font-weight:bold!important}#idc-container .idc-c-t ol,#idc-container .idc-c-t ul{padding:0 0 0 20px}#idc-container .idc-c-t li{display:list-item;list-style:disc}#idc-container .idc-c-t ol li{list-style:decimal}#idc-container a{background-image:none;clear:none!important;float:none;font-weight:normal;display:inline;border:none!important;padding:0!important}#idc-container a.fb_button{background:#29447e url(https://www.intensedebate.com/images/facebook-login.png) no-repeat left -211px;display:inline-block;padding:0 0 0 1px!important}#idc-container blockquote{padding:0 0 0 10px!important}#idc-container div{background:0;clear:left;display:block;float:none;margin:0;width:auto;font-size:13px;line-height:1.3em;overflow:visible;position:static}#idc-container h3,#idc-container h4,#idc-container h6{background:0;border:0;letter-spacing:0;padding:0;margin:0;clear:none;position:static;text-align:left;font-weight:normal}#idc-container h3{font-size:22px;line-height:1.3em;margin:0 0 8px}#idc-container .idc-text{background:#fff url(https://www.intensedebate.com/themes/universal/images/idc-grey-0926.png) no-repeat -713px -121px;border:1px solid #ccc;border-top:1px solid #b0b0b0;color:#333;cursor:text;float:left;padding:3px;margin:0 4px 4px 0;font-size:12px;line-height:1.3em;font:normal 12px/1.3em Helvetica,Arial,sans-serif;-moz-border-radius:4px;-khtml-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;-moz-border-radius-bottomleft:}#idc-container div.idc-text,#idc-container textarea.idc-text{height:50px;margin:0 0 4px;min-height:50px;overflow:hidden;width:97.8%}#idc-container div.idc-text_noresize,#idc-container textarea.idc-text_noresize{background:#fff url(https://www.intensedebate.com/themes/universal/images/idc-grey-0926.png) no-repeat -713px -121px;border:1px solid #ccc;border-top:1px solid #b0b0b0;color:#333;float:left;height:100px!important;padding:3px;margin:0 0 4px;font-size:12px;line-height:1.3em;font:normal 12px/1.3em Helvetica,Arial,sans-serif;width:97.8%;-moz-border-radius:4px;-khtml-border-radius:4px;-webkit-border-radius:4px;border-radius:4px}#idc-container textarea.idc-text:hover,#idc-container textarea.idc-text_noresize:hover,#idc-container .idc-text:hover{border:1px solid #aaa;border-top:1px solid #909090}#idc-container.idc .idc-focus{border:1px solid #c9e31a!important;border-top:1px solid #a0b513!important}#idc-container .idc-radio,#idc-container .idc-chk{border:0;margin:2px 2px 0 0;padding:0}#idc-container .idc-radio{float:left}#idc-container .idc-btn_input{background:#f2f2f2;border:1px solid #bbb;cursor:pointer;font-size:11px!important;line-height:16px!important;padding:2px 8px;text-decoration:none;-moz-border-radius:11px;-khtml-border-radius:11px;-webkit-border-radius:11px;border-radius:1}#idc-container .idc-btn_input:hover{border-color:#909090}#idc-container select{margin:0 4px 4px 0;float:none;width:auto}#idc-container label{clear:none;display:inline;float:left;line-height:1.3em;width:auto}#idc-container p{clear:left;margin:0 0 8px}#idc-container ul,#idc-container li{background:0;display:block;float:none;border:0;margin:0;padding:0}#idc-container li{list-style-type:none;display:list-item}#idc-container .idc-nomargin{margin:0}#idc-container .idc-moremargin{margin:0 0 .8em}#idc-container .idc-nofloat{float:none}#idc-container .idc-right{float:right!important}#idc-container .idc-divide{float:left;width:50%}#idc-container .idc-secondary{font-size:11px}.idc-measure{border:1px solid #fff!important;float:none!important;font:normal 12px/1.3em Helvetica,Arial,sans-serif!important;left:0!important;padding:3px!important;position:absolute!important;text-align:left!important;top:0!important;visibility:hidden!important;width:auto!important;z-index:-1!important}#idc-container .idc-loading{clear:both;display:block;float:none;margin:1em 0;text-align:center;width:auto}#idc-container .idc-loading p{line-height:16px!important}#idc-container .idc-loading img{margin:0 0 -3px}#idc-container .idc-close{width:15px;height:15px;background:url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat 0 -56px;float:right}#idc-container .idc-close span{display:none}#idc-container .idc-close:hover{background-position:0 -71px}#idc-container .idc-sourceimg{float:left;margin:0 4px 2px 0}#idc-container .idc-collapselink_closed,#idc-container .idc-collapselink{background:url(https://www.intensedebate.com/themes/universal/images/idc-color-1223.png) no-repeat -538px -46px;font-weight:bold;line-height:16px!important;margin:0 0 0 4px;overflow:hidden;padding:0 0 0 12px!important}#idc-container .idc-collapselink_closed,#idc-container .idc-collapse .idc-collapselink{background-position:-538px -8px}#idc-container .idc-thread_active{color:#666;font-size:11px}#idc-container .idc-customtext{margin:8px 0 0}#idc-container .idc-customtext strong,#idc-container .idc-customtext b{font-weight:bold}#idc-container .idc-customtext em,#idc-container .idc-customtext i{font-style:italic}#idc-container .idc-customtext ul,#idc-container .idc-customtext ol,#idc-container .idc-customtext dl{padding:0 0 0 20px}#idc-container .idc-customtext ul li{list-style:disc}#idc-container .idc-customtext ol li{list-style:decimal}#idc-container .idc-message{background:url(https://www.intensedebate.com/themes/universal/images/idc-bg-1223.png) repeat-x 0 -700px;clear:both;float:left;margin:.5em 0;padding:1% 1.5%;width:97%;-moz-border-radius:4px;-khtml-border-radius:4px;-webkit-border-radius:4px;border-radius:4px}#idc-container .idc-trackbacks-more a{background:url(https://www.intensedebate.com/themes/universal/images/idc-bg-1223.png) repeat-x 0 -700px;display:block;padding:8px 0!important;text-align:center;-moz-border-radius:4px;-o-border-radius:4px;-webkit-border-radius:4px;-khtml-border-radius:4px;border-radius:4px}#idc-container .idc-thread_cover{background:url(https://www.intensedebate.com/themes/chameleon/images/idc-arrow.png) no-repeat 0 6px;padding:0 0 12px 18px}#idc-container .idc-thread_cover .idc-thread{border:1px solid #eaeaea;padding:4px}#idc-container .idc-thread_cover .idc-thread .idc-thread{border:0;padding:0}#idc-container .idc-tb .idc-tb-title{font-size:15px;line-height:1.3em;margin:0}#idc-container .idc-tb .idc-tb_i{font-size:10px;line-height:1.3em}#idc-container .idc-tb-t{margin:0 0 .3em}#idc-container .idc-foot{border-top:1px outset}#idc-container .idc-foot .idc-right{margin:4px 0 0;width:auto}#idc-container .idc-head_action{background:url(https://www.intensedebate.com/themes/universal/images/idc-bg-1223.png) repeat-x 0 -700px;display:none;float:left;margin:0 0 8px;padding:1% 1.5%;width:97%;-moz-border-radius:4px;-o-border-radius:4px;-webkit-border-radius:4px;-khtml-border-radius:4px;border-radius:4px}#idc-container #IDLoginPopup,#idc-container #IDLoginOpenIDPopup{background-color:#444}#idc-container .idc-head_b{width:100%}#idc-container .idc-head_action strong{display:block;margin:0 0 .4em}#idc-container .idc-head .idc-text{width:90%}#idc-container .idc-head .idc-tools{clear:none;margin:4px 0 0;float:right;width:auto}#idc-container .idc-head .idc-tools a{float:right!important}#idc-container .idc-head .idc-tools .idc-btn_s{float:right!important;margin:0 0 0 6px!important}#idc-container .idc-head .idc-tools .idc-useopenid{float:left!important}#idc-container .idc-user .idc-head_action.idc-user{padding:1%;width:98%}#idc-container .idc-user .idc-user_i{padding:6px 0 0!important}#idc-container .idc-user .idc-user .idc-right{padding:6px 6px 0!important;width:auto}#idc-container .idc-user_admin{clear:both;float:none;padding:10px 0 0}#idc-container .idc-user_admin p{margin:0 0 4px}#idc-container .idc-user_i a{display:inline}#idc-container .idc-intensedebate_info{font-size:11px}#idc-container .idc-c-m{clear:left}#idc-container .idc-thread_loading{line-height:16px;margin:0 3px 15px}#idc-container .idc-thread_loading img{float:left;margin:0 5px 0 0}#idc-container .idc-toolbar{margin:0 0 8px}#idc-container .idc-toolbar p{margin:0}#idc-container .idc-toolbar a{margin:0 3px}#idc-container .idc-toolbar .idc-sel{font-weight:bold}#idc-container .idc-box{background:url(https://www.intensedebate.com/themes/universal/images/idc-bg-1223.png) repeat-x 0 -700px;margin:4px 0 16px;padding:16px}#idc-container .idc-box p{margin-bottom:8px}#idc-container .idc-reply .idc-header{clear:none;margin:2px 0}#idc-container .idc-tb,#idc-container .idc-c{margin:0 0 15px}#idc-container .idc-c .idc-c-h{background:url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) 100% 0;height:32px;margin:0 0 8px}#idc-container .idc-c .idc-c-h-inner{height:28px;margin:0 0 0 2px;padding:2px 2px 2px 0}#idc-container .idc-c-t{margin:0 0 10px;padding:0 8px;overflow:hidden}#idc-container .idc-c-t label{float:none}#idc-container.idc .idc-c-m{overflow:hidden}#idc-container.idc .idc-c-b{min-height:22px}#idc-container .idc-c .idc-i{clear:none;line-height:28px;height:28px;margin:0 0 0 8px}#idc-container .idc-c .idc-i span,#idc-container .idc-c .idc-i a{float:left;margin:0 3px 0 0}#idc-container .idc-c .idc-time a,#idc-container .idc-c .idc-time{color:#666;font-size:11px}#idc-container .idc-c .idc-time a{float:none;text-decoration:none}#idc-container .idc-c-h .idc-time a:hover{text-decoration:underline}#idc-container .idc-a_nomenu,#idc-container .idc-a{background:none!important;display:inline;float:left;margin:0 6px 0 0}#idc-container .idc-a img,#idc-container .idc-c.idc-anonymous .idc-a img:hover{height:26px;width:26px}#idc-container .idc-c .idc-a img,#idc-container .idc-c.idc-anonymous .idc-a img:hover{padding:1px}#idc-container .idc-c .idc-a img:hover{padding:0;width:28px;height:28px}#idc-container .idc-avatar{background:#ccc;float:left;overflow:hidden}#idc-container .idc-c.idc-error h5{background:#c00;color:#fff;padding:1px 2px}#idc-container .idc-friend .idc-c-h{background-position:100% -50px}#idc-container .idc-admin .idc-c-h{background-position:100% -100px}#idc-container .idc-thread .idc-c.idc-collapsed{-moz-opacity:.50;filter:alpha(opacity=50);opacity:.50}#idc-container .idc-c.idc-collapsed .idc-c-h{height:22px;margin:0}#idc-container .idc-c.idc-collapsed .idc-c-h-inner{height:18px}#idc-container .idc-c.idc-collapsed .idc-i{line-height:18px;height:18px;padding:0;margin:0 0 0 4px}#idc-container .idc-c.idc-collapsed .idc-i a,#idc-container .idc-c.idc-collapsed .idc-i span,#idc-container .idc-c.idc-collapsed .idc-c-b .idc-collapselink_closed,#idc-container .idc-c.idc-collapsed .idc-c-b .idc-thread_active{color:#666!important}#idc-container .idc-c.idc-collapsed .idc-c-h .idc-a,#idc-container .idc-c.idc-collapsed .idc-c-h .idc-v a,#idc-container .idc-c.idc-collapsed .idc-c-t,#idc-container .idc-c.idc-collapsed .idc-c-b .idc-btn_s,#idc-container .idc-c.idc-collapsed .idc-c-b .idc-btn_l,#idc-container .idc-c.idc-collapsed .idc-c-b .idc-right{display:none}#idc-container .idc-c.idc-collapsed .idc-c-h .idc-v{margin:0}#idc-container .idc-c.idc-collapsed .idc-rep{margin-top:2px!important}#IDCommentsNewThreadCover .idc-thread,#IDCommentsNewThreadCover .idc-c{width:100%!important}#idc-container .idc-c .idc-message{margin:0 0 .5em;width:97%}#idc-container .idc-comments .idc-c.idc-reply{margin:0 0 25px}#idc-container .idc-reply .idc-c-t{margin:0 0 2px;padding:0}#idc-container .idc-userbar{margin:5px 0 10px}#idc-container .idc-userbar-i{clear:none;line-height:28px;height:28px;margin:0 0 0 8px}#idc-container .idc-reply .idc-c-m{display:none;overflow:visible}#idc-container .idc-google .idc-google,#idc-container .idc-google_loggedin .idc-google_loggedin,#idc-container .idc-facebook .idc-facebook,#idc-container .idc-facebook_login .idc-facebook_login,#idc-container .idc-facebook_loggedin .idc-facebook_loggedin,#idc-container .idc-twitter_login .idc-twitter_login,#idc-container .idc-twitter_loggedin .idc-twitter_loggedin,#idc-container .idc-loggingin .idc-loggingin,#idc-container .idc-openid .idc-openid,#idc-container .idc-openid_signup .idc-openid_signup,#idc-container .idc-notvalidated .idc-notvalidated,#idc-container .idc-signup .idc-signup,#idc-container .idc-login .idc-login,#idc-container .idc-wp-login .idc-wp-login,#idc-container .idc-user .idc-user{display:block}#idc-container .idc-divide span{float:left;clear:both;margin:0 0 .4em}#idc-container .idc-c-m .idc-column-wide,#idc-container .idc-c-m .idc-column{clear:none;float:left;width:33%}#idc-container .idc-c-m .idc-column-wide{width:50%}#idc-container .idc-c-m .idc-text,#idc-container .idc-c-m label{width:90%;display:block;overflow:hidden;vertical-align:baseline}#idc-container .idc-c-m label{padding:4px 0 0;width:auto}#idc-container .idc-c-m .idc-form-info{color:#999;font-size:10px;font-style:italic;line-height:1.3em}#idc-container .idc-info.idc-disable{background:url(https://www.intensedebate.com/themes/chameleon/images/id-fade2.png);z-index:4500;position:relative;width:100%;float:left}#idc-container .idc-info.idc-disable div p{margin:0 0 2px}#idc-container .idc-info.idc-disable{position:relative}#idc-container .idc-info{float:left;left:50%;display:none;margin:0 0 0 -156px;position:fixed;top:20%;width:313px;z-index:8000}#idc-container .idc-info div{width:auto;position:relative}#idc-container .idc-head .idc-comments-main .idc-info div{background:0}#idc-container .idc-info div div{background:url(https://www.intensedebate.com/themes/chameleon/images/idc-info.png) no-repeat top left;width:273px!important;float:left;padding:20px 20px 8px;margin:0}#idc-container .idc-info div div div{width:100%!important;background:none!important;padding:0}#idc-container .idc-info div div.idc-bottom{background-position:bottom left!important;height:10px;width:313px!important;padding:0;clear:both}#idc-container .idc-info div h6{font-size:15px!important;line-height:1.3em!important;font-weight:bold;margin:0 0 10px;color:#fff}#idc-container .idc-info div div p{float:none;font-size:13px;line-height:1.3em;margin:0 0 8px;color:#fff;clear:both;width:auto}#idc-container .idc-info div div form p{color:#666;font-size:12px}#idc-container .idc-info div ul{width:100%!important}#idc-container .idc-info div ul li{margin:0 0 5px;float:left;clear:both;padding:0 0 0 17px!important;font-size:13px;background:url(https://www.intensedebate.com/themes/chameleon/images/id-icon_s_tick.png) no-repeat 0 0;color:#fff;width:90%}#idc-container .idc-info div p.idc-bottom{margin:10px 0 2px;width:90%;height:auto;float:left}#idc-container .idc-info div div.idc-bottom{width:313px}#idc-container .idc-info div .idc-close{margin:-10px -8px 0 0}#idc-container .idc-info div .idc-close span,#idc-container .idc-close span{display:none}#idc-container .idc-info div div div a{color:#fff}#idc-container .idc-info div div div a:hover{color:#def4ff}#idc-container .idc-info form{float:left;background:#fff;padding:8px;width:232px;margin:0;-moz-border-radius:4px;-khtml-border-radius:4px;-webkit-border-radius:4px;border-radius:4px}#idc-container .idc-info form textarea{width:224px;height:60px;margin:0 0 6px!important;overflow-x:hidden}#idc-container .idc-info form a{color:#000!important;clear:both!important;float:left}#idc-container .idc-info label{font-size:12px;line-height:1.3em;color:#666}#idc-container .idc-info .idc-text{clear:both;margin:0 0 4px;width:224px}#idc-container .idc-info .idc-radio{clear:left}#idc-container .idc-c-highlighted{background-image:url(https://www.intensedebate.com/themes/universal/images/idc-c-highlight.png)!important;background-repeat:repeat-x!important}#idc-container .idc-info .idc-fade{color:#999;font-style:italic}.idc-loaded{background:#fff;width:1px!important;height:1px;padding:0!important;position:absolute!important;top:0;left:0;z-index:-1;visibility:hidden}#idc-container-parent #idc-container .idc-c{height:auto}#idc-container .idc-skiplink{overflow:hidden!important;}#idc-container .idc-skiplink ul{position:absolute!important;left:-99999px!important;top:auto!important;width:1px!important;height:1px!important;}#idc-container .idc-fade,#idc-container .idc-fade a{color:#bbb!important;}#idc-container .idc-fade a:hover{color:#fff!important;}#idc-container .idc-c-b .idc-right a{margin:0 0 0 12px;}#idc-container .idc-info .idc-form_list{float:none!important;width:auto!important;}#idc-container .idc-info .idc-form_list li{margin:0 0 4px;float:none!important;background:none;padding:0!important;width:auto!important;}#idc-container .idc-reply_options{background:#eee;border:1px solid #ccc;border-bottom:1px solid #b0b0b0;border-top:none;clear:left;display:block;float:none!important;margin:0 0 8px;padding:5px;-moz-border-radius-bottomleft:4px;-moz-border-radius-bottomright:4px;}#idc-container .idc-reply_options ul{margin:0 0 0 -2px;}#idc-container .idc-reply_options li{margin:0 2px;}#idc-container .idc-reply_options .idc-option{display:block;line-height:20px!important;padding:2px 5px!important;-moz-border-radius:2px;}#idc-container .idc-reply_options a.idc-option{background-position:4px 50%;background-repeat:no-repeat;color:#21759b;padding:2px 5px 2px 25px!important;}#idc-container .idc-reply_options #IDCLoginIntenseDebate{background-image:url(https://www.intensedebate.com/favicon.ico);}#idc-container .idc-reply_options #IDCLoginOpenID{background-image:url(https://www.intensedebate.com/images1/icon-openid.png);}#idc-container .idc-reply_options a.idc-option:hover{background-color:#fff;color:#009EE4;}#idc-container .idc-reply_options .idc-sel .idc-option{background:#ccc!important;color:inherit!important;text-decoration:none;}#idc-container.idc .idc-reply_options .idc-divider{margin:0 4px!important;}#idc-container .idc-reply_options .idc-divider .idc-option{color:#999;}#idc-container .idc-character_count,#idc-container .idc-character_count_near,#idc-container .idc-character_count_over{text-align:right;}#idc-container .idc-character_count_near .idc-numbers{font-size:110%;}#idc-container .idc-character_count_over .idc-numbers{font-size:120%;}#idc-container .idc-character_count_over .idc-numbers strong:after{content:"!";}#idc-container .idc-infobar{background:url(https://www.intensedebate.com/themes/universal/images/idc-infobar.png) no-repeat;height:41px;float:none;margin:0 0 8px;width:auto;overflow:hidden!important;}#idc-container .idc-infobar-inner{background:url(https://www.intensedebate.com/themes/universal/images/idc-infobar.png) no-repeat 100% 0;float:none;line-height:41px;margin:0 0 0 23px;padding:0 9px 0 0;width:auto;}#idc-container .idc-infobar .idc-loading_img{margin:8px 0 -5px 0;padding:6px 3px 1px 9px;}#idc-container .idc-infobar-expand-wrap{border-left:1px solid #999;display:inline;float:left;height:21px;margin:8px 0 8px 9px;padding:4px 0 0 9px;width:19px;}#idc-container .idc-infobar-expand,#idc-container .idc-infobar-expanded{background:url(https://www.intensedebate.com/themes/universal/images/idc-infobar.png) no-repeat 0 -41px;display:block;height:18px;width:19px;}#idc-container .idc-infobar-expand span,#idc-container .idc-infobar-expanded span{display:none;}#idc-container .idc-infobar-expand:hover{background-position:-19px -41px;}#idc-container .idc-infobar-expanded{background-position:-38px -41px;}#idc-container .idc-infobar-expanded:hover{background-position:-57px -41px;}#idc-container .idc-infobar h3{clear:none;float:none;line-height:41px;}#idc-container .idc-infobar h3 small{font-size:13px;}#idc-container .idc-infobar .idc-infobar-options{float:left;line-height:41px;}#idc-container .idc-rss{background:url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat 0 -24px;display:block;float:left;height:10px;margin:0 3px 0 0;width:10px;overflow:hidden;}#idc-container .idc-rss:hover{background-position:0 -34px;}#idc-container .idc-rep{cursor:help;float:left;height:14px;margin:8px 3px 0 0!important;overflow:hidden;}#idc-container .idc-c .idc-rep span{background:url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) -566px -150px;float:left;height:14px;width:5px;margin:0!important;}#idc-container .idc-c .idc-rep .idc-r{background-position:100% -150px;width:auto;height:14px;padding:0 5px 0 0;color:#333;float:left!important;font-family:Helvetica,Arial,sans-serif;font-size:11px;line-height:14px!important;margin:0!important;}#idc-container .idc-rep.idc-level2 span{background-position:-566px -178px;}#idc-container .idc-rep.idc-level2 .idc-r{background-position:100% -178px;color:#424b20;}#idc-container .idc-rep.idc-level1 span{background-position:-566px -164px;}#idc-container .idc-rep.idc-level1 .idc-r{background-position:100% -164px;color:#667726;}#idc-container .idc-rep.idc-level-1 span{background-position:-566px -192px;width:17px;}#idc-container .idc-rep.idc-level-1 .idc-r{background-position:100% -192px;color:#fff;width:auto;}#idc-container .idc-official,#idc-container .idc-helper{background:url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat;height:12px;margin:8px 3px 0 0!important;width:13px;}.idc-official span,.idc-helper span{display:none;}#idc-container .idc-helper{background-position:0 -12px;}#idc-container .idc-v{display:inline;float:right!important;margin:5px 2px 0 0;}#idc-container .idc-v .idc-v-total{display:inline;float:left;line-height:18px!important;margin:0 6px 0 0;}#idc-container .idc-v a{background:url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat 0 -176px;_background-image:url(https://www.intensedebate.com/themes/universal/images/idc-universal-ie6.png?=4);clear:none;display:inline-block;float:left;height:18px;margin:0 3px 0 0;width:18px;}#idc-container .idc-v a span{display:none;}#idc-container a.idc-v-up:hover{background-position:0 -194px;}#idc-container a.idc-v-up:active{background-position:0 -212px;}#idc-container .idc-disabled a.idc-v-up{background-position:0 -230px;}#idc-container a.idc-v-down{background-position:-18px -176px;}#idc-container a.idc-v-down:hover{background-position:-18px -194px;}#idc-container a.idc-v-down:active{background-position:-18px -212px;}#idc-container .idc-disabled a.idc-v-down{background-position:-18px -230px;}#idc-container .idc-v.idc-disabled a{cursor:default!important;}#idc-container .idc-v a:hover{background-color:transparent!important;}#idc-container .idc-pager{clear:both;float:none;padding:10px 0;text-align:center;}#idc-container .idc-pager .idc-sel,#idc-container .idc-pager a{line-height:18px!important;padding:0 4px!important;}#idc-container .idc-pager .idc-sel{color:inherit;text-decoration:none;}#idc-container .idc-pager .idc-divider{float:none!important;}#idc-container .idc-clear{clear:both;display:block;}#idc-container .idc-pager_reply_loading,#idc-container .idc-pager_reply{clear:both;display:block;float:left;padding:0 0 .8em;}#idc-container .idc-pager_reply_loading div,#idc-container .idc-pager_reply div{padding:8px 8px 8px 26px;background:url(https://www.intensedebate.com/themes/universal/images/idc-grey-0926.png) no-repeat -1530px -108px;float:left;}#idc-container .idc-pager_reply_loading div{background:url(https://www.intensedebate.com/images/ajax-loader.gif) no-repeat 0 8px;}#idc-container .idc-expand_comments{background:url(https://www.intensedebate.com/themes/universal/images/idc-bg-1223.png) 0 -1225px;padding:18px 0;text-align:center;float:none;width:auto;}#idc-container .idc-expand_comments a{background:url(https://www.intensedebate.com/themes/universal/images/idc-bg-1223.png) 0 -1303px;padding:3px 6px!important;-moz-border-radius:2px;-khtml-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;}#idc-container .idc-expand_comments p{margin:0;}#idc-container .idc-c-admin{margin:6px 0 0;float:none!important;width:auto!important;}#idc-container .idc-c-admin .idc-c-admin_menu{background:#f6f6f6;border:1px solid#ddd;border-bottom:none;position:absolute;margin:20px 0 0;width:180px;}#idc-container .idc-c-admin .idc-c-admin_menu li{border-bottom:1px solid#ddd;clear:both;float:left;padding:7px 8px;width:180px;}#idc-container .idc-c-admin .idc-c-admin_menu a{color:#333;display:block;padding:5px 6px!important;text-decoration:none;width:168px;}#idc-container .idc-c-admin .idc-c-admin_menu a:hover{background:#fff;}#idc-container .idc-head_tools-share{background:url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat -516px -1031px;display:block;height:18px;text-indent:-9999px;width:36px;}#idc-container .idc-head_tools-share:hover{background-position:-516px -1049px;}#idc-container .idc-share{clear:none;color:#444;float:left;display:inline;position:relative;width:36px;}#idc-container .idc-share .idc-share_inner{background:#fff;border:1px solid #ccc;display:none;float:right;clear:none;margin:17px 0 0;padding:10px;position:absolute;right:0;width:228px;-moz-border-radius:4px;-o-border-radius:4px;-webkit-border-radius:4px;-khtml-border-radius:4px;border-radius:4px;-moz-border-radius-topright:0;-o-border-top-right-radius:0;-webkit-border-top-right-radius:0;-khtml-border-top-right-radius:0;border-top-right-radius:0;-moz-box-shadow:0 1px 2px #ccc;-o-box-shadow:0 1px 2px #ccc;-webkit-box-shadow:0 1px 2px #ccc;-khtml-box-shadow:0 1px 2px #ccc;box-shadow:0 1px 2px #ccc;}#idc-container .idc-share_inner div{width:100%;}#idc-container .idc-share_inner a{color:#444;text-decoration:none;}#idc-container .idc-share_inner a:hover{background-color:none!important;text-decoration:underline;}#idc-container .idc-share-tabs{background:url(https://www.intensedebate.com/themes/universal/images/idc-share.png) no-repeat 100% 100%;float:none;height:21px;padding:0 2px;margin:0 0 6px;}#idc-container .idc-share-tabs li{float:left;}#idc-container .idc-share-tabs a{color:#222;float:left;padding:0 0 0 10px!important;}#idc-container .idc-share-tabs a span{display:block;height:19px;padding:2px 10px 0 0!important;}#idc-container .idc-share-tabs .idc-sel a{background:url(https://www.intensedebate.com/themes/universal/images/idc-share.png) no-repeat -220px 0;text-decoration:none;}#idc-container .idc-share-tabs .idc-sel a span{background:url(https://www.intensedebate.com/themes/universal/images/idc-share.png) no-repeat 100% 0;}#idc-container .idc-share .idc-subscribe-email{display:inline-block;float:left;margin:6px 0 0;width:100%;}#idc-container .idc-share .idc-subscribe-email .idc-btn_s{margin:1px 4px 0 0!important;}#idc-container .idc-share .idc-share-list{float:left;width:110px;}#idc-container .idc-share .idc-share-list li{clear:both;padding:0 0 3px!important;}#idc-container .idc-share .idc-share-list li a{float:left;}#idc-container .idc-share p{padding:0 0 6px;}#idc-container .idc-head_tools-login{color:#444;cursor:pointer;display:inline;float:left;height:18px;margin:0 2px 0 0;}#idc-container .idc-head_tools-login span{background:url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat -516px -977px;display:block;font-size:12px;float:left;height:18px;line-height:18px;padding:0 0 0 18px;}#idc-container .idc-head_tools-login .idc-r{background:url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat 100% -977px;height:18px;_overflow:hidden;padding:0;width:3px;}#idc-container .idc-head_tools-login:hover span{background-position:-516px -995px;}#idc-container .idc-head_tools-login:hover .idc-r{background-position:100% -995px;}#idc-container .idc-head_tools-login:active span{background-position:-516px -1013px;}#idc-container .idc-head_tools-login:active .idc-r{background-position:100% -1013px;}#idc-container .idc-postnav{float:none!important;margin:2px 0;}#idc-container .idc-postnav-list{float:left;min-height:21px;}#idc-container .idc-postnav-list li{display:inline;float:left;line-height:21px!important;height:21px;margin:0 4px 4px 0;list-style:none!important;}#idc-container .idc-postnav-label{float:left;line-height:21px;margin:0 5px 0 0;}#idc-container .idc-loginbtn_wordpress,#idc-container .idc-loginbtn_intensedebate,#idc-container .idc-loginbtn_twitter,#idc-container .idc-loginbtn_openid{background:url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat -292px -150px;display:block;height:21px;text-indent:-9999px;width:95px;}#idc-container .idc-loginbtn_twitter{background-position:-387px -150px;width:80px;}#idc-container .idc-loginbtn_openid{background-position:-467px -150px;width:71px;}#idc-container .idc-loginbtn_wordpress{background-position:-165px -150px;width:127px;}#idc-container .idc-head .idc-head_action.idc-openid,#idc-container .idc-head .idc-head_action.idc-wp-login,#idc-container .idc-head .idc-head_action.idc-login{-webkit-box-shadow:0 3px 10px #444;-moz-box-shadow:0 3px 10px #444;box-shadow:0 3px 10px #444;background-position:0 0;color:#fff;left:50%;margin-left:-250px;padding:13px 15px;position:fixed;_position:absolute!important;_background:url(https://www.intensedebate.com/themes/universal/images/idc-bg-1223.png);_left:350px;top:25%;width:400px;z-index:7000;}#idc-container .idc-head .idc-head_action.idc-openid a,#idc-container .idc-head .idc-head_action.idc-wp-login a,#idc-container .idc-head .idc-head_action.idc-login a{color:#fff;text-decoration:underline;}#idc-container .idc-head .idc-head_action.idc-openid .idc-divide,#idc-container .idc-head .idc-head_action.idc-wp-login .idc-divide,#idc-container .idc-head .idc-head_action.idc-login .idc-divide{clear:none;}#idc-container .idc-form-action{margin:0 8px 0 0;}#idc-container div .idc-c-plugins{float:right;height:16px;margin:-20px 0 0 0;}#idc-container div .idc-c-plugins a{display:block;}#idc-container div .idc-c-plugins img{display:inline;float:left;margin:0 4px 0 0;}#idc-container div .idc-c-plugins li{float:left;font-size:11px;margin:0 4px;}#idc-container .idc-id{font-size:12px;margin:5px 0 0;}#idc-container .idc-id span{float:left;display:inline;margin:0 2px 0 0;}#idc-container .idc-idlogo{background:url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat 0 -150px;_background-image:url(https://www.intensedebate.com/themes/universal/images/idc-universal-ie6.png?=4);float:left;height:15px;text-indent:-9999px;width:78px;}#idc-container .idc-a .idc-a-facebook{margin:13px 0 -1px -5px;padding:0!important;height:16px!important;width:16px!important;}#idc-clear{clear:both;display:block;}#idc-container div.idc-m{color:#333;float:left;display:none;margin:-5px 0 0 -6px;position:absolute;width:345px;z-index:5000;}#idc-container .idc-m .idc-m-avatar{background:url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat -457px -206px;float:left;height:115px;padding:6px 7px;width:86px;}#idc-container .idc-m .idc-m-avatar a{display:block;height:89px;}#idc-container .idc-m .idc-m-avatar.idc-m-avatar-loading{cursor:pointer;}#idc-container .idc-m-avatar .idc-m-avatarimg{margin:0 0 3px;}#idc-container .idc-m-loadingimg{margin:38px 0 0 27px;}#idc-container .idc-m .idc-m-main{background:url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat -558px -206px;clear:none;display:inline;float:right;margin:-4px 0 0 -13px;min-height:97px;_height:97px;padding:16px 17px 0 23px;position:relative;width:218px;}#idc-container .idc-m a{color:#0090d6;}#idc-container .idc-m a:hover{color:#009ee4;}#idc-container .idc-m .idc-m-section-title{font-weight:bold;margin:.8em 0 0;}#idc-container a.idc-m-username{color:#333;float:left;font-size:18px;line-height:1em;overflow:visible;}#idc-container .idc-m-list{float:none;}#idc-container .idc-m-list li{float:none;}#idc-container .idc-m .idc-m-bottom{background:url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat -558px -821px;clear:none;float:right;margin:0 0 0 -13px;min-height:0;height:18px;padding:0 17px 0 23px;position:relative;width:218px;}#idc-container .idc-m p{font-size:12px;line-height:1.3em;margin:0;float:none;}#idc-container .idc-m .idc-about-none,#idc-container .idc-m .idc-about{margin:.8em 0 0;}#idc-container .idc-m .idc-about-none,#idc-container a.idc-date{color:#999;font-style:italic;}#idc-container .idc-m .idc-rep{margin:1px 0 0 5px!important;}#idc-container .idc-m-idprofile{background:url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat -300px -340px;color:#fff!important;display:block;height:25px;line-height:25px;margin:1em -1px 0;text-align:center;width:220px;}#idc-container .idc-m-idprofile:hover{background-position:-300px -365px;}#idc-container .idc-m-idprofile:active{background-position:-300px -390px;}#idc-container.idc .idc-follow-disabled{color:#999;display:block;font-style:italic;font-size:11px;line-height:20px;text-align:center;}#idc-container.idc .idc-m .idc-follow1,#idc-container.idc .idc-m .idc-follow2,#idc-container.idc .idc-m .idc-follow{background:#57D400 url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat 0 -260px;color:#fff!important;display:block;height:20px;line-height:20px;padding:0 4px 0 20px!important;text-shadow:0 1px 2px #ccc;-moz-border-radius:2px;-khtml-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;}#idc-container.idc .idc-m .idc-follow1{background:#B2B2B2 url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat 0 -440px;cursor:default;}#idc-container.idc .idc-m .idc-follow2{background:#B2B2B2 url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=4) no-repeat 0 -440px;cursor:default;}#idc-container.idc a.idc-follow:hover{background-position:0 -320px;}#idc-container.idc a.idc-follow:active{background-position:0 -380px;}#idc-container .idc-thread .idc-thread .idc-thread{padding:0 0 0 18px!important;}#idc-container .idc-thread .idc-thread .idc-c{background:url(https://www.intensedebate.com/themes/universal/images/idc-grey-0404.png) no-repeat -1533px -104px;padding:5px 0 0 18px;}#idc-container .idc-thread.idc-collapse .idc-thread{display:none;}#idc-container .idc-thread_info{clear:both;display:none;float:left;padding:0 0 .8em;}#idc-container .idc-thread.idc-collapse .idc-thread_info{display:block;}#idc-container .idc-thread_info div{padding:8px 8px 8px 26px;background:url(https://www.intensedebate.com/themes/universal/images/idc-grey-0404.png) no-repeat -1533px -108px;float:left;}#idc-container .idc-thread_info h5{margin:0;}#idc-container .idc-thread-h{display:block!important;}#idc-container .idc-right .idc-btn_l{margin:0 0 0 4px !important;}#idc-container .idc-btn_l,#idc-container .idc-btn_s{background: none;cursor: pointer;float: left;outline: none;padding:0;white-space: nowrap;border: none;font-family: "Lucida Grande",Helvetica,Arial,sans-serif;font-weight: normal;text-decoration: none;}#idc-container .idc-btn_l span,#idc-container .idc-btn_s span{background: url(https://www.intensedebate.com/themes/universal/images/idc-universal.png?=3) no-repeat -516px -839px;_background: url(https://www.intensedebate.com/themes/universal/images/idc-universal-ie6.png?=4) no-repeat -516px -839px;display:block;float: left;height:20px;width:9px;}#idc-container .idc-btn_l:hover span #idc-container .idc-btn_s:hover span{background-position: -516px -859px;}#idc-container .idc-btn_l:active span,#idc-container .idc-btn_s:active span{background-position: -516px -879px;}#idc-container .idc-btn_l .idc-r,#idc-container .idc-btn_s .idc-r{background-position:100% -839px;padding:0 9px 0 0;font-size:12px !important;line-height:20px;margin:0 !important;color:#000;float: left !important;overflow: hidden;width:auto;}#idc-container .idc-btn_l .idc-r strong,#idc-container .idc-btn_s .idc-r strong{font-weight:bold;}#idc-container .idc-btn_l:hover .idc-r,#idc-container .idc-btn_s:hover .idc-r{color:#333;background-position:100% -859px;}#idc-container .idc-btn_l:active .idc-r,#idc-container .idc-btn_s:active .idc-r{color:#333;background-position:100% -879px;}#idc-container span.idc-btn_l span,#idc-container span.idc-btn_s span{color:#ccc !important;cursor:default !important;}#idc-container span.idc-btn_l:hover span,#idc-container span.idc-btn_s:hover span{background-position: -516px -839px;}#idc-container span.idc-btn_l:hover .idc-r,#idc-container span.idc-btn_s:hover .idc-r{background-position:100% -839px;}#idc-container .idc-btn_l span{background-position: -516px -899px;height:26px;line-height:26px;width:12px;}#idc-container .idc-btn_l:hover span{background-position: -516px -925px;}#idc-container .idc-btn_l:active span{background-position: -516px -951px;}#idc-container .idc-btn_l .idc-r{background-position:100% -899px;line-height:26px;padding:0 12px 0 0;}#idc-container .idc-btn_l:hover .idc-r{background-position:100% -925px;}#idc-container .idc-btn_l:active .idc-r{background-position:100% -951px;}#idc-container .idc-btn_l-secondary{line-height:26px !important;margin:0 4px 0 0 !important;}#idc-container .idc-divider{float: left;}#idc-container .idc-head .idc-divider{float: none;}#idc-container .idc-c .idc-divider{display: none;}#idc-container .idc-head .idc-btn_s{margin:0 0 0 6px;}#idc-container .idc-head .idc-tools a{float: left !important;}#idc-container .idc-c-b .idc-right a,#idc-container .idc-c-b .idc-loadtext{float: left;}#idc-container .idc-c-b,#idc-container .idc-c-b .idc-right,#idc-container.idc .idc-btn_s-secondary{line-height:20px !important;}#idc-container.idc .idc-btn_l-secondary{line-height:26px !important;}#idc-container .idc-btn_s{float: left;}#idc-container .idc-id{display:none;}</style><div class="idc-loaded" id="IDCommentLoadingDiv" style="display: block;"></div></body></html>
